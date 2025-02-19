@@ -1,57 +1,53 @@
-import React from 'react'
-import Lightroom from 'react-lightbox-gallery'
-import GalleryImg1 from "../../assets/images/gallery/g1.jpg"
-import GalleryImg3 from "../../assets/images/gallery/g3.jpg"
-import GalleryImg4 from "../../assets/images/gallery/g4.jpg"
-import GalleryImg6 from "../../assets/images/gallery/g6.jpg"
-import GalleryImg7 from "../../assets/images/gallery/g7.jpg"
+import React from "react";
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
 
+import GalleryImg1 from "../../assets/images/gallery/g1.jpg";
+import GalleryImg3 from "../../assets/images/gallery/g3.jpg";
+import GalleryImg4 from "../../assets/images/gallery/g4.jpg";
+import GalleryImg6 from "../../assets/images/gallery/g6.jpg";
+import GalleryImg7 from "../../assets/images/gallery/g7.jpg";
+
+const images = [
+  {
+    original: GalleryImg1,
+    thumbnail: GalleryImg1,
+    description: "Person wearing shoes - Gift Habeshaw",
+  },
+  {
+    original: GalleryImg3,
+    thumbnail: GalleryImg3,
+    description: "Blonde woman wearing sunglasses - Dmitriy Frantsev",
+  },
+  {
+    original: GalleryImg6,
+    thumbnail: GalleryImg6,
+    description: "Harry Cunningham",
+  },
+  {
+    original: GalleryImg4,
+    thumbnail: GalleryImg4,
+    description: "Jaipur, Rajasthan India - Liam Baldock",
+  },
+  {
+    original: GalleryImg7,
+    thumbnail: GalleryImg7,
+    description: "Verne Ho",
+  },
+];
 
 const Gallery = () => {
+  return (
+    <div style={{ maxWidth: "800px", margin: "auto" }}>
+      <ImageGallery
+        items={images}
+        showFullscreenButton={true}
+        showPlayButton={false}
+        showThumbnails={true}
+        slideDuration={500}
+      />
+    </div>
+  );
+};
 
-    var images = [
-        {
-            src: GalleryImg1,
-            desc: "Person wearing shoes",
-            sub: "Gift Habeshaw"
-        },
-        {
-            src: GalleryImg3,
-            desc: "Blonde woman wearing sunglasses smiling at the camera ",
-            sub: "Dmitriy Frantsev"
-        },
-        {
-            src: GalleryImg6,
-            sub: "Harry Cunningham"
-        },
-        {
-            src: GalleryImg4,
-            desc: "Jaipur , Rajasthan India",
-            sub: "Liam Baldock"
-        },
-        {
-            src: GalleryImg7,
-            sub: "Verne Ho"
-        },
-        {
-            src: GalleryImg6,
-            desc: "Rann of kutch , India",
-            sub: "Hari Nandakumar"
-        },
-    ];
-
-    var settings = {
-        columnCount: {
-            default: 3,
-            mobile: 2,
-            tab: 3
-        },
-        mode: "dark",
-        enableZoom:false,
-    };
-    return (
-        <Lightroom images={images} settings={settings} />
-   );
-}
-
-export default Gallery
+export default Gallery;
