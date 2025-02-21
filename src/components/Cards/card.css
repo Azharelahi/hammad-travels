@@ -1,24 +1,28 @@
 .tours_section .img-box {
     padding: 0px 12px;
-  }
-  
- .img-box .card {
+}
+.dest-cont{
+    height: 300px;
+}
+
+
+.img-box .card {
     border: none;
     width: 100%;
     overflow: hidden;
     position: relative;
-  }
-  
- .img-box .card a {
+}
+
+.img-box .card a {
     border: none;
-  }
-  
- .img-box .card img {
+}
+
+.img-box .card img {
     transition: all 0.5s ease 0s;
     filter: brightness(0.8);
-  }
-  
- .img-box .card .card-title {
+}
+
+.img-box .card .card-title {
     position: absolute;
     top: 5%;
     left: 3%;
@@ -27,9 +31,9 @@
     line-height: 150%;
     font-weight: bold;
     width: 100%;
-  }
-  
- .img-box .card .tours {
+}
+
+.img-box .card .tours {
     position: absolute;
     right: 5%;
     bottom: 5%;
@@ -42,42 +46,42 @@
     border-radius: 15px;
     transform: translateX(120%);
     transition: 0.2s ease-in;
-  }
-  
- .img-box .card:hover {
+}
+
+.img-box .card:hover {
     transition: 0.2 ease-in;
-  }
-  
- .img-box .card:hover img {
+}
+
+.img-box .card:hover img {
     filter: brightness(1);
     transform: scale(1.1);
-  }
-  
- .img-box .card:hover .tours {
+}
+
+.img-box .card:hover .tours {
     transform: translateX(0);
-  }
-  
+}
 
 
 
 
 
-.popular  {
+
+.popular {
     padding: 5px;
     border: none;
     transition: all 0.5s ease 0s;
     overflow: hidden;
 }
 
-.popular:hover{
+.popular:hover {
     transform: translateY(-10px);
     transition: 0.2s ease-in;
-    
+
 }
 
 
 .popular:hover .card-title {
-    color:var(--primaryClr)
+    color: var(--primaryClr)
 }
 
 .popular img {
@@ -88,7 +92,7 @@
     transform: scale(1.1);
 }
 
-.popular  .card-body .badge {
+.popular .card-body .badge {
     padding: 4px 8px;
     border-radius: 4px;
     margin-right: 8px;
@@ -97,86 +101,80 @@
 
 
 
-.popular  .card-body .River{
+.popular .card-body .River {
     background-color: #ffebf5 !important;
-    color:#cf3881 !important;
+    color: #cf3881 !important;
 }
 
-.popular  .card-body .Wildlife{
+.popular .card-body .Wildlife {
     background-color: #4ba7fc !important;
-    color:#e6f7f4 !important;
+    color: #e6f7f4 !important;
 }
 
-.popular  .card-body .Escorted{
+.popular .card-body .Escorted {
     background-color: #e8edf1 !important;
-    color:#4f5e71 !important;
+    color: #4f5e71 !important;
 }
 
-.popular  .card-body .Rail{
+.popular .card-body .Rail {
     background-color: #fc961b !important;
-    color:#ffffff !important;
+    color: #ffffff !important;
 }
 
-.popular  .card-body .Tour{
+.popular .card-body .Tour {
     background-color: #6088c4 !important;
-    color:#ffffff !important;
+    color: #ffffff !important;
 }
 
-.popular  .card-body .card-title{
+.popular .card-body .card-title {
     font-size: var(--bodyText);
     font-weight: bold;
     transition: all 0.5s ease 0s;
     margin-bottom: 10px;
 
-    
+
 }
 
-.popular  .card-body .card-text {
+.popular .card-body .card-text {
     font-size: 13px;
     padding: 10px 0px;
     line-height: 1.3em;
     position: relative;
-    color:#4f5e71;
+    color: #4f5e71;
 }
 
- 
-.popular  .card-body .card-text i {
+
+.popular .card-body .card-text i {
     position: absolute;
     top: 15px;
 }
 
 
-.popular  .card-body .text {
+.popular .card-body .text {
     margin-left: 16px;
     display: block;
     font-size: 13px;
 }
 
-.popular  .card-body .reviwe {
+.popular .card-body .reviwe {
     margin-bottom: 12px;
 }
-.popular  .card-body .reviwe i {
-    color:var(--primaryClr)
+
+.popular .card-body .reviwe i {
+    color: var(--primaryClr)
 }
 
-.popular  .card-footer  {
+.popular .card-footer {
     background: none;
 }
 
-.popular  .card-footer p  {
+.popular .card-footer p {
     font-size: var(--bodyText);
-    color:#4f5e71
+    color: #4f5e71
 }
 
-.popular  .card-footer p strong {
+.popular .card-footer p strong {
     font-size: var(--bodyText);
-    color:black;
+    color: black;
     font-weight: bold;
 }
-
-
-
-
-
-
-  
