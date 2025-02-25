@@ -1,4 +1,4 @@
-import { Route, Router, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home/Home";
 import Header from "./components/Common/Header/Header";
@@ -8,6 +8,7 @@ import AboutUs from "./pages/About US/AboutUs";
 import Tours from "./pages/Tours/Tours";
 import TourDetails from "./pages/Tour Details/TourDetails";
 import Destination from "./pages/Destinations/Destination";
+import FloatingButtons from "./pages/FloatingButtons"; // Import the Floating Buttons
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/destination/:name" element={<Destination />} />
         </Routes>
       </div>
+      <FloatingButtons /> {/* Floating Buttons added here */}
       <Footer />
     </>
   );
