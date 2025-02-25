@@ -83,14 +83,13 @@ const Header = () => {
                   TOURS
                 </NavLink>
 
-                  <NavLink
-                    className="nav-link text-dark"
-                    to="/car-hire"
-                    onClick={toggleMenu}
-                  >
-                    Car Hire
-                  </NavLink>
-               
+                <NavLink
+                  className="nav-link text-dark"
+                  to="/car-hire"
+                  onClick={toggleMenu}
+                >
+                  CAR HIRE
+                </NavLink>
 
                 <NavLink
                   className="nav-link"
@@ -110,8 +109,11 @@ const Header = () => {
             </Offcanvas.Body>
           </Navbar.Offcanvas>
           <div className="ms-md-4 ms-2">
-            <NavLink className="primaryBtn d-none d-sm-inline-block">
-              Book Now
+            <NavLink
+              to="/car-hire"
+              className="primaryBtn d-none d-sm-inline-block"
+            >
+              Rent Now
             </NavLink>
             <li className="d-inline-block d-lg-none ms-3 toggle_btn">
               <i
