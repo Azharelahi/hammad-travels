@@ -112,7 +112,7 @@
 
 .why-choose-us h2 {
     font-size: 2.5rem;
-      font-family: var(--fontFamily1);
+    font-family: var(--fontFamily1);
     color: #110000;
 }
 
@@ -142,7 +142,7 @@
 
 .our-services h2 {
     font-size: 2.5rem;
-     font-family: var(--fontFamily1);
+    font-family: var(--fontFamily1);
     color: #110000;
 }
 
@@ -169,7 +169,7 @@
 
 .testimonials h2 {
     font-size: 2.5rem;
-  font-family: var(--fontFamily1);
+    font-family: var(--fontFamily1);
     color: #110000;
 }
 
@@ -225,6 +225,8 @@
 
     .right-div {
         width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .left-div {

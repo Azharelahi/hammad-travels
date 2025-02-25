@@ -46,12 +46,8 @@ const Header = () => {
               to="/"
               style={{ display: "flex", gap: 5, alignItems: "center" }}
             >
-              <img className="logo-img" src={img} alt="logo"  />
-              <h2 className="logo"
-                
-              >
-                Hammad Travels
-              </h2>
+              <img className="logo-img" src={img} alt="logo" />
+              <h2 className="logo">Hammad Travels</h2>
             </NavLink>
           </Navbar.Brand>
           {/* End Logo Section  */}
@@ -73,7 +69,7 @@ const Header = () => {
 
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3 ">
-                <NavLink className="nav-link" to="/" onClick={toggleMenu} >
+                <NavLink className="nav-link" to="/" onClick={toggleMenu}>
                   HOME
                 </NavLink>
                 <NavLink
@@ -87,18 +83,14 @@ const Header = () => {
                   TOURS
                 </NavLink>
 
-                <NavDropdown
-                  title="DESTINATION"
-                  id={`offcanvasNavbarDropdown-expand-lg`}
-                >
                   <NavLink
                     className="nav-link text-dark"
-                    to="/spain"
+                    to="/car-hire"
                     onClick={toggleMenu}
                   >
-                    SPAIN TOURS
+                    Car Hire
                   </NavLink>
-                </NavDropdown>
+               
 
                 <NavLink
                   className="nav-link"

@@ -9,6 +9,8 @@ import Tours from "./pages/Tours/Tours";
 import TourDetails from "./pages/Tour Details/TourDetails";
 import Destination from "./pages/Destinations/Destination";
 import FloatingButtons from "./pages/FloatingButtons"; // Import the Floating Buttons
+import CarHire from "./pages/Car Hire/CarHire";
+import HireDetails from "./pages/Hiring Details/HireDetails";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
           <Route path="/tours" element={<Tours />} />
           <Route path="/tour/:title" element={<TourDetails />} />
           <Route path="/destination/:name" element={<Destination />} />
+          <Route path="/car-hire" element={<CarHire />} />
+          <Route path="/hire-details" element={<HireDetails />} />
         </Routes>
       </div>
       <FloatingButtons /> {/* Floating Buttons added here */}
