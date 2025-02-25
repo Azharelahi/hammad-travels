@@ -38,13 +38,13 @@ const Destination = () => {
       <AnimatePresence>
         {selectedImage && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center p-4"
+            className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center p-4 z-50" // Added z-50
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="bg-white rounded-lg shadow-xl p-6 max-w-lg w-full text-center"
+              className="bg-white rounded-lg shadow-xl p-6 max-w-lg w-full text-center relative z-50" // Ensure it's above other elements
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 50, opacity: 0 }}
