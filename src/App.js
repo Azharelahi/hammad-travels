@@ -11,6 +11,7 @@ import Destination from "./pages/Destinations/Destination";
 import FloatingButtons from "./pages/FloatingButtons"; // Import the Floating Buttons
 import CarHire from "./pages/Car Hire/CarHire";
 import HireDetails from "./pages/Hiring Details/HireDetails";
+import Mountaines from "./pages/Trips/Mountaines";
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
           <Route path="/destination/:name" element={<Destination />} />
           <Route path="/car-hire" element={<CarHire />} />
           <Route path="/hire-details" element={<HireDetails />} />
+
+          <Route path="/mountaines" element={<Mountaines />} />
         </Routes>
       </div>
       <FloatingButtons /> {/* Floating Buttons added here */}

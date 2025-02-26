@@ -10,16 +10,15 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
 const Features = () => {
   var settings = {
     dots: false,
     infinite: true,
-    autoplay:false,
-    autoplaySpeed:1500,
+    autoplay: false,
+    autoplaySpeed: 1500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    
+
     responsive: [
       {
         breakpoint: 1024,
@@ -45,8 +44,8 @@ const Features = () => {
           slidesToShow: 2,
           slidesToScroll: 2,
           autoplay: true,
-          prevArrow:false,
-          nextArrow:false,
+          prevArrow: false,
+          nextArrow: false,
         },
       },
       {
@@ -54,8 +53,8 @@ const Features = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          prevArrow:false,
-          nextArrow:false,
+          prevArrow: false,
+          nextArrow: false,
         },
       },
     ],
@@ -77,7 +76,7 @@ const Features = () => {
     {
       id: 2,
       image: feature3,
-      title: "Exploring made easyt",
+      title: "Exploring made easy",
       des: "Book last minute, skip lines &amp; get free cancellation for easier exploring.",
     },
 
@@ -91,7 +90,6 @@ const Features = () => {
 
   return (
     <>
-    
       <section className="feature-section">
         <Container>
           <Row>

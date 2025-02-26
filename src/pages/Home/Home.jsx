@@ -14,6 +14,7 @@ import Gallery from "../../components/Gallery/Gallery";
 import Cards from "../../components/Cards/Cards";
 import { destinationsData, popularsData } from "../../utils/data";
 import PopularCard from "../../components/Cards/PopularCard";
+import CardSlider from "../Card Slider/CardSlider";
 
 const Home = () => {
   var settings = {
@@ -102,11 +103,12 @@ const Home = () => {
           <Row>
             <Col md="12">
               <div className="main_heading">
-                <h1> Popular Activities </h1>
+                <h1> Popular Trips </h1>
               </div>
             </Col>
           </Row>
-          <Row>
+          <CardSlider />
+          {/* <Row>
             {popularsData.map((val, inx) => {
               return (
                 <Col md={3} sm={6} xs={12} className="mb-5" key={inx}>
@@ -114,7 +116,7 @@ const Home = () => {
                 </Col>
               );
             })}
-          </Row>
+          </Row> */}
         </Container>
       </section>
 

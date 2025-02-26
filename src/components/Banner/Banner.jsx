@@ -2,7 +2,7 @@ import React from "react";
 import { Carousel } from "react-bootstrap";
 import sliderImg from "../../assets/images/slider/1.png";
 import sliderImg1 from "../../assets/images/slider/2.png";
-import "../Banner/banner.css"
+import "../Banner/banner.css";
 
 const Banner = () => {
   return (
@@ -14,12 +14,12 @@ const Banner = () => {
             <Carousel.Caption>
               <div className="slider_des">
                 <h5 className="heading-des1">
-                  JOURNEY TO <span>EXPLORE WORLD</span>
+                  JOURNEY TO <span>EXPLORE THE WORLD</span>
                 </h5>
                 <p className="sub_text">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s,
+                  🌍 Unleash the Explorer in You! Discover breathtaking
+                  destinations, unique cultures, and unforgettable experiences.
+                  Start your adventure today!
                 </p>
               </div>
             </Carousel.Caption>
@@ -30,12 +30,12 @@ const Banner = () => {
             <Carousel.Caption>
               <div className="slider_des">
                 <h5 className="heading-des1">
-                  BEAUTIFUL PLACE <span>TO VISIT</span>
+                  DISCOVER <span>STUNNING DESTINATIONS</span>
                 </h5>
                 <p className="sub_text">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s,
+                  🏝️ Your Dream Vacation Awaits! From serene beaches to majestic
+                  mountains, embark on a journey to the most beautiful places on
+                  Earth. Let’s make memories!
                 </p>
               </div>
             </Carousel.Caption>

@@ -238,7 +238,7 @@ export const destinationsData = [
 export const popularsData = [
   {
     id: 0,
-    title: "Discover Singapore",
+    title: "Misgar Trophy Hunting And Safari",
     image: Singapore,
     location: "European Way, Southampton, United Kingdom",
     category: ["Escorted Tour", "Rail Tour"],
@@ -250,7 +250,7 @@ export const popularsData = [
   },
   {
     id: 1,
-    title: "Kiwiana Panorama",
+    title: "Kirthar Trophy Hunting And Safari",
     image: Kiwiana,
     location: "European Way, Southampton, United Kingdom",
     category: ["River Cruise", "Wildlife"],
@@ -262,7 +262,7 @@ export const popularsData = [
   },
   {
     id: 2,
-    title: "Anchorage To Quito",
+    title: "Dream Journey of North",
     image: Quito,
     location: "European Way, Southampton, United Kingdom",
     category: ["Escorted Tour", "River Cruise"],
@@ -274,7 +274,7 @@ export const popularsData = [
   },
   {
     id: 3,
-    title: "Anchorage To La Paz",
+    title: "Magnificent Hunza Valley",
     image: Anchorage,
     location: "European Way, Southampton, United Kingdom",
     category: ["River Cruise", "Rail Tour"],
@@ -286,7 +286,7 @@ export const popularsData = [
   },
   {
     id: 4,
-    title: "Cuzco To Anchorage",
+    title: "Baloch Richness",
     image: Cuzco,
     location: "European Way, Southampton, United Kingdom",
     category: ["River Cruise", "Tour & Cruise"],
@@ -298,7 +298,7 @@ export const popularsData = [
   },
   {
     id: 5,
-    title: "Anchorage To Ushuaia",
+    title: "Coastal Adventure",
     image: Ushuaia,
     location: "European Way, Southampton, United Kingdom",
     category: ["Escorted Tour", "Wildlife"],
@@ -310,7 +310,7 @@ export const popularsData = [
   },
   {
     id: 6,
-    title: "Anchorage To Santiago",
+    title: "Experience the Karakoram Highway",
     image: Santiago,
     location: "European Way, Southampton, United Kingdom",
     category: ["Escorted Tour", "Wildlife"],
@@ -322,7 +322,7 @@ export const popularsData = [
   },
   {
     id: 7,
-    title: "LA Explorer",
+    title: "Wild Deosai And Skardu",
     image: Explorer,
     location: "European Way, Southampton, United Kingdom",
     category: ["Rail Tour", "Tour & Cruise"],
@@ -333,6 +333,104 @@ export const popularsData = [
     reviews: 22,
   },
 ];
+const mountainDestinations = {
+  gilgitBaltistan: {
+    name: "Gilgit-Baltistan",
+    destinations: [
+      {
+        image:
+          "https://images.unsplash.com/photo-1550586678-f7225f03c44b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aHVuemElMjB2YWxsZXklMkMlMjBodW56YSUyQyUyMHBha2lzdGFufGVufDB8fDB8fHww",
+        name: "Hunza Valley",
+        description:
+          "Famous for its breathtaking landscapes, Baltit and Altit Forts, and the stunning Attabad Lake.",
+        attractions: [
+          "Baltit Fort",
+          "Altit Fort",
+          "Attabad Lake",
+          "Eagle’s Nest Viewpoint",
+        ],
+      },
+      {
+        image:
+          "https://images.unsplash.com/photo-1595507205672-ae65e9fda540?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U2thcmR1fGVufDB8fDB8fHww",
+        name: "Skardu",
+        description:
+          "Home to the beautiful Shangrila Resort, Shigar Fort, and the mesmerizing Deosai Plains.",
+        attractions: [
+          "Shangrila Resort",
+          "Shigar Fort",
+          "Satpara Lake",
+          "Deosai National Park",
+        ],
+      },
+      {
+        image:
+          "https://images.unsplash.com/photo-1572099666274-6559498526bf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZmVhcnklMjBtZWFkb3dzfGVufDB8fDB8fHww",
+        name: "Fairy Meadows",
+        description:
+          "A picturesque spot near Nanga Parbat, offering stunning views and trekking opportunities.",
+        attractions: [
+          "Nanga Parbat Base Camp",
+          "Fairy Meadows Cottages",
+          "Beyal Camp",
+        ],
+      },
+    ],
+  },
+  khyberPakhtunkhwa: {
+    name: "Khyber Pakhtunkhwa",
+    destinations: [
+      {
+        image:
+          "https://images.unsplash.com/photo-1599543552889-a5f37428e72c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3dhdCUyMGtwa3xlbnwwfHwwfHx8MA%3D%3D",
+        name: "Swat Valley",
+        description:
+          "Known as the 'Switzerland of Pakistan,' famous for its lush green valleys and Malam Jabba ski resort.",
+        attractions: [
+          "Malam Jabba",
+          "Fizagat Park",
+          "Kalam Valley",
+          "Mahodand Lake",
+        ],
+      },
+      {
+        image: "",
+        name: "Kaghan Valley",
+        description:
+          "A scenic valley with beautiful lakes, including Saif-ul-Malook and Lulusar Lake.",
+        attractions: ["Saif-ul-Malook Lake", "Lulusar Lake", "Babusar Top"],
+      },
+      {
+        image: "",
+        name: "Dir and Kumrat Valley",
+        description:
+          "A hidden paradise with lush green landscapes, waterfalls, and a peaceful environment.",
+        attractions: ["Jahaz Banda", "Panjkora River", "Katora Lake"],
+      },
+    ],
+  },
+  azadKashmir: {
+    name: "Azad Kashmir",
+    destinations: [
+      {
+        image: "",
+        name: "Neelum Valley",
+        description:
+          "Famous for its blue rivers, lush green mountains, and picturesque villages.",
+        attractions: ["Sharda", "Arang Kel", "Ratti Gali Lake"],
+      },
+      {
+        image: "",
+        name: "Rawalakot",
+        description:
+          "A serene valley also known as the 'Pearl Valley' of Kashmir.",
+        attractions: ["Banjosa Lake", "Toli Pir", "Poonch River"],
+      },
+    ],
+  },
+};
+
+export default mountainDestinations;
 
 export const tourDetails = {
   title: "Beautiful Bali with Malaysia",
