@@ -1,23 +1,19 @@
 import React, { useEffect } from "react";
-import {
-  FaMapMarkerAlt,
-  FaUmbrellaBeach,
-  FaSwimmer,
-  FaShip,
-} from "react-icons/fa";
+import { FaMapMarkerAlt, FaTree, FaHiking, FaWater } from "react-icons/fa";
 import Heading from "../../components/Heading/Heading";
-import { beachDestinations } from "../../utils/data";
-const Beaches = () => {
+import {forestDestinations} from "../../utils/data";
+
+const Forests = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div>
-      <Heading heading={"Beautiful Beaches Of Pakistan"} />
+      <Heading heading={"Enchanting Forests Of Pakistan"} />
       <div className="container mx-auto px-4 py-10">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-          {Object.values(beachDestinations).map((region) =>
+          {Object.values(forestDestinations).map((region) =>
             region.destinations.map((destination, index) => (
               <div
                 key={index}
@@ -30,9 +26,9 @@ const Beaches = () => {
                     src={destination.image}
                     alt={destination.name}
                   />
-                  <div className="absolute top-3 left-3 bg-blue-600 text-white px-3 py-1 text-sm font-semibold rounded-lg shadow">
+                  <div className="absolute top-3 left-3 bg-green-600 text-white px-3 py-1 text-sm font-semibold rounded-lg shadow">
                     <FaMapMarkerAlt className="inline-block mr-1" />
-                    {region.name}
+                    {destination.name}
                   </div>
                 </div>
 
@@ -54,14 +50,14 @@ const Beaches = () => {
                       {destination.attractions.map((attraction, i) => (
                         <li key={i} className="flex items-center gap-2">
                           {/* Select Icon Based on Attraction Type */}
-                          {attraction.toLowerCase().includes("beach") && (
-                            <FaUmbrellaBeach className="text-blue-500" />
+                          {attraction.toLowerCase().includes("forest") && (
+                            <FaTree className="text-green-700" />
                           )}
-                          {attraction.toLowerCase().includes("swim") && (
-                            <FaSwimmer className="text-green-600" />
+                          {attraction.toLowerCase().includes("hiking") && (
+                            <FaHiking className="text-brown-600" />
                           )}
-                          {attraction.toLowerCase().includes("boat") && (
-                            <FaShip className="text-yellow-500" />
+                          {attraction.toLowerCase().includes("waterfall") && (
+                            <FaWater className="text-blue-500" />
                           )}
                           {attraction}
                         </li>
@@ -72,7 +68,7 @@ const Beaches = () => {
                   {/* Explore Button */}
                   <a
                     href="/car-hire"
-                    className="mt-6 inline-flex text-decoration-none items-center justify-center w-full bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
+                    className="mt-6 inline-flex text-decoration-none items-center justify-center w-full bg-green-600 text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-green-700 transition duration-300"
                   >
                     Rent And Go!
                   </a>
@@ -86,4 +82,4 @@ const Beaches = () => {
   );
 };
 
-export default Beaches;
+export default Forests;

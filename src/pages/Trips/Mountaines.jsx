@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   FaMapMarkerAlt,
   FaHiking,
@@ -9,6 +9,10 @@ import Heading from "../../components/Heading/Heading";
 import mountainDestinations from "../../utils/data";
 
 const Mountaines = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <Heading heading={"Mighty Mountaines Of Pakistan"} />
@@ -20,16 +24,17 @@ const Mountaines = () => {
                 key={index}
                 className="relative bg-white rounded-2xl shadow-lg overflow-hidden transition-all transform hover:scale-105 hover:shadow-2xl"
               >
+                {console.log("dest is ", destination, " reg is ", region)}
                 {/* Image */}
                 <div className="relative">
                   <img
                     className="w-full h-56 object-cover rounded-t-2xl"
-                    src={destination.image} // Dummy image
+                    src={destination.image}
                     alt={destination.name}
                   />
                   <div className="absolute top-3 left-3 bg-blue-600 text-white px-3 py-1 text-sm font-semibold rounded-lg shadow">
                     <FaMapMarkerAlt className="inline-block mr-1" />{" "}
-                    {destination.name}
+                    {region.name}
                   </div>
                 </div>
 
@@ -68,10 +73,10 @@ const Mountaines = () => {
 
                   {/* Explore Button */}
                   <a
-                    href="#"
-                    className="mt-6 inline-flex items-center justify-center w-full bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
+                    href="/car-hire"
+                    className="mt-6 inline-flex text-decoration-none items-center justify-center w-full bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
                   >
-                    Explore More
+                    Rent And Go!
                   </a>
                 </div>
               </div>

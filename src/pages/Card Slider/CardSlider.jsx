@@ -44,7 +44,10 @@ const CardSlider = () => {
           <p className="mt-2 italic text-sm">
             Plan your next beach trip with these fabulous destinations
           </p>
-          <button className="mt-4 px-4 py-2 bg-darklw text-white font-bold text-xs uppercase tracking-wide rounded-lg hover:bg-gray-800 focus:outline-none focus:ring focus:ring-yellow-400">
+          <button
+            onClick={() => navigate("/beaches")}
+            className="mt-4 px-4 py-2 bg-darklw text-white font-bold text-xs uppercase tracking-wide rounded-lg hover:bg-gray-800 focus:outline-none focus:ring focus:ring-yellow-400"
+          >
             View Trips
           </button>
         </div>
@@ -65,7 +68,10 @@ const CardSlider = () => {
           <p className="mt-2 italic text-sm">
             Plan your next Desert trip with these fabulous destinations
           </p>
-          <button className="mt-4 px-4 py-2 bg-darklw text-white font-bold text-xs uppercase tracking-wide rounded-lg hover:bg-gray-800 focus:outline-none focus:ring focus:ring-yellow-400">
+          <button
+            onClick={() => navigate("/deserts")}
+            className="mt-4 px-4 py-2 bg-darklw text-white font-bold text-xs uppercase tracking-wide rounded-lg hover:bg-gray-800 focus:outline-none focus:ring focus:ring-yellow-400"
+          >
             View Trips
           </button>
         </div>
@@ -86,7 +92,10 @@ const CardSlider = () => {
           <p className="mt-2 italic text-sm">
             Discover serene forests and reconnect with nature's beauty.
           </p>
-          <button className="mt-4 px-4 py-2 bg-darklw text-white font-bold text-xs uppercase tracking-wide rounded-lg hover:bg-gray-800 focus:outline-none focus:ring focus:ring-green-400">
+          <button
+            onClick={() => navigate("/forests")}
+            className="mt-4 px-4 py-2 bg-darklw text-white font-bold text-xs uppercase tracking-wide rounded-lg hover:bg-gray-800 focus:outline-none focus:ring focus:ring-green-400"
+          >
             Explore Forests
           </button>
         </div>

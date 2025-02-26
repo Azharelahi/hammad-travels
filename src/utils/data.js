@@ -352,6 +352,18 @@ const mountainDestinations = {
       },
       {
         image:
+          "https://images.unsplash.com/photo-1602741805960-8fa6d8c6d988?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8a2h1bmplcmFiJTIwcGFzc3xlbnwwfHwwfHx8MA%3D%3D",
+        name: "Khunjerab Pass",
+        description:
+          "The highest paved border crossing in the world, offering breathtaking mountain views and a gateway to China via the Karakoram Highway.",
+        attractions: [
+          "Highest ATM in the World",
+          "China-Pakistan Border",
+          "Snow-Capped Peaks",
+        ],
+      },
+      {
+        image:
           "https://images.unsplash.com/photo-1595507205672-ae65e9fda540?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U2thcmR1fGVufDB8fDB8fHww",
         name: "Skardu",
         description:
@@ -386,22 +398,19 @@ const mountainDestinations = {
         name: "Swat Valley",
         description:
           "Known as the 'Switzerland of Pakistan,' famous for its lush green valleys and Malam Jabba ski resort.",
-        attractions: [
-          "Malam Jabba",
-          "Fizagat Park",
-          "Kalam Valley",
-          "Mahodand Lake",
-        ],
+        attractions: ["Fizagat Park", "Kalam Valley", "Mahodand Lake"],
       },
       {
-        image: "",
+        image:
+          "https://images.unsplash.com/photo-1572707582365-0ee1c8e71173?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bmFyYW4lMjBrYWdoYW58ZW58MHx8MHx8fDA%3D",
         name: "Kaghan Valley",
         description:
           "A scenic valley with beautiful lakes, including Saif-ul-Malook and Lulusar Lake.",
         attractions: ["Saif-ul-Malook Lake", "Lulusar Lake", "Babusar Top"],
       },
       {
-        image: "",
+        image:
+          "https://images.unsplash.com/photo-1596464148416-e0916276a9f5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8a3VtcmF0fGVufDB8fDB8fHww",
         name: "Dir and Kumrat Valley",
         description:
           "A hidden paradise with lush green landscapes, waterfalls, and a peaceful environment.",
@@ -413,14 +422,16 @@ const mountainDestinations = {
     name: "Azad Kashmir",
     destinations: [
       {
-        image: "",
+        image:
+          "https://images.unsplash.com/photo-1651135135875-a6d458a9462d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bmVlbGFtJTIwdmFsbGV5fGVufDB8fDB8fHww",
         name: "Neelum Valley",
         description:
           "Famous for its blue rivers, lush green mountains, and picturesque villages.",
         attractions: ["Sharda", "Arang Kel", "Ratti Gali Lake"],
       },
       {
-        image: "",
+        image:
+          "https://images.unsplash.com/photo-1638395726483-44ce023bacd1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8UmF3YWxha290fGVufDB8fDB8fHww",
         name: "Rawalakot",
         description:
           "A serene valley also known as the 'Pearl Valley' of Kashmir.",
@@ -429,8 +440,129 @@ const mountainDestinations = {
     ],
   },
 };
+export const beachDestinations = {
+  sindh: {
+    name: "Sindh",
+    destinations: [
+      {
+        image:
+          "https://media.istockphoto.com/id/2152420888/photo/camel-riding-along-the-coast-a-tranquil-experience-at-sea-view-beach-karachi-pakistan.jpg?s=612x612&w=0&k=20&c=PkIjGAhnfTnA5dcHfVt9nx5SRx5HyUmbHODDxU3I7GA=",
+        name: "Clifton Beach",
+        description:
+          "A popular beach in Karachi with camel rides, food stalls, and scenic views of the Arabian Sea.",
+        attractions: ["Camel & Horse Riding", "Sunset View", "Food Stalls"],
+      },
+      {
+        image:
+          "https://media.istockphoto.com/id/1335305981/photo/good-morning.jpg?s=612x612&w=0&k=20&c=FXM-W4twaIbBjQxwqS2ypDbsRWLNBmFE33LIY8OP-X4=",
+        name: "Hawke's Bay Beach",
+        description:
+          "A serene beach near Karachi, famous for its crystal-clear waters and turtle nesting areas.",
+        attractions: ["Turtle Watching", "Swimming", "Beach Huts"],
+      },
+      {
+        image:
+          "https://media.istockphoto.com/id/465540233/photo/paradise-point-beach-karachi-sind-pakistan.jpg?s=612x612&w=0&k=20&c=w6HaAEEaZC__zNemSYF8bkAj5ji-Apo1WNhF4tUP51g=",
+        name: "Paradise Point",
+        description:
+          "A natural rock formation and popular picnic spot along the Karachi coastline.",
+        attractions: ["Rock Formations", "Boating", "Jet Skiing"],
+      },
+    ],
+  },
+};
 
 export default mountainDestinations;
+export const desertDestinations = {
+  sindh: {
+    region: "Sindh",
+    destinations: [
+      {
+        name: "Thar Desert",
+        image:
+          "https://media.istockphoto.com/id/1024816978/photo/master-in-desert.jpg?s=612x612&w=0&k=20&c=_BoQ5m0CFydeOHX97KkVhRSvIgO10WmcssIfb-FUHPk=",
+        description:
+          "One of the largest deserts in Pakistan, known for its golden sand dunes and vibrant culture.",
+        attractions: ["Sand Dunes", "Camel Safari", "Folk Music"],
+      },
+    ],
+  },
+  punjab: {
+    region: "Punjab",
+    destinations: [
+      {
+        name: "Cholistan Desert",
+        image:
+          "https://media.istockphoto.com/id/1497969711/photo/derawar-fort-bahawalpur.jpg?s=612x612&w=0&k=20&c=Yp6H_9TwfGj_aYCTAOA0YFExOzKXeH9IxV409ZWVTIY=",
+        description:
+          "A vast desert in Punjab, home to the famous Derawar Fort and traditional nomadic lifestyle.",
+        attractions: ["Derawar Fort", "Jeep Rally", "Traditional Handicrafts"],
+      },
+    ],
+  },
+  balochistan: {
+    region: "Balochistan",
+    destinations: [
+      {
+        name: "Kharan Desert",
+        image:
+          "https://media.istockphoto.com/id/674370214/photo/kenya-from-the-air.jpg?s=612x612&w=0&k=20&c=kpg1H2zpIVOFz_TTjUzFAqVmkV7rIevrpZFasaj7MjQ=",
+        description:
+          "A remote and mesmerizing desert with unique landscapes, once used for nuclear testing.",
+        attractions: ["Vast Sand Landscapes", "Wildlife", "Camping"],
+      },
+    ],
+  },
+};
+export const forestDestinations = {
+  gilgit_baltistan: {
+    region: "Gilgit-Baltistan",
+    destinations: [
+      {
+        name: "Deosai National Park",
+        image:
+          "https://plus.unsplash.com/premium_photo-1670959934143-f646ac034d1c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGVvc2FpJTIwbmF0aW9uYWwlMjBwYXJrfGVufDB8fDB8fHww",
+        description:
+          "Known as the ‘Land of Giants’, Deosai is a high-altitude forest with breathtaking landscapes.",
+        attractions: ["Wildlife", "Camping", "Hiking"],
+      },
+    ],
+  },
+  khyber_pakhtunkhwa: {
+    region: "Khyber Pakhtunkhwa",
+    destinations: [
+      {
+        name: "Ayubia National Park",
+        image:
+          "https://images.unsplash.com/photo-1602600049562-ab0a1645ce3e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QXl1YmlhJTIwTmF0aW9uYWwlMjBQYXJrfGVufDB8fDB8fHww",
+        description:
+          "A dense pine forest with scenic hiking trails, home to leopards and a variety of bird species.",
+        attractions: ["Hiking Trails", "Chair Lifts", "Wildlife"],
+      },
+      {
+        name: "Kumrat Valley",
+        image:
+          "https://images.unsplash.com/photo-1605687711416-adb293b8fbe4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8S3VtcmF0JTIwVmFsbGV5fGVufDB8fDB8fHww",
+        description:
+          "A stunning valley with thick forests, waterfalls, and rivers, offering a perfect retreat for nature lovers.",
+        attractions: ["Camping", "Trekking", "River Rafting"],
+      },
+    ],
+  },
+  punjab: {
+    region: "Punjab",
+    destinations: [
+      {
+        name: "Changa Manga Forest",
+        image:
+          "https://images.unsplash.com/photo-1511497584788-876760111969?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8fDB8fHww",
+        description:
+          "One of the largest man-made forests in the world, offering boating, cycling, and wildlife exploration.",
+        attractions: ["Boating", "Cycling", "Wildlife Park", "Picnic Spots"],
+      },
+    ],
+  },
+};
 
 export const tourDetails = {
   title: "Beautiful Bali with Malaysia",
