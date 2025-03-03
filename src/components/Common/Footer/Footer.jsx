@@ -109,12 +109,12 @@ const Footer = () => {
         </Container>
       </footer>
 
-      <div
+      <div 
         id="back-top"
         onClick={scrollTop}
         className={visible ? "active" : ""}
       >
-        <i className="bi bi-arrow-up"></i>
+        <i className="bi bi-arrow-up "></i>
       </div>
     </>
   );

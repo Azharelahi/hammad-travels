@@ -1,8 +1,8 @@
 import { FaWhatsapp, FaPhone } from "react-icons/fa";
-
+import "./floating.css"
 const FloatingButtons = () => {
   return (
-    <div className="fixed bottom-5 left-5 md:bottom-3 md:left-3 flex flex-col gap-3 z-50">
+    <div className="fixed bottom-5 left-5 md:bottom-3 md:left-3 flex flex-col gap-3 float-icons">
       {/* WhatsApp Button */}
       <a
         href="https://wa.me/923341111427" // Replace with your number

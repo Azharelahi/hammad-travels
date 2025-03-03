@@ -1,6 +1,9 @@
 footer {
   background: black;
+}
 
+ListGroup {
+  z-index: 1;
 }
 
 footer h4 {
@@ -55,7 +58,7 @@ footer .bdr {
 
 #back-top {
   opacity: 0;
-  z-index: 99999;
+  z-index: 4;
   font-size: 26px;
   color: white;
   line-height: 47px;

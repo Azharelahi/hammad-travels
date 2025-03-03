@@ -15,6 +15,7 @@ import Mountaines from "./pages/Trips/Mountaines";
 import Beaches from "./pages/Trips/Beach";
 import Deserts from "./pages/Trips/Desert";
 import Forests from "./pages/Trips/Forests";
+import CarsGallery from "./pages/Our Cars Gallery/CarsGallery";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="/beaches" element={<Beaches />} />
           <Route path="/deserts" element={<Deserts />} />
           <Route path="/forests" element={<Forests />} />
+          <Route path="/gallery" element={<CarsGallery />} />
         </Routes>
       </div>
       <FloatingButtons /> {/* Floating Buttons added here */}

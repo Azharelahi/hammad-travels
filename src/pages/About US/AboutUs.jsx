@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./about.css";
 import img from "./../../assets/images/logo/logo.png";
+import TeamSection from "../../components/Our Team/TeamSection";
 const AboutUs = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -18,7 +19,7 @@ const AboutUs = () => {
       <section className="about-section">
         <div className="main-div">
           <div className="left-div">
-            <h2>About Us!</h2>
+            <h2 className="text-4xl font-bold text-center text-gray-800">About Us!</h2>
             <p>
               At Hammad Travels, we specialize in providing top-quality travel
               and rental services to make your journey smooth and memorable.
@@ -38,7 +39,7 @@ const AboutUs = () => {
       <hr />
       {/* Why Choose Us Section */}
       <section className="why-choose-us">
-        <h2>Why Us?</h2>
+        <h2 className="text-4xl font-bold text-center text-gray-800">Why Us?</h2>
         <div className="features">
           <div className="feature">
             <h3>✅ Affordable Pricing</h3>
@@ -58,10 +59,10 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-
+<TeamSection/>
       {/* Our Services */}
       <section className="our-services">
-        <h2>Our Services</h2>
+        <h2 className="text-4xl font-bold text-center text-gray-800">Our Services</h2>
         <ul>
           <li>✈️ Airport Transfers</li>
           <li>🚘 Daily & Monthly Car Rentals</li>
@@ -72,7 +73,7 @@ const AboutUs = () => {
 
       {/* Testimonials */}
       <section className="testimonials">
-        <h2>What Our Customers Say</h2>
+        <h2 className="text-4xl font-bold text-center text-gray-800">What Our Customers Say</h2>
         <div className="testimonial">
           <p>
             "Hammad Travels made my trip stress-free! The car was in perfect
