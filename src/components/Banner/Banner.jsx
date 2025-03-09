@@ -3,7 +3,7 @@ import { Carousel } from "react-bootstrap";
 import sliderImg from "../../assets/images/slider/1.png";
 import sliderImg1 from "../../assets/images/slider/2.png";
 import "../Banner/banner.css";
-
+import { Link } from "react-router-dom";
 const Banner = () => {
   return (
     <>
@@ -21,6 +21,7 @@ const Banner = () => {
                   destinations, unique cultures, and unforgettable experiences.
                   Start your adventure today!
                 </p>
+                <a href="/contact" className="Rent-button"> Rent Now</a>
               </div>
             </Carousel.Caption>
           </Carousel.Item>
@@ -37,6 +38,7 @@ const Banner = () => {
                   mountains, embark on a journey to the most beautiful places on
                   Earth. Let’s make memories!
                 </p>
+                <a href="/contact" className="Rent-button"> Rent Now</a>
               </div>
             </Carousel.Caption>
           </Carousel.Item>

@@ -1,7 +1,14 @@
 import React, { useEffect } from "react";
+import { motion } from "framer-motion";
 import "./about.css";
 import img from "./../../assets/images/logo/logo.png";
 import TeamSection from "../../components/Our Team/TeamSection";
+
+const fadeIn = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } },
+};
+
 const AboutUs = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -10,13 +17,25 @@ const AboutUs = () => {
   return (
     <div className="about-us-container">
       {/* Hero Section */}
-      <section className="hero-section">
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={fadeIn}
+        className="hero-section"
+      >
         <h1>Welcome to Hammad Travels</h1>
         <p>Your Trusted Partner for Hassle-Free Travel & Car Rentals</p>
-      </section>
+      </motion.section>
 
       {/* About Section */}
-      <section className="about-section">
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={fadeIn}
+        className="about-section"
+      >
         <div className="main-div">
           <div className="left-div">
             <h2 className="text-4xl font-bold text-center text-gray-800">About Us!</h2>
@@ -35,10 +54,17 @@ const AboutUs = () => {
             <img src={img} alt="there is an image" />
           </div>
         </div>
-      </section>
+      </motion.section>
       <hr />
+
       {/* Why Choose Us Section */}
-      <section className="why-choose-us">
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={fadeIn}
+        className="why-choose-us"
+      >
         <h2 className="text-4xl font-bold text-center text-gray-800">Why Us?</h2>
         <div className="features">
           <div className="feature">
@@ -58,10 +84,18 @@ const AboutUs = () => {
             <p>Our customer support team is always available to assist you.</p>
           </div>
         </div>
-      </section>
-<TeamSection/>
+      </motion.section>
+
+      <TeamSection />
+
       {/* Our Services */}
-      <section className="our-services">
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={fadeIn}
+        className="our-services"
+      >
         <h2 className="text-4xl font-bold text-center text-gray-800">Our Services</h2>
         <ul>
           <li>✈️ Airport Transfers</li>
@@ -69,10 +103,16 @@ const AboutUs = () => {
           <li>🏝️ Tour & Travel Packages</li>
           <li>🚖 City & Intercity Transport</li>
         </ul>
-      </section>
+      </motion.section>
 
       {/* Testimonials */}
-      <section className="testimonials">
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={fadeIn}
+        className="testimonials"
+      >
         <h2 className="text-4xl font-bold text-center text-gray-800">What Our Customers Say</h2>
         <div className="testimonial">
           <p>
@@ -88,7 +128,7 @@ const AboutUs = () => {
           </p>
           <h4>- Ali Khan</h4>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 };

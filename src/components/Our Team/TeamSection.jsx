@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import ceo from "./../../assets/images/Our Team/ceo.jpg";
 import ceo2 from "./../../assets/images/Our Team/assad.jpg";
 import ceo3 from "./../../assets/images/Our Team/yasir.jpg";
@@ -35,20 +36,39 @@ const teamMembers = [
   },
 ];
 
+const slideInLeft = {
+  hidden: { opacity: 0, x: -100 },
+  visible: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeOut" } },
+};
+
 const TeamSection = () => {
   return (
     <section className="max-w-screen-lg mx-auto px-4 py-12">
-      <h2 className="text-4xl font-bold text-center text-gray-800">
-         Executives!
-      </h2>
-      <p className="text-center text-gray-600 mt-2">
+      <motion.h2 
+        initial={{ opacity: 0, x: -50 }} 
+        animate={{ opacity: 1, x: 0 }} 
+        transition={{ duration: 1 }}
+        className="text-4xl font-bold text-center text-gray-800"
+      >
+        Executives!
+      </motion.h2>
+      <motion.p 
+        initial={{ opacity: 0, x: 50 }} 
+        animate={{ opacity: 1, x: 0 }} 
+        transition={{ duration: 0.3, delay: 0.3 }}
+        className="text-center text-gray-600 mt-2"
+      >
         Our leadership team brings expertise and vision to drive success.
-      </p>
-
+      </motion.p>
+      
       <div className="grid gap-8 mt-10 sm:grid-cols-2 lg:grid-cols-4">
         {teamMembers.map((member, index) => (
-          <div
+          <motion.div
             key={index}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={slideInLeft}
             className={`relative flex flex-col items-center p-6 rounded-lg transition transform hover:scale-105 ${member.style}`}
           >
             <img
@@ -62,7 +82,7 @@ const TeamSection = () => {
             <p className={`mt-1 text-sm font-medium ${member.textStyle}`}>
               {member.role}
             </p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

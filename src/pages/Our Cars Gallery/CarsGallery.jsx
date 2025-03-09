@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Heading from "../../components/Heading/Heading";
 import { motion } from "framer-motion";
 import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css"; // Ensure Lightbox styles are imported
+import "yet-another-react-lightbox/styles.css";
 import car1 from "./../../assets/images/cars gallery/car1.jpg";
 import car2 from "./../../assets/images/cars gallery/civic.jpeg";
 import car3 from "./../../assets/images/cars gallery/civic back.jpeg";
@@ -38,6 +38,7 @@ import car32 from "./../../assets/images/cars gallery/gc white4.jpeg";
 import car33 from "./../../assets/images/cars gallery/gc white and brown.jpeg";
 import car34 from "./../../assets/images/cars gallery/gcs.jpeg";
 import car35 from "./../../assets/images/cars gallery/coaster new.jpeg";
+
 const cars = [
   { src: car2, alt: "Car 2" },
   { src: car3, alt: "Car 3" },
@@ -79,7 +80,9 @@ const cars = [
 const CarsGallery = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
-
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   const slides = cars.map((car) => ({ src: car.src }));
 
   return (
@@ -91,8 +94,12 @@ const CarsGallery = () => {
             <motion.div
               key={index}
               className="relative overflow-hidden rounded-2xl cursor-pointer"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.08, rotateZ: -3 }}
               whileTap={{ scale: 0.95 }}
+              initial={{ opacity: 0, y: 30 }} // Smaller y-offset for quicker feel
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }} // Runs only once
+              transition={{ duration: 0.5, ease: "easeOut" }} // Faster transition
               onClick={() => {
                 setPhotoIndex(index);
                 setIsOpen(true);
@@ -102,9 +109,6 @@ const CarsGallery = () => {
                 src={car.src}
                 alt={car.alt}
                 className="w-full h-48 object-cover rounded-2xl"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
               />
             </motion.div>
           ))}

@@ -69,7 +69,7 @@ const Home = () => {
   return (
     <>
       <Banner />
-      <AdvanceSearch />
+      {/* <AdvanceSearch /> */}
       <Features />
 
       {/* tour seciton start */}

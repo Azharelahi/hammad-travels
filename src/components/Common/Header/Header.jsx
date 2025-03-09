@@ -111,7 +111,7 @@ const Header = () => {
           <div className="ms-md-4 ms-2">
             <NavLink
               to="/car-hire"
-              className="primaryBtn d-none d-sm-inline-block"
+              className="Rent-Now d-none d-sm-inline-block"
             >
               Rent Now
             </NavLink>

@@ -19,6 +19,71 @@
   /* Subtle Border */
 }
 
+/* Apply the effect to both .Rent-button and .Rent-Now */
+
+.Rent-Now {
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: bold;
+  color: azure;
+  border: 2px solid azure;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  /* Neon Glow */
+  box-shadow: 0 0 10px rgba(173, 216, 230, 0.8),
+    0 0 20px rgba(173, 216, 230, 0.6),
+    0 0 40px rgba(173, 216, 230, 0.4);
+}
+
+/* Hover Effects */
+
+.Rent-Now:hover {
+  color: black;
+  background: azure;
+  box-shadow: 0 0 15px rgba(173, 216, 230, 1),
+    0 0 30px rgba(173, 216, 230, 0.8),
+    0 0 60px rgba(173, 216, 230, 0.6),
+    0 0 100px rgba(173, 216, 230, 0.4);
+  transform: scale(1.05);
+}
+
+/* Glowing Edge Animation */
+
+.Rent-Now::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  border-radius: 10px;
+  border: 2px solid azure;
+  opacity: 0;
+  box-shadow: 0 0 15px azure;
+  transition: opacity 0.4s ease-in-out;
+}
+
+
+.Rent-Now:hover::before {
+  opacity: 1;
+}
+
+/* Click Effect */
+
+.Rent-Now:active {
+  transform: scale(0.98);
+  box-shadow: 0 0 5px rgba(173, 216, 230, 0.8),
+    0 0 10px rgba(173, 216, 230, 0.6),
+    0 0 20px rgba(173, 216, 230, 0.4);
+}
 
 .logo {
   font-family: Oleo Script Swash Caps;

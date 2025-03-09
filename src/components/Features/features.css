@@ -1,40 +1,108 @@
-.feature-section{
-    padding: 40px 0px;
+/* Feature Section */
+.feature-section {
+    padding: 40px 0;
     overflow: hidden;
+    background-color: rgba(182, 197, 197, 0.219);
 }
 
+/* Remove border from active slides */
 .feature-section .slick-active {
     border: none !important;
 }
 
-
+/* Card Styles */
 .feature-section .card {
     border: none !important;
     text-align: center;
-    padding: 0px 14px;
+    padding: 14px;
     margin-bottom: 14px;
+    background: rgba(255, 255, 255, 0.2); /* Glassmorphism Effect */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    height: 320px; /* Fixed height for consistency */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures even spacing */
 }
 
+/* Background Logo inside each Card */
+.feature-section .card::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    background: url('../../assets/images/logo/logo4.png') no-repeat center center;
+    background-size: contain;
+    opacity: 0.1; /* Adjust visibility */
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
 
+/* Ensures content stays above the background logo */
+.feature-section .card * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Card Content Layout */
+.feature-section .card .card-body {
+    flex-grow: 1; /* Ensures content area grows */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Image inside Card */
 .feature-section .card img {
     width: 75px;
-    margin: 0px auto;
+    margin: 0 auto;
     margin-bottom: 14px;
 }
 
-.feature-section .card  .card-title {
+/* Card Title */
+.feature-section .card .card-title {
     font-size: var(--subTitle);
-    padding: 12px 0px;
+    padding: 12px 0;
     font-weight: bold;
 }
 
-.feature-section .card  .card-text {
+/* Card Description (Text) */
+.feature-section .card .card-text {
+    flex-grow: 1; /* Pushes content evenly, keeping space when text is short */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 50px; /* Prevents collapsing */
     font-size: var(--bodyText);
     line-height: 22px;
-    color:var(--textclr);
-
-}
-.feature-section .card:hover .card-title{
-    color:var(--primaryClr)
+    color: var(--textclr);
 }
 
+/* Hover Effect */
+.feature-section .card:hover .card-title {
+    color: var(--primaryClr);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .feature-section .card {
+        height: 280px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .feature-section .card {
+        height: 260px;
+    }
+
+    .feature-section .card img {
+        width: 60px;
+    }
+}
