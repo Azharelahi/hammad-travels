@@ -18,7 +18,7 @@ import CardSlider from "../Card Slider/CardSlider";
 
 const Home = () => {
   var settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     autoplay: true,
     slidesToShow: 4,
@@ -120,34 +120,34 @@ const Home = () => {
         </Container>
       </section>
 
-      <section className="call_us">
-        <Container>
-          <Row className="align-items-center">
-            <Col md="8">
-              <h5 className="title">CALL TO ACTION</h5>
-              <h2 className="heading">
-                READY FOR UNFORGATABLE TRAVEL. REMEMBER US!
-              </h2>
-              <p className="text">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s,{" "}
-              </p>
-            </Col>
-            <Col md="4" className="text-center mt-3 mt-md-0">
-              <a
-                href="tel:+923341111427"
-                className="secondary_btn bounce"
-                rel="no"
-              >
-                {" "}
-                Contact Us !
-              </a>
-            </Col>
-          </Row>
-        </Container>
-        <div className="overlay"></div>
-      </section>
+    <section className="call_us">
+  <Container>
+    <Row className="align-items-center">
+      <Col md="8">
+        <h5 className="title">BOOK YOUR NEXT ADVENTURE</h5>
+        <h2 className="heading">
+          EXPLORE THE WORLD WITH <span>HAMMAD TRAVELS!</span>
+        </h2>
+        <p className="text">
+          Discover breathtaking destinations, hassle-free bookings, and 
+          unforgettable experiences. Whether it's a relaxing getaway or an 
+          adventurous trip, we make your travel dreams a reality.
+        </p>
+      </Col>
+      <Col md="4" className="text-center mt-3 mt-md-0">
+        <a
+          href="tel:+923341111427"
+          className="secondary_btn bounce"
+          rel="no"
+        >
+          Contact Us Now!
+        </a>
+      </Col>
+    </Row>
+  </Container>
+  <div className="overlay"></div>
+</section>
+
 
       <section className="gallery">
         <Container>

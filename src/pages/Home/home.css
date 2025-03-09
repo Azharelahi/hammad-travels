@@ -84,6 +84,27 @@
     padding: 5px 0 10px 0;
   }
 }
+@media (max-width: 768px) {
+  .call_us {
+    text-align: center;
+  }
+
+  .call_us .title,
+  .call_us .heading,
+  .call_us .text {
+    text-align: justify;
+  }
+
+  .call_us .text {
+    margin: 0 auto; /* Centers the text */
+    max-width: 90%; /* Limits width for better readability */
+  }
+
+  .call_us .secondary_btn {
+    display: inline-block;
+    margin-top: 15px;
+  }
+}
 
 @media only screen and (max-width: 420px) {
   .call_us {

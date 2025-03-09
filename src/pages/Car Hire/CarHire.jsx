@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Heading from "../../components/Heading/Heading";
 import civic from "./../../assets/images/cars/civic.jpg";
 import revo from "./../../assets/images/cars/revo.jpg";
+import "animate.css";
 import { useNavigate } from "react-router-dom";
 const CarHire = () => {
   const navigate = useNavigate();
@@ -127,6 +128,9 @@ const CarHire = () => {
         "Dominate the roads and off-road trails with the Toyota Revo 4x4, a robust and powerful pickup truck. Whether you're transporting cargo or seeking adventure in rugged landscapes, this vehicle is designed to perform. Rent now with Hammad Travels and explore with confidence.",
     },
   ];
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>
@@ -149,7 +153,7 @@ const CarHire = () => {
                   <h2 className="text-sm text-gray-500 uppercase tracking-widest mb-1">
                     {car.type}
                   </h2>
-                  <h1 className="text-lg font-bold text-gray-900 mb-2">
+                  <h1 className="text-lg font-bold text-gray-900 mb-2 ">
                     {car.name}
                   </h1>
                   <div className="w-full mb-3 text-gray-700 text-sm grid grid-cols-2 gap-x-2 gap-y-1 text-left">
@@ -172,7 +176,7 @@ const CarHire = () => {
                   <span className="text-2xl font-bold text-[#5394d2]">
                     {car.price}
                   </span>
-                  <button className="mt-4 px-6 py-2 bg-[#5394d2] text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition">
+                  <button className="animate-tadaWithDelay mt-4 px-6 py-2 bg-[#5394d2] text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition">
                     Rent Now
                   </button>
                 </div>

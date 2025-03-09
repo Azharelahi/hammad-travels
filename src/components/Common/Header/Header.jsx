@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import "animate.css";
+
 import img from "./../../../assets/images/logo/logo4.png";
 import {
   Container,
@@ -28,13 +30,20 @@ const Header = () => {
   });
 
   // sticky Header
-  const isSticky = (e) => {
-    const header = document.querySelector(".header-section");
-    const scrollTop = window.scrollY;
-    scrollTop >= 120
-      ? header.classList.add("is-sticky")
-      : header.classList.remove("is-sticky");
-  };
+ const isSticky = () => {
+  const header = document.querySelector(".header-section");
+  const rentNowBtn = document.querySelector(".Rent-Now"); // Target Rent Now button
+  const scrollTop = window.scrollY;
+
+  if (scrollTop >= 120) {
+    header.classList.add("is-sticky");
+    rentNowBtn.classList.add("black-button"); // Add class for black color
+  } else {
+    header.classList.remove("is-sticky");
+    rentNowBtn.classList.remove("black-button"); // Remove class when not sticky
+  }
+};
+
 
   return (
     <header className="header-section">
@@ -111,7 +120,7 @@ const Header = () => {
           <div className="ms-md-4 ms-2">
             <NavLink
               to="/car-hire"
-              className="Rent-Now d-none d-sm-inline-block"
+              className="Rent-Now d-none d-sm-inline-block animate__animated animate__pulse animate__infinite"
             >
               Rent Now
             </NavLink>

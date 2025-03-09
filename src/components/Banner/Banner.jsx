@@ -3,6 +3,7 @@ import { Carousel } from "react-bootstrap";
 import sliderImg from "../../assets/images/slider/1.png";
 import sliderImg1 from "../../assets/images/slider/2.png";
 import "../Banner/banner.css";
+import "animate.css";
 import { Link } from "react-router-dom";
 const Banner = () => {
   return (
@@ -16,12 +17,18 @@ const Banner = () => {
                 <h5 className="heading-des1">
                   JOURNEY TO <span>EXPLORE THE WORLD</span>
                 </h5>
-                <p className="sub_text">
+                <p className="sub_text animate__animated animate__backInDown">
                   🌍 Unleash the Explorer in You! Discover breathtaking
                   destinations, unique cultures, and unforgettable experiences.
                   Start your adventure today!
                 </p>
-                <a href="/contact" className="Rent-button"> Rent Now</a>
+                <a
+                  href="/car-hire"
+                  className="Rent-button animate__animated animate__pulse animate__infinite"
+                >
+                  {" "}
+                  Rent Now
+                </a>
               </div>
             </Carousel.Caption>
           </Carousel.Item>
@@ -31,14 +38,21 @@ const Banner = () => {
             <Carousel.Caption>
               <div className="slider_des">
                 <h5 className="heading-des1">
-                  DISCOVER <span>STUNNING DESTINATIONS</span>
+                  DISCOVER STUNNING<span> DESTINATIONS</span>
                 </h5>
-                <p className="sub_text">
+                <p className="sub_text animate__animated animate__backInDown">
                   🏝️ Your Dream Vacation Awaits! From serene beaches to majestic
                   mountains, embark on a journey to the most beautiful places on
                   Earth. Let’s make memories!
                 </p>
-                <a href="/contact" className="Rent-button"> Rent Now</a>
+                <a
+                  href="/car-hire
+                  "
+                  className="Rent-button animate__animated animate__pulse animate__infinite"
+                >
+                  {" "}
+                  Rent Now
+                </a>
               </div>
             </Carousel.Caption>
           </Carousel.Item>

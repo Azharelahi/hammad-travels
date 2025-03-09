@@ -2,6 +2,22 @@
 <html lang="en">
 
 <head>
+<style>
+  @keyframes tadaWithDelay {
+    0%, 100% { transform: scale(1); }
+    10%, 30% { transform: scale(1.1) rotate(3deg); }
+    20%, 40% { transform: scale(1.1) rotate(-3deg); }
+    50% { transform: scale(1.2) rotate(0deg); }
+    60% { transform: scale(1); }
+    70%, 100% { transform: scale(1); } /* Holds still */
+  }
+
+  .animate-tadaWithDelay {
+    animation: tadaWithDelay 4s ease-in-out infinite;
+    animation-delay: 4s; /* Pause after each animation */
+  }
+</style>
+
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />

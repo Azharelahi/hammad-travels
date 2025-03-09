@@ -85,6 +85,24 @@
     0 0 20px rgba(173, 216, 230, 0.4);
 }
 
+/* When Sticky */
+.is-sticky .Rent-Now {
+  color: black !important; /* Text should be black */
+  background: transparent !important; /* Background should be transparent */
+  border: 2px solid black !important; /* Border should be black */
+  box-shadow: 0 0 10px black !important; /* Box shadow should be black */
+}
+
+/* On Hover */
+.is-sticky .Rent-Now:hover {
+  color: black !important; /* Text remains black */
+  background: white !important; /* Background should be white */
+  border: 2px solid white !important; /* Border should be white */
+  box-shadow: 0 0 10px rgb(14, 14, 14) !important; /* Box shadow should be white */
+}
+
+
+
 .logo {
   font-family: Oleo Script Swash Caps;
   font-size: 40px;
