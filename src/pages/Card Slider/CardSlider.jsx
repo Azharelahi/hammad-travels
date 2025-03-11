@@ -52,12 +52,14 @@ const CardSlider = () => {
             <p className="mt-2 italic text-sm text-white text-center">
               {card.desc}
             </p>
-            <button
-              onClick={() => navigate(card.link)}
-              className="mt-4 px-4 py-2 bg-darklw text-white font-bold text-xs uppercase tracking-wide rounded-lg hover:bg-gray-800 focus:outline-none focus:ring focus:ring-yellow-400"
-            >
-              View Trips
-            </button>
+           <button
+  onClick={() => navigate(card.link)}
+  className="mt-4 px-4 py-2 bg-darklw text-white text-xs uppercase tracking-wide rounded-lg transition duration-300 
+             hover:bg-white/10 hover:backdrop-blur-md hover:border hover:border-white focus:outline-none focus:ring focus:ring-yellow-400"
+>
+  View Trips
+</button>
+
           </motion.div>
         </div>
       ))}

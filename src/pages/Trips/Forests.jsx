@@ -28,7 +28,7 @@ const Forests = () => {
                   />
                   <div className="absolute top-3 left-3 bg-green-600 text-white px-3 py-1 text-sm font-semibold rounded-lg shadow">
                     <FaMapMarkerAlt className="inline-block mr-1" />
-                    {destination.name}
+                    {region.region}
                   </div>
                 </div>
 

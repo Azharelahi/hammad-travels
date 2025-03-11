@@ -5,7 +5,6 @@ import { Navigate, NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const Cards = ({ destination }) => {
-
   return (
     <>
       <div className="img-box">

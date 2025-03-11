@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import Heading from "../../components/Heading/Heading";
 
 const Tours = () => {
+   useEffect(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, []);
   return (
     <div>
       <Heading heading={"Our Tours"} />

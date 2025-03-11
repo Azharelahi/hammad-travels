@@ -1,120 +1,162 @@
-import React, { useState } from "react";
-import "../Footer/footer.css";
+import React, { useState, useEffect } from "react";
 import { Col, Container, Row, ListGroup } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-
+import { ChevronUp, MapPin } from "lucide-react";
+import "../Footer/footer.css";
+import { Mail, Phone } from "lucide-react";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 const Footer = () => {
   const [visible, setVisible] = useState(false);
 
-  const toggleVisible = () => {
-    const scrolled = document.documentElement.scrollTop;
-    if (scrolled > 300) {
-      setVisible(true);
-    } else if (scrolled <= 300) {
-      setVisible(false);
-    }
-  };
+  useEffect(() => {
+    const toggleVisible = () => {
+      setVisible(window.scrollY > 300);
+    };
+    window.addEventListener("scroll", toggleVisible);
+    return () => window.removeEventListener("scroll", toggleVisible);
+  }, []);
 
   const scrollTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
-
-  if (typeof window !== "undefined") {
-    window.addEventListener("scroll", toggleVisible);
-  }
 
   return (
     <>
-      <footer className="pt-5">
+      <footer className="pt-5 bg-dark text-white">
         <Container>
           <Row>
-            <Col md="3" sm="12" className="quick_link mt-3 mt-md-0 ">
-              <h4 className="mt-lg-0 mt-sm-3">Company </h4>
-              <ListGroup variant="flush">
+            {/* Company */}
+            <Col md="3" sm="6" className="mt-3">
+              <h4 className="footer-title">Hammad Travels</h4>
+              <ListGroup variant="flush" className="footer-list">
                 <ListGroup.Item>
-                  <NavLink to="/">About Us</NavLink>
+                  <ListGroup.Item>
+                    <NavLink
+                      to="/"
+                      onClick={() =>
+                        window.scrollTo({ top: 0, behavior: "smooth" })
+                      }
+                    >
+                      Home
+                    </NavLink>
+                  </ListGroup.Item>
                 </ListGroup.Item>
                 <ListGroup.Item>
-                  <NavLink to="/">News</NavLink>
+                  <NavLink to="/car-hire">Available Cars</NavLink>
                 </ListGroup.Item>
                 <ListGroup.Item>
-                  <NavLink to="/">Faq</NavLink>
-                </ListGroup.Item>
-              </ListGroup>
-            </Col>
-            <Col md="3" sm="12" className="quick_link mt-3 mt-md-0 ">
-              <h4 className="mt-lg-0 mt-sm-3">Explore </h4>
-              <ListGroup variant="flush">
-                <ListGroup.Item>
-                  <NavLink to="/"> Faq</NavLink>
-                </ListGroup.Item>
-                <ListGroup.Item>
-                  <NavLink to="/">Tour Listings</NavLink>
-                </ListGroup.Item>
-                <ListGroup.Item>
-                  <NavLink to="/"> Destination</NavLink>
+                  <NavLink to="/gallery">Gallery</NavLink>
                 </ListGroup.Item>
               </ListGroup>
             </Col>
-            <Col md="3" sm="12" className="quick_link mt-3 mt-md-0 ">
-              <h4 className="mt-lg-0 mt-sm-3">Quick Link </h4>
-              <ListGroup variant="flush">
-                <ListGroup.Item>
-                  <NavLink to="/"> Home</NavLink>
-                </ListGroup.Item>
-                <ListGroup.Item>
-                  <NavLink to="/">About Us </NavLink>
-                </ListGroup.Item>
-                <ListGroup.Item>
-                  <NavLink to="/"> Contact Us </NavLink>
-                </ListGroup.Item>
-              </ListGroup>
-            </Col>
-            <Col md="3" sm="12" className="location mt-3 mt-md-0 ">
-              <h4 className="mt-lg-0 mt-sm-3">Contact Info </h4>
 
-              <div className="d-flex align-items-center">
-                <p className="pb-2"> Islamabad, CT, PAKISTAN</p>
-              </div>
+            {/* Explore */}
+            <Col md="3" sm="6" className="mt-3">
+              <h4 className="footer-title">Explore</h4>
+              <ListGroup variant="flush" className="footer-list">
+                <ListGroup.Item>
+                  <NavLink to="/faq">FAQ</NavLink>
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  <NavLink to="/terms">Terms of Services</NavLink>
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  <NavLink to="/privacy">Privacy Policy</NavLink>
+                </ListGroup.Item>
+              </ListGroup>
+            </Col>
 
-              <div className="d-flex align-items-top my-2">
-                <i className="bi bi-geo-alt me-3"></i>
-                <a
-                  target="_blank"
-                  href="mailto:contact.hammadtravel@gmail.com"
-                  className="d-block"
-                >
-                  contact.hammadtravel@gmail.com
-                </a>
-              </div>
-              <div className="d-flex align-items-top ">
-                <i className="bi bi-telephone me-3"></i>
-                <a target="_blank" href="tel:+923341111427" className="d-block">
-                  923341111427
-                </a>
-              </div>
+            {/* Quick Links */}
+            <Col md="3" sm="6" className="mt-3">
+              <h4 className="footer-title">Quick Links</h4>
+              <ListGroup variant="flush" className="footer-list">
+                <ListGroup.Item>
+                  <NavLink to="/tours">Tours</NavLink>
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  <NavLink to="/aboutus">About Us</NavLink>
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  <NavLink to="/contact">Contact Us</NavLink>
+                </ListGroup.Item>
+              </ListGroup>
+            </Col>
+
+            {/* Contact Info */}
+            <Col
+              md="3"
+              sm="6"
+              className="mt-3 text-center d-flex flex-column align-items-center"
+            >
+              <h4 className="footer-title">Contact Info</h4>
+              <p className="d-flex align-items-center gap-2">
+                <MapPin size={20} />
+                G9 Markaz , Islamabad, Pakistan
+              </p>
+              <a
+                href="mailto:contact.hammadtravel@gmail.com"
+                className="d-flex align-items-center gap-2 text-white"
+                style={{ textDecoration: "none" }}
+              >
+                <Mail size={20} /> contact.hammadtravel@gmail.com
+              </a>
+              <a
+                href="tel:+923341111427"
+                className="d-flex align-items-center gap-2 text-white mt-2"
+                style={{ textDecoration: "none" }}
+              >
+                <Phone size={20} /> +92 334 1111427
+              </a>
             </Col>
           </Row>
-          <Row className="py-2 bdr mt-3">
-            <Col className="col copyright">
-              <p className="text-light">
-                {" "}
-                @ 2025. Hammad Travels® All rights reserved{" "}
+
+          {/* Copyright Section */}
+          <Row
+            className="mt-4 border-top pt-3 mx-auto d-flex justify-content-center align-items-center flex-wrap"
+            style={{ width: "80%" }}
+          >
+            {/* Copyright Section */}
+            <Col md={6} xs={12} className="text-center mb-2 mb-md-0">
+              <p className="m-0 text-white">
+                © 2025 Hammad Travels®. All rights reserved.
               </p>
+            </Col>
+
+            {/* Social Media Section */}
+            <Col
+              md={6}
+              xs={12}
+              className="text-center d-flex justify-content-center gap-3"
+            >
+              <a
+                href="https://www.facebook.com/share/1MTGNTf85v/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white"
+              >
+                <FaFacebookF size={24} />
+              </a>
+              <a
+                href="https://www.instagram.com/hammad.travelservices/?igsh=dTVoNXhzdTk1cG55#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white"
+              >
+                <FaInstagram size={24} />
+              </a>
             </Col>
           </Row>
         </Container>
       </footer>
 
-      <div 
+      {/* Scroll to Top Button */}
+      <div
         id="back-top"
         onClick={scrollTop}
-        className={visible ? "active" : ""}
+        className={`scroll-top ${visible ? "visible" : ""}`}
+        aria-label="Scroll to top"
       >
-        <i className="bi bi-arrow-up "></i>
+        <ChevronUp size={24} />
       </div>
     </>
   );

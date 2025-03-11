@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -251,7 +254,7 @@ const styles = {
     marginTop: "15px",
     border: "none",
   },
-    '@media screen and (max-width: 768px)': {
+  "@media screen and (max-width: 768px)": {
     formContainer: {
       width: "100%",
       backgroundColor: "aqua",

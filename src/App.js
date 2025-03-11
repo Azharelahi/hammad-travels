@@ -16,6 +16,9 @@ import Beaches from "./pages/Trips/Beach";
 import Deserts from "./pages/Trips/Desert";
 import Forests from "./pages/Trips/Forests";
 import CarsGallery from "./pages/Our Cars Gallery/CarsGallery";
+import FAQ from "./pages/FAQ";
+import TermsOfServices from "./pages/TermsOfServices";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function App() {
   return (
@@ -36,6 +39,9 @@ function App() {
           <Route path="/deserts" element={<Deserts />} />
           <Route path="/forests" element={<Forests />} />
           <Route path="/gallery" element={<CarsGallery />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/terms" element={<TermsOfServices />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
         </Routes>
       </div>
       <FloatingButtons /> {/* Floating Buttons added here */}

@@ -6,7 +6,7 @@ import tour8 from "../assets/images/tour/nah-trang.png";
 import tour9 from "../assets/images/tour/phuket.png";
 import tour10 from "../assets/images/tour/paris.png";
 import tour11 from "../assets/images/tour/malaysia.png";
-
+import murree1 from "../assets/images/places/murree1.jpg";
 // populars img
 import Anchorage from "../assets/images/popular/Anchorage To La Paz.jpg";
 import Singapore from "../assets/images/popular/Discover Singapore.png";
@@ -34,26 +34,41 @@ export const destinationsData = [
     distance: "64 km from Islamabad (1.5-hour drive)",
     tours: "7 tours and activities",
     image:
-      "https://images.unsplash.com/photo-1585654766816-8a9fe569d445?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVycmVlfGVufDB8MXwwfHx8MA%3D%3D",
+      "https://media.istockphoto.com/id/1786393441/photo/a-road-between-beautiful-colors-of-autumn-in-a-pine-forest-on-the-mountain-slopes.jpg?s=612x612&w=0&k=20&c=XPaKXGhOVvCsb6qBMfxV7PJ4mbFZlREqoZu85p-1zFo=",
     link: "murree-tours",
-    shortDes: "A beautiful hill station with breathtaking views.",
+    shortDes:
+      "A beautiful hill station with breathtaking views and a popular tourist destination.",
     detailedDes:
-      "Murree is a popular hill station known for its lush green hills, snowfall in winters, and colonial-era architecture. Enjoy the scenic Mall Road, Pindi Point, and Kashmir Point.",
+      "Murree, often referred to as the 'Queen of the Hills,' is a picturesque hill station located in the Galyat region of the Pir Panjal Range. It sits at an elevation of 2,291 meters (7,516 feet) and is known for its lush green hills, colonial-era architecture, and scenic beauty. The town was established in 1851 by the British as a summer retreat and has since become a major tourist destination. Murree offers attractions like Mall Road, Pindi Point, Kashmir Point, and the Patriata chairlift, making it a year-round getaway for both nature lovers and adventure seekers. The region experiences cold, snowy winters and mild summers, making it an ideal escape from the hustle and bustle of city life. Visitors can enjoy hiking trails, panoramic mountain views, and local cuisine while staying in well-equipped resorts and hotels. Murree remains a must-visit location for anyone exploring the beauty of northern Pakistan.",
     hotels: [
       "Shangrila Resort Murree",
       "Pearl Continental Bhurban",
       "Lockwood Hotel Murree",
+      "Maisonette Firhill Murree",
+      "Grand Taj Hotel Murree",
     ],
     convinceMessage:
-      "Planning your Murree trip? Leave everything to us and enjoy a hassle-free journey with the best accommodations and guided tours!",
+      "Planning your Murree trip? Leave everything to us and enjoy a hassle-free journey with the best accommodations and guided tours! Whether you seek adventure, relaxation, or breathtaking scenery, we've got you covered.",
     subImages: [
       {
-        url: "https://images.unsplash.com/photo-1580910051072-445b5a050032?w=600&auto=format&fit=crop&q=60",
-        description: "Snow-covered streets of Murree.",
+        url: murree1,
+        description: "Mall Road, Murree, Pakistan",
+        Mdes: "A famous street in Murree known for its vibrant markets and snow-covered scenery in winter.",
       },
       {
         url: "https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?w=600&auto=format&fit=crop&q=60",
-        description: "Sunset view from Kashmir Point.",
+        description: "Kashmir Point, Murree, Pakistan",
+        Mdes: "A scenic viewpoint offering breathtaking views of the Kashmir mountains.",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1616598021444-8e208b8d6e74?w=600&auto=format&fit=crop&q=60",
+        description: "Pindi Point, Murree, Pakistan",
+        Mdes: "A popular viewpoint with a chairlift offering panoramic views of the Murree hills.",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1582719471446-c6fc8906c972?w=600&auto=format&fit=crop&q=60",
+        description: "Patriata (New Murree) Chairlift, Pakistan",
+        Mdes: "A famous chairlift ride providing stunning aerial views of Murree's lush green hills.",
       },
     ],
   },
@@ -65,22 +80,31 @@ export const destinationsData = [
     image:
       "https://images.unsplash.com/photo-1592298483937-d76c1a24dbca?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8SHVuemElMjB2YWxsZXl8ZW58MHwxfDB8fHww",
     link: "hunza-valley-tours",
-    shortDes: "A paradise on Earth with stunning landscapes.",
+    shortDes:
+      "A paradise on Earth with breathtaking landscapes, towering peaks, and cultural heritage.",
     detailedDes:
-      "Hunza Valley offers mesmerizing views of the Karakoram mountains, Attabad Lake, Baltit Fort, and the historic Altit Fort. A must-visit for nature and adventure lovers.",
+      "Hunza Valley, often referred to as 'Heaven on Earth,' is located in the Gilgit-Baltistan region of Pakistan. Surrounded by the majestic Karakoram Range, this valley is famous for its stunning views, historical forts, and vibrant local culture. Major attractions include Attabad Lake, a turquoise-blue lake formed due to a landslide in 2010; Baltit Fort, an ancient royal palace over 700 years old; and Altit Fort, a UNESCO-recognized heritage site. The valley is also home to the world's most hospitable people and offers breathtaking viewpoints such as Eagle's Nest, where visitors can witness some of the highest peaks on the planet, including Rakaposhi, Ultar Sar, and Ladyfinger Peak. Hunza's unique culture, traditional cuisine, and stunning landscapes make it a dream destination for tourists and adventure seekers alike.",
     hotels: ["Eagle’s Nest Hotel", "Hunza Serena Inn", "Hard Rock Hunza"],
     convinceMessage:
       "Experience Hunza like never before! We handle everything from transport to accommodation, so you can enjoy a stress-free vacation.",
     subImages: [
-      {
-        url: "https://images.unsplash.com/photo-1580910051072-445b5a050032?w=600&auto=format&fit=crop&q=60",
-        description: "Snow-covered streets of Hunza valley.",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?w=600&auto=format&fit=crop&q=60",
-        description: "Sunset view from Hunza valley.",
-      },
-    ],
+  {
+    url: "https://images.unsplash.com/photo-1580910051072-445b5a050032?w=600&auto=format&fit=crop&q=60",
+    description: "Karimabad, Hunza, Pakistan",
+    Mdes: "The main town of Hunza Valley, known for its historic forts, bustling markets, and spectacular mountain views.",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?w=600&auto=format&fit=crop&q=60",
+    description: "Eagle's Nest, Hunza, Pakistan",
+    Mdes: "A breathtaking viewpoint offering panoramic views of Hunza Valley and the surrounding peaks.",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1600478372787-3bdeafc60042?w=600&auto=format&fit=crop&q=60",
+    description: "Attabad Lake, Hunza, Pakistan",
+    Mdes: "A stunning turquoise lake formed after a landslide in 2010, now a major tourist attraction offering boating and scenic views.",
+  },
+],
+
   },
 
   {
@@ -91,22 +115,37 @@ export const destinationsData = [
     image:
       "https://images.unsplash.com/photo-1626440875119-d9b87c00e5fc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8U2thcmR1fGVufDB8MXwwfHx8MA%3D%3D",
     link: "skardu-tours",
-    shortDes: "Gateway to the world’s highest peaks and lakes.",
+    shortDes:
+      "A gateway to the world’s highest peaks, pristine lakes, and breathtaking landscapes.",
     detailedDes:
-      "Skardu is home to Shigar Fort, Shangrila Resort, Satpara Lake, and the stunning Deosai National Park. Ideal for adventure seekers and trekkers.",
-    hotels: ["Shangrila Resort", "Serena Shigar Fort", "Baltistan Continental"],
+      "Skardu, located in the Gilgit-Baltistan region, is a paradise for nature lovers, trekkers, and adventure seekers. It serves as the starting point for expeditions to some of the world’s highest peaks, including K2. The region is home to stunning attractions like Shangrila Resort (often called Heaven on Earth), the serene Satpara Lake, and the vast Deosai National Park, known for its lush plains and wildlife. Shigar Fort, a historical structure that blends Tibetan and Balti architecture, is another must-visit site. Visitors can also explore the mesmerizing Sheosar Lake, Upper Kachura Lake, and the cold desert of Skardu. Whether you're into trekking, sightseeing, or simply soaking in the raw beauty of nature, Skardu promises an unforgettable experience.",
+    hotels: [
+      "Shangrila Resort Skardu",
+      "Serena Shigar Fort",
+      "Baltistan Continental",
+      "Mountain Lodge Skardu",
+      "Mashabrum Hotel Skardu",
+    ],
     convinceMessage:
       "Dreaming of Skardu? Let us take care of everything from flights to lodging, so you can fully immerse in nature’s beauty!",
-    subImages: [
-      {
-        url: "https://images.unsplash.com/photo-1580910051072-445b5a050032?w=600&auto=format&fit=crop&q=60",
-        description: "Snow-covered streets of Skardu.",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?w=600&auto=format&fit=crop&q=60",
-        description: "Sunset view from Skardu.",
-      },
-    ],
+   subImages: [
+  {
+    url: "https://images.unsplash.com/photo-1580910051072-445b5a050032?w=600&auto=format&fit=crop&q=60",
+    description: "Shigar Fort, Skardu, Pakistan",
+    Mdes: "A centuries-old fort blending Tibetan and Balti architecture, now a heritage hotel.",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?w=600&auto=format&fit=crop&q=60",
+    description: "Deosai National Park, Skardu, Pakistan",
+    Mdes: "The land of giants, known for its vast plateaus, rich wildlife, and stunning summer blooms.",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1593610652900-c3e23d4b3b61?w=600&auto=format&fit=crop&q=60",
+    description: "Satpara Lake, Skardu, Pakistan",
+    Mdes: "A serene alpine lake surrounded by mountains, serving as a primary water source for Skardu city.",
+  },
+],
+
   },
   {
     id: 3,
@@ -116,22 +155,37 @@ export const destinationsData = [
     image:
       "https://c4.wallpaperflare.com/wallpaper/117/398/461/grayscale-photo-of-wood-dock-wallpaper-preview.jpg",
     link: "fairy-meadows-tours",
-    shortDes: "A breathtaking viewpoint of Nanga Parbat.",
+    shortDes:
+      "A breathtaking alpine meadow offering panoramic views of Nanga Parbat.",
     detailedDes:
-      "Fairy Meadows is a spectacular green plateau offering an iconic view of Nanga Parbat, the world’s 9th highest peak. Ideal for camping and photography lovers.",
-    hotels: ["Fairy Meadows Cottages", "Raikot Sarai", "Parbat Inn"],
+      "Fairy Meadows is one of Pakistan’s most stunning destinations, offering an awe-inspiring view of Nanga Parbat, the world’s 9th highest peak. Located in the Diamer District of Gilgit-Baltistan, this lush green plateau serves as a base camp for trekkers heading towards the 'Killer Mountain.' Reaching Fairy Meadows involves a thrilling jeep ride to Raikot Bridge followed by a moderate trek through pine forests. This scenic location is ideal for camping, stargazing, and photography. Visitors can also explore Beyal Camp, a higher-altitude viewpoint that provides even more breathtaking views of the Karakoram Range. Whether you're an adventurer, a photographer, or a nature lover, Fairy Meadows promises an unforgettable experience.",
+    hotels: [
+      "Fairy Meadows Cottages",
+      "Raikot Sarai",
+      "Parbat Inn",
+      "Fairy Land Hotel",
+      "Nanga Parbat Base Camp Huts",
+    ],
     convinceMessage:
       "Let us handle your transport, accommodation, and trek arrangements for a once-in-a-lifetime Fairy Meadows experience!",
     subImages: [
-      {
-        url: "https://images.unsplash.com/photo-1580910051072-445b5a050032?w=600&auto=format&fit=crop&q=60",
-        description: "Snow-covered streets of Fairy Meadows.",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?w=600&auto=format&fit=crop&q=60",
-        description: "Sunset view from Fairy Meadows.",
-      },
-    ],
+  {
+    url: "https://images.unsplash.com/photo-1580910051072-445b5a050032?w=600&auto=format&fit=crop&q=60",
+    description: "Fairy Meadows, Gilgit-Baltistan, Pakistan",
+    Mdes: "A lush green plateau offering mesmerizing views of Nanga Parbat, perfect for camping and stargazing.",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?w=600&auto=format&fit=crop&q=60",
+    description: "Beyal Camp, Fairy Meadows, Pakistan",
+    Mdes: "A higher-altitude viewpoint offering an even more breathtaking view of the mighty Nanga Parbat.",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1517733351733-221095382bf5?w=600&auto=format&fit=crop&q=60",
+    description: "Rupal Valley, Astore, Pakistan",
+    Mdes: "A stunning valley on the southern face of Nanga Parbat, known for its lush meadows and dramatic landscapes.",
+  },
+],
+
   },
   {
     id: 4,
@@ -141,22 +195,37 @@ export const destinationsData = [
     image:
       "https://c1.wallpaperflare.com/preview/248/376/997/lake-saif-ul-muluk-pakistan-khyber-pakhtunkhwa-naran.jpg",
     link: "naran-kaghan-tours",
-    shortDes: "Heavenly green valleys with crystal-clear lakes.",
+    shortDes:
+      "A breathtaking valley known for its lush green mountains and crystal-clear lakes.",
     detailedDes:
-      "Naran and Kaghan are famous for their lush green mountains, Babusar Top, and the stunning Saif-ul-Malook Lake. Perfect for family vacations and adventure trips.",
-    hotels: ["Pine Park Hotel", "Naran City Hotel", "Arcadian Sprucewoods"],
-    convinceMessage:
-      "Plan your Naran & Kaghan getaway with us for a seamless and enjoyable experience!",
-    subImages: [
-      {
-        url: "https://images.unsplash.com/photo-1580910051072-445b5a050032?w=600&auto=format&fit=crop&q=60",
-        description: "Snow-covered streets of Murree.",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?w=600&auto=format&fit=crop&q=60",
-        description: "Sunset view from Kashmir Point.",
-      },
+      "Naran and Kaghan Valleys, nestled in the Mansehra District of Khyber Pakhtunkhwa, are among the most famous tourist destinations in Pakistan. These valleys are known for their stunning alpine scenery, towering peaks, and iconic lakes like Saif-ul-Malook and Lulusar Lake. Babusar Top, at an altitude of 4,173 meters, offers mesmerizing panoramic views. The region is also famous for adventure activities such as jeep safaris, hiking, and trout fishing in the Kunhar River. Whether you're looking for a peaceful retreat in nature or an action-packed adventure, Naran & Kaghan have something to offer for everyone.",
+    hotels: [
+      "Pine Park Hotel",
+      "Naran City Hotel",
+      "Arcadian Sprucewoods",
+      "Fairy Meadows Resort",
+      "Lalazar Hotel Naran",
     ],
+    convinceMessage:
+      "Plan your Naran & Kaghan getaway with us for a seamless and enjoyable experience! From accommodations to guided tours, we take care of everything.",
+subImages: [
+  {
+    url: "https://images.unsplash.com/photo-1618975820895-7c8f1fc8e6b6?w=600&auto=format&fit=crop&q=60",
+    description: "Saif-ul-Malook Lake, Naran, Pakistan",
+    Mdes: "One of Pakistan's most beautiful lakes, surrounded by snow-capped peaks and enchanting legends.",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1590217982585-918a8f85e57b?w=600&auto=format&fit=crop&q=60",
+    description: "Babusar Top, Kaghan Valley, Pakistan",
+    Mdes: "A high-altitude mountain pass at 4,173 meters, offering breathtaking views of the entire Kaghan Valley.",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1590487982723-7d5af4c4b299?w=600&auto=format&fit=crop&q=60",
+    description: "Lulusar Lake, Kaghan Valley, Pakistan",
+    Mdes: "A stunning alpine lake with crystal-clear waters, forming the primary source of the Kunhar River.",
+  },
+],
+
   },
   {
     id: 5,
@@ -164,22 +233,30 @@ export const destinationsData = [
     distance: "250 km from Islamabad (5-hour drive)",
     tours: "6 tours and activities",
     image:
-      "https://images.unsplash.com/photo-1579196900052-a6034632c042?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c3dhdCUyMHZhbGxleXxlbnwwfHwwfHx8MA%3D%3D",
+      "https://images.unsplash.com/photo-1579196900052-a6034632c042?w=600&auto=format&fit=crop&q=60",
     link: "swat-tours",
-    shortDes: "The Switzerland of Pakistan.",
+    shortDes: "A picturesque valley known as the Switzerland of Pakistan.",
     detailedDes:
-      "Swat is famous for its breathtaking scenery, Malam Jabba ski resort, Mingora, and the cultural heritage of Buddhist sites.",
-    hotels: ["Swat Serena Hotel", "Rock City Resort", "Pameer Hotel"],
+      "Swat Valley, often called the 'Switzerland of Pakistan,' is known for its lush green mountains, clear rivers, and rich cultural heritage. It is home to the Malam Jabba ski resort, Mingora city, and remnants of the ancient Gandhara civilization. Visitors can explore breathtaking spots like Kalam, Mahodand Lake, Bahrain, and Fizagat Park. The valley is also famous for its skiing, hiking, and river rafting opportunities, making it a perfect destination for nature lovers and adventure seekers alike.",
+    hotels: [
+      "Swat Serena Hotel",
+      "Rock City Resort",
+      "Pameer Hotel",
+      "Greens Hotel Swat",
+      "Pearl Continental Malam Jabba",
+    ],
     convinceMessage:
-      "Want a hassle-free Swat trip? Let us arrange everything from transportation to sightseeing!",
+      "Want a hassle-free Swat trip? Let us arrange everything from transportation to sightseeing! Enjoy the best accommodations and guided tours while you soak in the beauty of Swat.",
     subImages: [
       {
-        url: "https://images.unsplash.com/photo-1580910051072-445b5a050032?w=600&auto=format&fit=crop&q=60",
-        description: "Snow-covered streets of Murree.",
+        url: "https://images.unsplash.com/photo-1569949384429-59f26f982a2c?w=600&auto=format&fit=crop&q=60",
+        description: "Malam Jabba Ski Resort, Swat",
+        Mdes: "The only ski resort in Pakistan, offering stunning winter sports and breathtaking mountain views.",
       },
       {
-        url: "https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?w=600&auto=format&fit=crop&q=60",
-        description: "Sunset view from Kashmir Point.",
+        url: "https://images.unsplash.com/photo-1637327544571-4f3a5b813c56?w=600&auto=format&fit=crop&q=60",
+        description: "Mahodand Lake, Kalam Valley",
+        Mdes: "A pristine alpine lake surrounded by lush green meadows and towering peaks, a must-visit in Swat Valley.",
       },
     ],
   },
@@ -216,22 +293,35 @@ export const destinationsData = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxjZR6uU6ShaTvCGq0McQjCBW1VL0fEeNXSA&s",
     link: "gorakh-hill-tours",
-    shortDes: "Sindh’s only hill station with cold weather.",
+    shortDes:
+      "Sindh’s only hill station with breathtaking views and cold weather.",
     detailedDes:
-      "Gorakh Hill offers a unique experience in Sindh with its chilly weather, stunning sunsets, and a view of the Milky Way at night.",
-    hotels: ["Gorakh Hill Resort", "Dadu Guest House"],
-    convinceMessage:
-      "Leave the planning to us! Experience Gorakh Hill in comfort with our guided tours and accommodations.",
-    subImages: [
-      {
-        url: "https://images.unsplash.com/photo-1580910051072-445b5a050032?w=600&auto=format&fit=crop&q=60",
-        description: "Snow-covered streets of Murree.",
-      },
-      {
-        url: "https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?w=600&auto=format&fit=crop&q=60",
-        description: "Sunset view from Kashmir Point.",
-      },
+      "Gorakh Hill Station, situated in the Kirthar Mountains, is the only hill station in Sindh, offering a cool climate and stunning panoramic views. Located at an altitude of 5,688 feet, it is a perfect retreat from the heat of the plains. Known for its mesmerizing sunsets, starry night skies, and scenic landscapes, Gorakh is a paradise for nature lovers, hikers, and photographers. The journey to Gorakh Hill is an adventure in itself, passing through rugged terrains and picturesque valleys.",
+    hotels: [
+      "Gorakh Hill Resort",
+      "Dadu Guest House",
+      "Gorakh Camps & Cottages",
     ],
+    convinceMessage:
+      "Leave the planning to us! Experience Gorakh Hill in comfort with our guided tours, cozy accommodations, and hassle-free travel arrangements.",
+    subImages: [
+  {
+    url: "https://images.unsplash.com/photo-1632180514357-43bcba1d50da?w=600&auto=format&fit=crop&q=60",
+    description: "Benazir Viewpoint, Gorakh Hill",
+    Mdes: "A stunning viewpoint at Gorakh Hill offering panoramic views of the surrounding Kirthar mountain range.",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1627843563098-8766657c4db3?w=600&auto=format&fit=crop&q=60",
+    description: "Gorakh Hill Sunset Point",
+    Mdes: "A mesmerizing spot to witness breathtaking sunsets over the vast landscape of Sindh and Balochistan.",
+  },
+  {
+    url: "https://images.unsplash.com/photo-1577863833131-b2c5a4b8cb72?w=600&auto=format&fit=crop&q=60",
+    description: "Gorakh Hill Camping Site",
+    Mdes: "An ideal location for camping under the stars, offering a peaceful escape with cool mountain air.",
+  },
+],
+
   },
 ];
 
