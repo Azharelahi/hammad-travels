@@ -2,6 +2,16 @@ import React, { useEffect } from "react";
 import Heading from "../../components/Heading/Heading";
 import civic from "./../../assets/images/cars/civic.jpg";
 import revo from "./../../assets/images/cars/revo.jpg";
+import v8 from "./../../assets/images/cars/Toyota v8.jpeg";
+import pradoup from "./../../assets/images/cars/prado-upmodel.jpeg";
+import grandcabin from "./../../assets/images/cars/grandcabin.jpeg";
+import gli from "./../../assets/images/cars/corolla xli.jpeg";
+import brv from "./../../assets/images/cars/brv.jpeg";
+import coaster5c from "./../../assets/images/cars/coaster5c.jpeg";
+import coaster4c from "./../../assets/images/cars/coaster4c.webp";
+
+import tz from "./../../assets/images/cars/prado tz.jpeg";
+
 import "animate.css";
 import { useNavigate } from "react-router-dom";
 const CarHire = () => {
@@ -10,7 +20,7 @@ const CarHire = () => {
     {
       type: "SUV",
       name: "Toyota Landcruiser V8",
-      img: "https://gbtours.com.pk/wp-content/uploads/2024/02/V8-760x460.jpeg",
+      img: v8,
       passengers: 7,
       gear: "Auto 4x4",
       baggage: 3,
@@ -22,7 +32,7 @@ const CarHire = () => {
     {
       type: "SUV",
       name: "Toyota Prado Upmodel",
-      img: "https://gbtours.com.pk/wp-content/uploads/2022/05/prado-upmodel-760x460.jpeg",
+      img: pradoup,
       passengers: 7,
       gear: "Auto 4x4",
       baggage: 3,
@@ -34,7 +44,7 @@ const CarHire = () => {
     {
       type: "SUV",
       name: "Toyota Prado TZ",
-      img: "https://gbtours.com.pk/wp-content/uploads/2024/02/prado-tz-760x460.jpeg",
+      img: tz,
       passengers: 7,
       gear: "Auto 4x4",
       baggage: 3,
@@ -46,7 +56,7 @@ const CarHire = () => {
     {
       type: "Wagon",
       name: "Toyota Hiace Grandcabin",
-      img: "https://gbtours.com.pk/wp-content/uploads/2024/02/grandcabin-760x460.jpeg",
+      img: grandcabin,
       passengers: 13,
       gear: "Manual",
       baggage: 9,
@@ -58,7 +68,7 @@ const CarHire = () => {
     {
       type: "Sedan",
       name: "Toyota Corolla GLI/XLI",
-      img: "https://gbtours.com.pk/wp-content/uploads/2024/02/corolla-xli-760x460.jpeg",
+      img: gli,
       passengers: 4,
       gear: "Auto",
       baggage: 4,
@@ -82,7 +92,7 @@ const CarHire = () => {
     {
       type: "Sedan",
       name: "Honda BRV",
-      img: "https://gbtours.com.pk/wp-content/uploads/2024/02/brv-760x460.jpeg",
+      img: brv,
       passengers: 7,
       gear: "Auto",
       baggage: 4,
@@ -94,7 +104,7 @@ const CarHire = () => {
     {
       type: "Wagon",
       name: "Coaster Saloon 5c",
-      img: "https://gbtours.com.pk/wp-content/uploads/2024/02/coaster5c-760x460.jpeg",
+      img: coaster5c,
       passengers: 28,
       gear: "Auto",
       baggage: 20,
@@ -106,7 +116,7 @@ const CarHire = () => {
     {
       type: "Wagon",
       name: "Coaster Saloon 4c",
-      img: "https://royaltaxi.pk/wp-content/uploads/2024/06/Rent-a-Toyota-coaster-Booking.jpg",
+      img: coaster4c,
       passengers: 28,
       gear: "Auto",
       baggage: 20,
@@ -136,24 +146,25 @@ const CarHire = () => {
     <div>
       <Heading heading={"Hire The Best Cars"} />
       <section className="text-gray-600 body-font">
-        <div className="container px-5 py-12 mx-auto">
-          <div className="flex flex-wrap -m-4 justify-center">
+        <div className="container max-w-screen-sm sm:max-w-screen-md lg:max-w-screen-lg mx-auto px-3 sm:px-5 py-12">
+          <div className="flex flex-wrap -m-2 justify-center">
             {carList.map((car, index) => (
               <div
                 key={index}
-                className="p-4 lg:w-1/3 md:w-1/2 w-full"
+                className="p-2 sm:w-1/2 md:w-1/3 w-full"
                 onClick={() => navigate("/hire-details", { state: { car } })}
               >
-                <div className="h-full bg-white shadow-2xl rounded-2xl p-6 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-3xl">
+                <div className="h-full bg-white shadow-2xl rounded-2xl p-4 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-3xl">
                   <img
                     alt="car"
-                    className="rounded-xl w-full h-56 object-contain mb-4"
+                    className="rounded-xl w-full h-48 object-contain mb-4"
                     src={car.img}
+                    loading="lazy"
                   />
                   <h2 className="text-sm text-gray-500 uppercase tracking-widest mb-1">
                     {car.type}
                   </h2>
-                  <h1 className="text-lg font-bold text-gray-900 mb-2 ">
+                  <h1 className="text-lg font-bold text-gray-900 mb-2">
                     {car.name}
                   </h1>
                   <div className="w-full mb-3 text-gray-700 text-sm grid grid-cols-2 gap-x-2 gap-y-1 text-left">
@@ -176,7 +187,7 @@ const CarHire = () => {
                   <span className="text-2xl font-bold text-[#5394d2]">
                     {car.price}
                   </span>
-                  <button className="animate-tadaWithDelay mt-4 px-6 py-2 bg-[#5394d2] text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition">
+                  <button className="animate__animated animate__flip  mt-4 px-6 py-2 bg-[#5394d2] text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition">
                     Rent Now
                   </button>
                 </div>
