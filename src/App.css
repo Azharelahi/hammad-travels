@@ -13,6 +13,36 @@
   border: none;
 }
 
+@keyframes bounceWithPause {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  75% {
+    transform: translateY(0);
+  }
+
+  76% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Apply delay by using animation iteration timing */
+.animate-bounce-delay {
+  animation: bounceWithPause 1s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
 .primaryBtn:hover {
   transform: translateY(-3px);
 }

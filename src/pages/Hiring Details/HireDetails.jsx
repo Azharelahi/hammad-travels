@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import Heading from "../../components/Heading/Heading";
 import logo from "./../../assets/images/logo/logo4.png"
+import "animate.css"
 const HireDetails = () => {
   const { state } = useLocation();
   const car = state?.car;
@@ -71,89 +72,84 @@ const HireDetails = () => {
       </section>
 
 {/* Booking Section */}
-<section className="bg-gray-100 py-12 flex justify-center h-screen">
-  <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center lg:items-start h-full gap-10">
+<section className="bg-gray-100 py-12 flex justify-center min-h-screen">
+  <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center lg:items-start gap-6">
     
-    {/* Left: Booking Form (Optimized for Viewport) */}
-  <div className="relative w-full lg:w-3/5 p-6 rounded-lg shadow-lg flex flex-col justify-center h-[90vh] bg-white/70 backdrop-blur-md">
-  {/* Background Logo */}
-  <img 
-    src={logo} 
-    alt="Hammad Travels Logo" 
-    className="absolute inset-0 w-full h-full object-contain opacity-20 blur-md mx-auto"
-  />
+    {/* Left: Booking Form */}
+    <div className="relative w-full lg:w-3/5 p-6 rounded-lg shadow-lg flex flex-col justify-center bg-white/70 backdrop-blur-md">
+      {/* Background Logo */}
+      <img 
+        src={logo} 
+        alt="Hammad Travels Logo" 
+        className="absolute inset-0 w-full h-full object-contain opacity-20 blur-md mx-auto"
+      />
+      
+      {/* Form Container */}
+      <div className="relative z-10">
+<h2 className="text-lg lg:text-xl font-bold text-center mb-4 
+                bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 
+                bg-clip-text text-transparent animate-bounce-delay">
+   Book This Car
+</h2>
 
-  {/* Form Container */}
-  <div className="relative z-10">
-    <h2 className="text-lg lg:text-xl font-semibold text-center mb-4 text-gray-800">Book This Car</h2>
-    
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <div>
-          <label className="block text-gray-700 text-sm font-medium">Car Name</label>
-          <input type="text" name="carName" value={formData.carName} readOnly 
-            className="w-full px-3 py-1.5 border-2 border-gray-400 rounded-md bg-gray-200/80 text-sm" />
-        </div>
-        <div>
-          <label className="block text-gray-700 text-sm font-medium">Gear Type</label>
-          <input type="text" name="gearType" value={formData.gear} readOnly 
-            className="w-full px-3 py-1.5 border-2 border-gray-400 rounded-md bg-gray-200/80 text-sm" />
-        </div>
-        <div>
-          <label className="block text-gray-700 text-sm font-medium">Name</label>
-          <input type="text" name="name" value={formData.name} onChange={handleChange} 
-            className="w-full px-3 py-1.5 border-2 border-gray-400 rounded-md text-sm bg-transparent focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" required />
-        </div>
-        <div>
-          <label className="block text-gray-700 text-sm font-medium">Email</label>
-          <input type="email" name="email" value={formData.email} onChange={handleChange} 
-            className="w-full px-3 py-1.5 border-2 border-gray-400 rounded-md text-sm bg-transparent focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" required />
-        </div>
-        <div>
-          <label className="block text-gray-700 text-sm font-medium">Phone</label>
-          <input type="tel" name="phone" value={formData.phone} onChange={handleChange} 
-            className="w-full px-3 py-1.5 border-2 border-gray-400 rounded-md text-sm bg-transparent focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" required />
-        </div>
-        <div className="lg:col-span-2">
-          <label className="block text-gray-700 text-sm font-medium">Message</label>
-          <textarea name="message" value={formData.message} onChange={handleChange} 
-            className="w-full px-3 py-1.5 border-2 border-gray-400 rounded-md text-sm bg-transparent focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Any special request?" rows="3"></textarea>
-        </div>
+
+
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-gray-700 text-sm font-medium">Car Name</label>
+              <input type="text" name="carName" value={formData.carName} readOnly 
+                className="w-full px-3 py-1.5 border-2 border-gray-400 rounded-md bg-gray-200/80 text-sm" />
+            </div>
+            <div>
+              <label className="block text-gray-700 text-sm font-medium">Gear Type</label>
+              <input type="text" name="gearType" value={formData.gear} readOnly 
+                className="w-full px-3 py-1.5 border-2 border-gray-400 rounded-md bg-gray-200/80 text-sm" />
+            </div>
+            <div>
+              <label className="block text-gray-700 text-sm font-medium">Name</label>
+              <input type="text" name="name" value={formData.name} onChange={handleChange} 
+                className="w-full px-3 py-1.5 border-2 border-gray-400 rounded-md text-sm bg-transparent focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" required />
+            </div>
+            <div>
+              <label className="block text-gray-700 text-sm font-medium">Email</label>
+              <input type="email" name="email" value={formData.email} onChange={handleChange} 
+                className="w-full px-3 py-1.5 border-2 border-gray-400 rounded-md text-sm bg-transparent focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" required />
+            </div>
+            <div>
+              <label className="block text-gray-700 text-sm font-medium">Phone</label>
+              <input type="tel" name="phone" value={formData.phone} onChange={handleChange} 
+                className="w-full px-3 py-1.5 border-2 border-gray-400 rounded-md text-sm bg-transparent focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" required />
+            </div>
+            <div className="lg:col-span-2">
+              <label className="block text-gray-700 text-sm font-medium">Message</label>
+              <textarea name="message" value={formData.message} onChange={handleChange} 
+                className="w-full px-3 py-1.5 border-2 border-gray-400 rounded-md text-sm bg-transparent focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500" placeholder="Any special request?" rows="3"></textarea>
+            </div>
+          </div>
+          <button type="submit" className="w-full bg-indigo-500 text-white py-2 rounded-md hover:bg-indigo-600 transition text-sm">
+            Submit Booking
+          </button>
+        </form>
       </div>
-      <button type="submit" className="w-full bg-indigo-500 text-white py-2 rounded-md hover:bg-indigo-600 transition text-sm">
-        Submit Booking
-      </button>
-    </form>
-  </div>
-</div>
+    </div>
 
-
-
-    {/* Right: Contact Info */}
- <div className="w-full lg:w-2/5 flex flex-col justify-center items-center text-center h-[90vh]">
-  {/* Logo */}
-  <img 
-    src={logo} // Ensure 'logo' is imported correctly
-    alt="Hammad Travels Logo"
-    className="w-32 lg:w-40 mb-4" // Adjust size as needed
-  />
-
-  <h2 className="text-lg lg:text-xl font-semibold mb-2">Rent The Car With Us!</h2>
-  
-  <p className="text-gray-600 text-sm leading-relaxed max-w-md">
-    At <strong>Hammad Travels</strong>, we offer premium car rental services tailored to your needs.
-    Whether you're looking for short-term or long-term rentals, we ensure comfort and reliability.
-  </p>
-  
-  <p className="mt-3 text-gray-600 text-sm leading-relaxed max-w-md">
-    If you need assistance, feel free to contact us directly via <strong>WhatsApp</strong> or call us for immediate support.
-  </p>
-</div>
-
-
+    {/* Right: Contact Info (Now Visible on Small Screens) */}
+    <div className="w-full lg:w-2/5 flex flex-col justify-center items-center text-center">
+      <img src={logo} alt="Hammad Travels Logo" className="w-32 lg:w-40 mb-4" />
+      <h2 className="text-lg lg:text-xl font-semibold mb-2">Rent The Car With Us!</h2>
+      <p className="text-gray-600 text-sm leading-relaxed max-w-md">
+        At <strong>Hammad Travels</strong>, we offer premium car rental services tailored to your needs.
+        Whether you're looking for short-term or long-term rentals, we ensure comfort and reliability.
+      </p>
+      <p className="mt-3 text-gray-600 text-sm leading-relaxed max-w-md">
+        If you need assistance, feel free to contact us directly via <strong>WhatsApp</strong> or call us for immediate support.
+      </p>
+    </div>
 
   </div>
 </section>
+
 
 
 
