@@ -1,228 +1,161 @@
-/* sticky menu  */
-
+/* Sticky Menu */
 .is-sticky {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  animation: smothScroll 1s forwards;
+  animation: smoothScroll 0.5s forwards;
   background: rgba(255, 255, 255, 0.2);
-  /* Transparent White */
   backdrop-filter: blur(10px);
-  /* Blur Effect */
   -webkit-backdrop-filter: blur(10px);
-  /* Safari Support */
   z-index: 999;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  /* Soft Shadow */
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  /* Subtle Border */
 }
 
-/* Apply the effect to both .Rent-button and .Rent-Now */
-
+/* Rent Button Styles */
 .Rent-Now {
   text-decoration: none;
-  font-size: 10px;
+  font-size: clamp(10px, 1vw, 14px);
   font-weight: bold;
   color: azure;
   border: 2px solid azure;
-  padding: 10px 20px;
+  padding: 8px 16px;
   border-radius: 8px;
   cursor: pointer;
   background: transparent;
   position: relative;
-  overflow: hidden;
   transition: all 0.3s ease-in-out;
   text-transform: uppercase;
-  letter-spacing: 2px;
-
-  /* Neon Glow */
-  box-shadow: 0 0 10px rgba(173, 216, 230, 0.8),
-    0 0 20px rgba(173, 216, 230, 0.6),
-    0 0 40px rgba(173, 216, 230, 0.4);
+  letter-spacing: 1px;
+  box-shadow: 0 0 10px rgba(173, 216, 230, 0.8);
 }
-
-/* Hover Effects */
 
 .Rent-Now:hover {
   color: black;
   background: azure;
-  box-shadow: 0 0 15px rgba(173, 216, 230, 1),
-    0 0 30px rgba(173, 216, 230, 0.8),
-    0 0 60px rgba(173, 216, 230, 0.6),
-    0 0 100px rgba(173, 216, 230, 0.4);
   transform: scale(1.05);
 }
 
-/* Glowing Edge Animation */
-
-.Rent-Now::before {
-  content: "";
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  width: calc(100% + 6px);
-  height: calc(100% + 6px);
-  border-radius: 10px;
-  border: 2px solid azure;
-  opacity: 0;
-  box-shadow: 0 0 15px azure;
-  transition: opacity 0.4s ease-in-out;
-}
-
-
-.Rent-Now:hover::before {
-  opacity: 1;
-}
-
-/* Click Effect */
-
-.Rent-Now:active {
-  transform: scale(0.98);
-  box-shadow: 0 0 5px rgba(173, 216, 230, 0.8),
-    0 0 10px rgba(173, 216, 230, 0.6),
-    0 0 20px rgba(173, 216, 230, 0.4);
-}
-
-/* When Sticky */
 .is-sticky .Rent-Now {
-  color: black !important; /* Text should be black */
-  background: transparent !important; /* Background should be transparent */
-  border: 2px solid black !important; /* Border should be black */
-  box-shadow: 0 0 10px black !important; /* Box shadow should be black */
+  color: black !important;
+  background: transparent !important;
+  border: 2px solid black !important;
 }
 
-/* On Hover */
 .is-sticky .Rent-Now:hover {
-  color: black !important; /* Text remains black */
-  background: white !important; /* Background should be white */
-  border: 2px solid white !important; /* Border should be white */
-  box-shadow: 0 0 10px rgb(14, 14, 14) !important; /* Box shadow should be white */
+  background: white !important;
+  border: 2px solid white !important;
 }
 
-
-
+/* Logo Styling */
 .logo {
-  font-family: Oleo Script Swash Caps;
-  font-size: 40px;
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(20px, 3vw, 40px);
   background: linear-gradient(to right, #ff7eb3, #5394d2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-@keyframes smothScroll {
-  0% {
-    transform: translateY(-40px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
 
 .logo-img {
-
-  height: 50px;
-  width: 70px;
+  height: auto;
+  width: clamp(40px, 6vw, 70px);
 }
 
-.is-sticky .navbar .navbar-brand a,
-.is-sticky .navbar .offcanvas-body a {
-  color: var(--black) !important;
-}
-
-.is-sticky .toggle_btn {
-  color: var(--primaryClr) !important;
-}
-
+/* Navbar & Header */
 header {
   position: absolute;
   top: 0;
   z-index: 999;
-  padding: 12px 0px;
+  padding: 10px 5vw;
   width: 100%;
 }
 
-header .navbar .navbar-brand a {
-  font-size: 22px;
+.navbar .navbar-brand a {
+  font-size: clamp(18px, 2vw, 22px);
   color: var(--white);
-  line-height: 150%;
-  font-family: var(--fontFamily1);
   font-weight: bold;
-  text-transform: capitalize;
-  text-decoration: none;
 }
 
-header .navbar .offcanvas-body a {
-  font-size: 14px;
+.navbar .offcanvas-body a {
+  font-size: clamp(12px, 1.5vw, 14px);
   color: var(--white) !important;
-  line-height: 150%;
-  font-family: var(--fontFamily);
   font-weight: bold;
   text-transform: uppercase;
 }
 
-header .navbar .offcanvas-body .dropdown-menu a {
-  color: black !important
+@keyframes smoothScroll {
+  from {
+    transform: translateY(-40px);
+  }
+  to {
+    transform: translateY(0px);
+  }
 }
 
-header .navbar .offcanvas-body a:hover {
-  color: #5394d2 !important;
-  /* color: var(--primaryClr) !important; */
-}
-
-header .navbar .offcanvas-body .dropdown-menu {
-  min-width: 12rem;
-}
-
-header .navbar .offcanvas-body .dropdown-menu .dropdown-item {
-  color: var(--black) !important;
-}
-
-@media only screen and (max-width: 991px) {
-  header .navbar .toggle_btn {
-    font-size: var(--bodyText);
-    color: var(--white);
+/* Responsive Design */
+@media (max-width: 991px) {
+  .navbar .toggle_btn {
+    font-size: 1rem;
+    color: #f58ee9;
     border: 2px solid var(--white);
+    border-radius: 8px;
     padding: 7px 10px;
   }
-
-  .is-sticky .navbar .toggle_btn {
-    border: 2px solid var(#5394d2);
-  }
-
   .offcanvas-header {
-
-    border: 1px solid rgb(245, 142, 233);
+    border-bottom: 1px solid #f58ee9;
   }
-
   .offcanvas-header .logo {
     font-size: 26px;
     color: var(--black) !important;
-    font-family: var(--fontFamily1);
-    font-weight: bold;
-    text-decoration: none;
+  }
+  .offcanvas-body .nav-link, .offcanvas-body .dropdown-item {
+    padding: 12px 0;
+    color: var(--black);
+  }
+}
+
+@media (max-width: 550px) {
+  .logo {
+    font-size: 20px;
+  }
+  .logo-img {
+    width: 40px;
+  }
+  .Rent-Now {
+    padding: 6px 12px;
+    font-size: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .logo {
+    font-size: 18px;
+    letter-spacing: 0.5px;
+  }
+  
+  .logo-img {
+    width: 35px;
+  }
+
+  .Rent-Now {
+    padding: 5px 10px;
+    font-size: 9px;
+  }
+
+  .navbar .toggle_btn {
+    font-size: 0.9rem;
+    padding: 5px 8px;
+  }
+
+  .offcanvas-header .logo {
+    font-size: 22px;
   }
 
   .offcanvas-body .nav-link {
-    padding: 12px 0px;
-    color: var(--black);
-  }
-
-  .offcanvas-body .dropdown-item {
-    padding: 12px 10px;
-    color: var(--black);
-  }
-
-  @media only screen and (max-width: 550px) {
-    .logo {
-      font-size: 20px;
-    }
-
-    .logo-img {
-      height: 30px;
-      width: 40px;
-    }
+    font-size: 12px;
+    padding: 10px 0;
   }
 }

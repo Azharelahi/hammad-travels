@@ -1,14 +1,30 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function FAQ() {
-      useEffect(() => {
+  useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
+
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <div>
       {/* Header Section */}
-      <div className="relative h-60 bg-cover bg-center flex items-center justify-center text-white text-center px-4"
-        style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://media.istockphoto.com/id/1908249816/photo/hanging-questions.webp?a=1&b=1&s=612x612&w=0&k=20&c=i4CPowz69gYcW1Ji5_WigG1boq6pH5u2iYzXwdrPEG0=", backgroundRepeat:"no-repeat",objectFit:"cover",backgroundPosition:"center"}}>
+      <div
+        className="relative h-60 bg-cover bg-center flex items-center justify-center text-white text-center px-4"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://media.istockphoto.com/id/1908249816/photo/hanging-questions.webp?a=1&b=1&s=612x612&w=0&k=20&c=i4CPowz69gYcW1Ji5_WigG1boq6pH5u2iYzXwdrPEG0=')",
+          backgroundRepeat: "no-repeat",
+          objectFit: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <h1 className="text-4xl sm:text-5xl font-bold">Frequently Asked Questions</h1>
       </div>
 
@@ -16,13 +32,36 @@ export default function FAQ() {
       <div className="max-w-4xl mx-auto my-12 p-6">
         <div className="space-y-6">
           {faqData.map((faq, index) => (
-            <details key={index} className="bg-white shadow-md p-4 rounded-lg transition-all duration-300">
-              <summary className="font-semibold text-lg cursor-pointer flex justify-between items-center">
+            <div
+              key={index}
+              className="bg-white shadow-lg p-5 rounded-lg border-l-4 transition-all duration-300"
+              style={{
+                borderLeftColor: openIndex === index ? "#fd1d1d" : "#fcb045",
+                background: "linear-gradient(135deg,rgb(165, 126, 126),rgb(119, 116, 116),rgb(187, 187, 187))",
+                color: "#fff",
+              }}
+            >
+              <button
+                onClick={() => toggleFAQ(index)}
+                className="w-full flex justify-between items-center text-lg font-semibold focus:outline-none"
+              >
                 {faq.question}
-                <span className="text-gray-500">+</span>
-              </summary>
-              <p className="mt-2 text-gray-600">{faq.answer}</p>
-            </details>
+                <span className="text-2xl">{openIndex === index ? "−" : "+"}</span>
+              </button>
+              
+              <AnimatePresence>
+                {openIndex === index && (
+                  <motion.p
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="mt-2 text-gray-200"
+                  >
+                    {faq.answer}
+                  </motion.p>
+                )}
+              </AnimatePresence>
+            </div>
           ))}
         </div>
       </div>

@@ -82,18 +82,19 @@
 .textarea {
     padding: 12px;
     font-size: 16px;
-    border: 2px solid #ddd;
+    border: 2px solid #bbb;
     border-radius: 8px;
     width: 100%;
     outline: none;
     transition: 0.3s;
     color: #333;
+    background: white;
 }
 
 .input:focus,
 .textarea:focus {
-    border-color: #a9b4d4;
-    box-shadow: 0 0 10px rgba(255, 126, 179, 0.5);
+    border-color: #5394d2;
+    box-shadow: 0 0 10px rgba(83, 148, 210, 0.5);
 }
 
 .textarea {
@@ -102,8 +103,8 @@
 }
 
 .button {
-    background: lightgray;
-    color: rgb(79, 118, 195);
+    background: #5394d2;
+    color: white;
     padding: 12px;
     font-size: 18px;
     font-weight: bold;
@@ -114,8 +115,7 @@
 }
 
 .button:hover {
-    background: rgb(79, 118, 195);
-    color: rgb(255, 255, 255);
+    background: #ff7eb3;
     transform: translateY(-2px);
 }
 
@@ -216,9 +216,9 @@
 }
 
 @media screen and (max-width: 768px) {
-
     .formContainer,
     .infoContainer {
-        width: 95%;
+        width: 100%;
+        padding: 25px;
     }
 }

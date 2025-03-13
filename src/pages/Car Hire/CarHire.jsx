@@ -15,6 +15,7 @@ import tz from "./../../assets/images/cars/prado tz.jpeg";
 import "animate.css";
 import { useNavigate } from "react-router-dom";
 const CarHire = () => {
+  
   const navigate = useNavigate();
   const carList = [
     {

@@ -5,6 +5,9 @@ import { Hotel, Image, MapPin, ArrowRightCircle } from "lucide-react";
 import "animate.css";
 
 const Destination = () => {
+  useEffect(() => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}, []);
   const location = useLocation();
   const navigate = useNavigate();
   const destination = location.state?.destination;
