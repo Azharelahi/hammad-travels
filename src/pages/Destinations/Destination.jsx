@@ -95,7 +95,7 @@ const Destination = () => {
           {destination.subImages.map((item, index) => (
             <div
               key={index}
-              className="relative p-6 rounded-xl shadow-lg bg-white text-black 
+              className="relative p-6 cursor-pointer rounded-xl shadow-lg bg-white text-black 
                  flex flex-col items-center justify-center transition-all duration-300 
                  hover:scale-105 hover:shadow-xl active:scale-95"
               onClick={() => setSelectedImage(item)}

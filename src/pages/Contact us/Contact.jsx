@@ -1,65 +1,99 @@
 import React, { useEffect, useState } from "react";
+import "./contact.css";
+
 const Contact = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState({});
   const [responseMessage, setResponseMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Handle input changes
+  const validateForm = () => {
+    let newErrors = {};
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+    } else if (formData.name.length < 3) {
+      newErrors.name = "Name must be at least 3 characters";
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Enter a valid email address";
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = "Message cannot be empty";
+    } else if (formData.message.length < 10) {
+      newErrors.message = "Message must be at least 10 characters";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  // Handle form submission
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!validateForm()) return;
+
     setIsSubmitting(true);
 
-    try {
-      const response = await fetch("http://localhost:8080/back", {
-        method: "POST",
-        body: JSON.stringify(formData),
-        headers: { "Content-Type": "application/json" },
-      });
+    // Admin Email
+    const adminEmail = "contact.hammadtravel@gmail.com";
 
-      if (response.ok) {
-        setResponseMessage("Thank you! We will contact you soon.");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        setResponseMessage("Something went wrong, please try again.");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      setResponseMessage("Failed to send message. Try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
+    // Subject
+    const subject = `New Contact Form Submission - ${formData.name}`;
+
+    // Email Body
+    const body = `
+Name: ${formData.name}
+Email: ${formData.email}
+
+Message:
+${formData.message}
+  `;
+
+    // Create mailto link
+    const mailtoLink = `mailto:${adminEmail}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+
+    // Open email client
+    window.location.href = mailtoLink;
+
+    setResponseMessage(
+      "Email is ready. Please send it from your preferred email app."
+    );
+    setIsSubmitting(false);
   };
 
   return (
-    <div style={styles.container}>
-      {/* Page Header */}
-      <div style={styles.header}>
-        <h1 style={styles.title}>Get in Touch</h1>
-        <p style={styles.subtitle}>
+    <div className="conta-container">
+      <div className="header">
+        <h1 className="title">Get in Touch</h1>
+        <p className="subtitle">
           Have questions? Our team is here to assist you. Reach out now!
         </p>
       </div>
 
-      {/* Contact Form & Info Section */}
-      <div style={styles.content}>
-        {/* Contact Form */}
-        <div style={styles.formContainer}>
-          <h2 style={styles.formTitle}>Send Us a Message</h2>
-          <form onSubmit={handleSubmit} style={styles.form}>
+      <div className="content">
+        <div className="formContainer">
+          <h2 className="formTitle">Send Us a Message</h2>
+          <form onSubmit={handleSubmit} className="form">
             <input
               type="text"
               name="name"
@@ -67,8 +101,10 @@ const Contact = () => {
               value={formData.name}
               onChange={handleInputChange}
               required
-              style={styles.input}
+              className={`input ${errors.name ? "error" : ""}`}
             />
+            {errors.name && <p className="error-text">{errors.name}</p>}
+
             <input
               type="email"
               name="email"
@@ -76,190 +112,50 @@ const Contact = () => {
               value={formData.email}
               onChange={handleInputChange}
               required
-              style={styles.input}
+              className={`input ${errors.email ? "error" : ""}`}
             />
+            {errors.email && <p className="error-text">{errors.email}</p>}
+
             <textarea
               name="message"
               placeholder="Your Message"
               value={formData.message}
               onChange={handleInputChange}
               required
-              style={styles.textarea}
-            ></textarea>
-            <button type="submit" style={styles.button} disabled={isSubmitting}>
-              {isSubmitting ? "Sending..." : "Submit"}
+              className={`textarea ${errors.message ? "error" : ""}`}
+            />
+            {errors.message && <p className="error-text">{errors.message}</p>}
+
+            <button type="submit" className="button" disabled={isSubmitting}>
+              {isSubmitting ? "Sending..." : "Send"}
             </button>
           </form>
-          {responseMessage && <p style={styles.response}>{responseMessage}</p>}
+          {responseMessage && <p className="response">{responseMessage}</p>}
         </div>
 
-        {/* Contact Info */}
-        <div style={styles.infoContainer}>
-          <h2 style={styles.infoTitle}>Contact Info</h2>
-          <p style={styles.infoText}>
-            📍 <span>Location: G9 Markaz, Islamabad, Pakistan</span>
+        <div className="infoContainer">
+          <h2 className="infoTitle">Contact Info</h2>
+          <p className="infoText">
+            📍 Location: G9 Markaz, Islamabad, Pakistan
           </p>
-          <p style={styles.infoText}>
+          <p className="infoText">
             📧{" "}
-            <span>
-              <a
-                target="_blank"
-                href="mailto:contact.hammadtravel@gmail.com"
-                className="d-block"
-              >
-                contact.hammadtravel@gmail.com
-              </a>{" "}
-            </span>
+            <a href="mailto:contact.hammadtravel@gmail.com">
+              contact.hammadtravel@gmail.com
+            </a>
           </p>
-          <p style={styles.infoText}>
-            📞
-            <span>
-              <a target="_blank" href="tel:+923341111427" className="d-block">
-                923341111427
-              </a>
-            </span>
+          <p className="infoText">
+            📞 <a href="tel:+923341111427">+92 334 111 1427</a>
           </p>
           <iframe
             src="https://maps.google.com/maps?q=Islamabad&t=&z=13&ie=UTF8&iwloc=&output=embed"
-            style={styles.map}
+            className="map"
             title="map"
           ></iframe>
         </div>
       </div>
     </div>
   );
-};
-
-// Styles
-const styles = {
-  container: {
-    fontFamily: "Arial, sans-serif",
-    backgroundImage:
-      "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1677180202551-e45eb8a8431c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGJlYXV0ZnlmdWxsJTIwcGxhY2VzfGVufDB8MHwwfHx8MA%3D%3D')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    padding: "50px 20px",
-    textAlign: "center",
-    color: "#fff",
-  },
-
-  header: {
-    marginTop: 50,
-    marginBottom: "30px",
-  },
-  title: {
-    marginTop: "10px",
-    fontSize: "36px",
-    fontWeight: "bold",
-    color: "#fff",
-  },
-  subtitle: {
-    fontSize: "18px",
-    color: "#f0f0f0",
-  },
-  content: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "center",
-    gap: "20px",
-    maxWidth: "1200px",
-    margin: "auto",
-  },
-
-  // Contact Form Styles
-  formContainer: {
-    background: "#fff",
-    padding: "30px",
-    borderRadius: "10px",
-    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-    width: "40%",
-    minWidth: "300px",
-  },
-  formTitle: {
-    fontSize: "22px",
-    fontWeight: "bold",
-    marginBottom: "15px",
-    color: "#333",
-  },
-  form: {
-    display: "flex",
-    flexDirection: "column",
-    gap: "15px",
-  },
-  input: {
-    padding: "12px",
-    fontSize: "16px",
-    border: "1px solid #ccc",
-    borderRadius: "6px",
-    width: "100%",
-    outline: "none",
-  },
-  textarea: {
-    padding: "12px",
-    fontSize: "16px",
-    border: "1px solid #ccc",
-    borderRadius: "6px",
-    width: "100%",
-    height: "120px",
-    outline: "none",
-  },
-  button: {
-    background: "#ff6f61",
-    color: "#fff",
-    padding: "12px",
-    fontSize: "18px",
-    border: "none",
-    borderRadius: "6px",
-    cursor: "pointer",
-    transition: "0.3s",
-  },
-  response: {
-    marginTop: "10px",
-    fontSize: "14px",
-    color: "green",
-  },
-
-  // Contact Info Styles
-  infoContainer: {
-    background: "#fff",
-    padding: "30px",
-    borderRadius: "10px",
-    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-    width: "40%",
-    minWidth: "300px",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "flex-start", // Aligns text properly
-    textAlign: "left",
-  },
-  infoTitle: {
-    fontSize: "22px",
-    fontWeight: "bold",
-    marginBottom: "15px",
-    color: "#333",
-  },
-  infoText: {
-    fontSize: "16px",
-    marginBottom: "10px",
-    color: "#555",
-    display: "flex",
-    alignItems: "center",
-    gap: "8px", // Space between icon and text
-  },
-  map: {
-    width: "100%",
-    height: "200px",
-    borderRadius: "8px",
-    marginTop: "15px",
-    border: "none",
-  },
-  "@media screen and (max-width: 768px)": {
-    formContainer: {
-      width: "100%",
-      backgroundColor: "aqua",
-    },
-  },
 };
 
 export default Contact;
