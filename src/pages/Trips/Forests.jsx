@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { FaMapMarkerAlt, FaTree, FaHiking, FaWater } from "react-icons/fa";
 import Heading from "../../components/Heading/Heading";
-import {forestDestinations} from "../../utils/data";
+import { forestDestinations } from "../../utils/data";
+import { Link } from "react-router-dom";
 
 const Forests = () => {
   useEffect(() => {
@@ -66,12 +67,12 @@ const Forests = () => {
                   </div>
 
                   {/* Explore Button */}
-                  <a
-                    href="/car-hire"
-                    className="mt-6 inline-flex text-decoration-none items-center justify-center w-full bg-green-600 text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-green-700 transition duration-300"
+                  <Link
+                    to="/car-hire"
+                    className="mt-6 inline-flex text-decoration-none items-center justify-center w-full bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
                   >
                     Rent And Go!
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))

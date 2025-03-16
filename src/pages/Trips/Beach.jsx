@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa";
 import Heading from "../../components/Heading/Heading";
 import { beachDestinations } from "../../utils/data";
+import { Link } from "react-router-dom";
 const Beaches = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -70,12 +71,12 @@ const Beaches = () => {
                   </div>
 
                   {/* Explore Button */}
-                  <a
-                    href="/car-hire"
-                    className="mt-6 inline-flex text-decoration-none items-center justify-center w-full bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
-                  >
-                    Rent And Go!
-                  </a>
+                  <Link
+                                    to="/car-hire"
+                                    className="mt-6 inline-flex text-decoration-none items-center justify-center w-full bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
+                                  >
+                                    Rent And Go!
+                                  </Link>
                 </div>
               </div>
             ))

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import {
   FaMapMarkerAlt,
   FaHiking,
@@ -72,12 +73,12 @@ const Mountaines = () => {
                   </div>
 
                   {/* Explore Button */}
-                  <a
-                    href="/car-hire"
+                  <Link
+                    to="/car-hire"
                     className="mt-6 inline-flex text-decoration-none items-center justify-center w-full bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
                   >
                     Rent And Go!
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))
