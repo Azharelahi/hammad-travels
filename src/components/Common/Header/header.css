@@ -159,3 +159,32 @@ header {
     padding: 10px 0;
   }
 }
+@media (max-width: 333px) {
+  .logo {
+    font-size: 16px;
+    letter-spacing: 0.3px;
+  }
+
+  .logo-img {
+    width: 30px;
+  }
+
+  .Rent-Now {
+    padding: 4px 8px;
+    font-size: 8px;
+  }
+
+  .navbar .toggle_btn {
+    font-size: 0.8rem;
+    padding: 4px 6px;
+  }
+
+  .offcanvas-header .logo {
+    font-size: 20px;
+  }
+
+  .offcanvas-body .nav-link {
+    font-size: 11px;
+    padding: 8px 0;
+  }
+}

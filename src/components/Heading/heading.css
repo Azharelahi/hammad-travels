@@ -4,42 +4,93 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 15em; /* Default for large screens */
+    height: 15em;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1em; /* Ensures spacing on smaller screens */
+    padding: 1em;
     text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSlideUp 1.2s ease-out forwards;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Responsive Text */
+/* Beautiful Text Animation */
 .head-name {
     font-family: "Jaro", sans-serif;
     font-size: 3.5em;
     padding-top: 1em;
     color: white;
     text-align: center;
+    line-height: 1.2;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    animation: glowEffect 2s infinite alternate ease-in-out;
+}
+
+/* Hover Zoom Effect */
+.heading-div:hover {
+    transform: scale(1.02);
+}
+
+/* Fade-in and Slide-up Animation */
+@keyframes fadeInSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Soft Glow Effect for Text */
+@keyframes glowEffect {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    }
 }
 
 /* Tablet Screens (768px and below) */
 @media (max-width: 768px) {
     .heading-div {
-        height: 12em; /* Reduce height for tablets */
+        height: 12em;
+        padding: 0.8em;
     }
 
     .head-name {
-        font-size: 2.5em; /* Adjust font size */
+        margin-top: 20px;
+        font-size: 2.4em;
+        padding-top: 0.8em;
     }
 }
 
 /* Mobile Screens (480px and below) */
 @media (max-width: 480px) {
     .heading-div {
-        height: 10em; /* Reduce height further */
+        height: 12em;
+        padding: 0.6em;
     }
 
     .head-name {
-        font-size: 2em; /* Adjust font size for small screens */
+        font-size: 2.0em;
         padding-top: 0.5em;
+    }
+}
+
+/* Ultra-Small Screens (333px and below) */
+@media (max-width: 333px) {
+    .heading-div {
+        height: 10em;
+        padding: 0.5em;
+    }
+
+    .head-name {
+        font-size: 1.8em;
+        padding-top: 0.3em;
     }
 }
