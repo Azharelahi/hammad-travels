@@ -80,12 +80,66 @@ header {
   font-weight: bold;
 }
 
+.is-sticky .navbar .offcanvas-body a {
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: var(--black) !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  
+}
 .navbar .offcanvas-body a {
   font-size: clamp(12px, 1.5vw, 14px);
   color: var(--white) !important;
   font-weight: bold;
   text-transform: uppercase;
 }
+.navbar .offcanvas-body a:hover {
+  font-size: clamp(12px, 1.5vw, 14px);
+ color: #4169E1 !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+.navbar .offcanvas-body a:hover {
+  font-size: clamp(12px, 1.5vw, 14px);
+color: #8141e1 !important;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.navbar .offcanvas-body .nav-link.active {
+  position: relative;
+  color: #bbaeec !important;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar .offcanvas-body .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 8px;
+  height: 8px;
+  background-color: #cebecc;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 8px #736d72, 0 0 15px #252324;
+  animation: pulse-ring 1.5s infinite ease-in-out;
+}
+
+/* Keyframe animation for the glowing ring effect */
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 8px #f58ee9, 0 0 15px #ff7eb3;
+  }
+  50% {
+    box-shadow: 0 0 12px #f58ee9, 0 0 20px #ff7eb3, 0 0 25px #ffb3e6;
+  }
+  100% {
+    box-shadow: 0 0 8px #f58ee9, 0 0 15px #ff7eb3;
+  }
+}
+
 
 @keyframes smoothScroll {
   from {

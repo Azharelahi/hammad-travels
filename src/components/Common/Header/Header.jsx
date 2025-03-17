@@ -3,12 +3,15 @@ import "animate.css";
 import { motion } from "framer-motion";
 import img from "./../../../assets/images/logo/logo4.png";
 import { Container, Navbar, Offcanvas, Nav } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "../Header/header.css";
 
 const AnimatedText = ({ text, className }) => {
   return (
-    <span className={className} style={{ whiteSpace: "pre", fontFamily: "'Great Vibes', cursive" }}>
+    <span
+      className={className}
+      style={{ whiteSpace: "pre", fontFamily: "'Great Vibes', cursive" }}
+    >
       {text.split(" ").map((word, wordIndex) => (
         <span key={wordIndex} style={{ marginRight: "8px" }}>
           {word.split("").map((char, charIndex) => (
@@ -16,7 +19,10 @@ const AnimatedText = ({ text, className }) => {
               key={charIndex}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: (wordIndex * 0.4) + (charIndex * 0.1), ease: "easeOut" }}
+              transition={{
+                delay: wordIndex * 0.4 + charIndex * 0.1,
+                ease: "easeOut",
+              }}
               style={{ display: "inline-block", fontFamily: "inherit" }}
             >
               {char}
@@ -28,9 +34,9 @@ const AnimatedText = ({ text, className }) => {
   );
 };
 
-
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const location = useLocation(); // Detect current route
 
   const toggleMenu = () => {
     if (window.innerWidth <= 991) {
@@ -59,6 +65,10 @@ const Header = () => {
     }
   };
 
+  const getNavLinkClass = (path) => {
+    return location.pathname === path ? "nav-link active-link" : "nav-link";
+  };
+
   return (
     <header className="header-section">
       <Container>
@@ -69,7 +79,7 @@ const Header = () => {
               style={{ display: "flex", gap: 5, alignItems: "center" }}
             >
               <img className="logo-img" src={img} alt="logo" />
-              <h2 className="logo" >
+              <h2 className="logo">
                 <AnimatedText text="Hammad Travels" />
               </h2>
             </NavLink>
@@ -88,38 +98,22 @@ const Header = () => {
 
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <NavLink className="nav-link" to="/" onClick={toggleMenu}>
+                <NavLink className={getNavLinkClass("/")} to="/" onClick={toggleMenu}>
                   HOME
                 </NavLink>
-                <NavLink
-                  className="nav-link"
-                  to="/aboutus"
-                  onClick={toggleMenu}
-                >
+                <NavLink className={getNavLinkClass("/aboutus")} to="/aboutus" onClick={toggleMenu}>
                   ABOUT US
                 </NavLink>
-                <NavLink className="nav-link" to="/tours" onClick={toggleMenu}>
+                <NavLink className={getNavLinkClass("/tours")} to="/tours" onClick={toggleMenu}>
                   TOURS
                 </NavLink>
-                <NavLink
-                  className="nav-link text-dark"
-                  to="/car-hire"
-                  onClick={toggleMenu}
-                >
+                <NavLink className={getNavLinkClass("/car-hire")} to="/car-hire" onClick={toggleMenu}>
                   CAR HIRE
                 </NavLink>
-                <NavLink
-                  className="nav-link"
-                  to="/gallery"
-                  onClick={toggleMenu}
-                >
+                <NavLink className={getNavLinkClass("/gallery")} to="/gallery" onClick={toggleMenu}>
                   GALLERY
                 </NavLink>
-                <NavLink
-                  className="nav-link"
-                  to="/contact"
-                  onClick={toggleMenu}
-                >
+                <NavLink className={getNavLinkClass("/contact")} to="/contact" onClick={toggleMenu}>
                   CONTACT
                 </NavLink>
               </Nav>

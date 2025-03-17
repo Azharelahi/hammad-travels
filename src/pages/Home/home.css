@@ -47,6 +47,7 @@
 .bounce {
   animation: bounce 2s infinite;
 }
+
 .overlay {
   position: absolute;
   left: 0;
@@ -58,6 +59,7 @@
 }
 
 @keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -65,9 +67,11 @@
   100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-30px);
   }
+
   60% {
     transform: translateY(-15px);
   }
@@ -84,20 +88,22 @@
     padding: 5px 0 10px 0;
   }
 }
+
 @media (max-width: 768px) {
   .call_us {
     text-align: center;
   }
 
-  .call_us .title,
-  .call_us .heading,
+
   .call_us .text {
     text-align: justify;
   }
 
   .call_us .text {
-    margin: 0 auto; /* Centers the text */
-    max-width: 90%; /* Limits width for better readability */
+    margin: 0 auto;
+    /* Centers the text */
+    max-width: 90%;
+    /* Limits width for better readability */
   }
 
   .call_us .secondary_btn {
@@ -108,27 +114,144 @@
 
 @media only screen and (max-width: 420px) {
   .call_us {
-    overflow: hidden;
+    text-align: center;
+    position: relative;
+    padding: 60px 20px;
+    /* Adjusted padding for smaller screens */
   }
+
+  /* Blurred background effect */
+  .call_us::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../assets/images/slider/1.jpg") no-repeat center center;
+    background-size: cover;
+    filter: blur(10px) brightness(50%);
+    /* Blurs the background and dims it */
+    z-index: -1;
+  }
+
+  /* Centered, elevated text */
+  .call_us .title,
+  .call_us .heading,
+  .call_us .text {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+  }
+
+  .call_us .title {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--primaryClr);
+    opacity: 0.85;
+  }
+
+  .call_us .heading {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 34px;
+    color: var(--white);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    /* Elevated text effect */
+  }
+
+  .call_us .text {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+    /* Slight glow effect */
+    max-width: 90%;
+    margin: 10px auto;
+  }
+
+  /* Premium glass button */
+  .call_us .secondary_btn {
+    background: rgba(255, 255, 255, 0.15);
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--white);
+    padding: 12px 14px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    margin-top: 15px;
+  }
+
+  .call_us .secondary_btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color:  white;
+    border-color: #ff7eb3
+  }
+}
+
+/* Ultra Small Devices (375px and below) */
+@media only screen and (max-width: 375px) {
+  .call_us {
+    padding: 40px 12px;
+  }
+
   .call_us .heading {
     font-size: 22px;
+    line-height: 28px;
+  }
+
+  .call_us .text {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .call_us .secondary_btn {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+}
+
+/* Ultra Small Devices (320px and below) */
+@media only screen and (max-width: 320px) {
+  .call_us {
+    padding: 30px 10px;
+  }
+
+  .call_us .heading {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .call_us .text {
+    font-size: 13px;
+    line-height: 22px;
+  }
+
+  .call_us .secondary_btn {
+    font-size: 12px;
+    padding: 7px 9px;
   }
 }
 
 .gallery {
-    background-color: var(--secondaryClr);
-    overflow: hidden;
-    padding: 50px 0px;
+  background-color: var(--secondaryClr);
+  overflow: hidden;
+  padding: 50px 0px;
 }
 
 .gallery .styles_thumbpanel__1sa4E {
-    z-index: 9999;
+  z-index: 9999;
 }
 
-.gallery .styles_lightroom__1X2qE{
-    position: fixed;
-    overflow: hidden;
-    z-index: 9999;
+.gallery .styles_lightroom__1X2qE {
+  position: fixed;
+  overflow: hidden;
+  z-index: 9999;
 }
 
 

@@ -126,7 +126,7 @@ const Home = () => {
       <Col md="8">
         <h5 className="title">BOOK YOUR NEXT ADVENTURE</h5>
         <h2 className="heading">
-          EXPLORE THE WORLD WITH <span>HAMMAD TRAVELS!</span>
+          EXPLORE THE BEAUTY OF PAKISTAN WITH <span>HAMMAD TRAVELS!</span>
         </h2>
         <p className="text">
           Discover breathtaking destinations, hassle-free bookings, and 

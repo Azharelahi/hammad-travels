@@ -10,10 +10,7 @@
 /* Hero Section */
 .hero-section {
     position: relative;
-    background-image: url("https://media.istockphoto.com/id/1262230418/photo/couple-sitting-in-camp-chairs-looking-at-sunset-above-river-in-mountains.webp?a=1&b=1&s=612x612&w=0&k=20&c=t6U-T9qC4nj7vAVUUiOABk0ajlFG6WDN3dKOEs8Asaw=");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url("https://media.istockphoto.com/id/1262230418/photo/couple-sitting-in-camp-chairs-looking-at-sunset-above-river-in-mountains.webp?a=1&b=1&s=612x612&w=0&k=20&c=t6U-T9qC4nj7vAVUUiOABk0ajlFG6WDN3dKOEs8Asaw=") no-repeat center/cover;
     height: 60vh;
     display: flex;
     flex-direction: column;
@@ -35,15 +32,13 @@
     z-index: 1;
 }
 
-.hero-section h1,
-.hero-section p {
+.hero-section h1, .hero-section p {
     position: relative;
     z-index: 2;
 }
 
 .hero-section h1 {
     font-size: 3rem;
-    font-family: 'Jaro', sans-serif;
     font-weight: bolder;
     margin: 0;
 }
@@ -51,7 +46,6 @@
 .hero-section p {
     margin-top: 20px;
     font-size: 1.2rem;
-    font-weight: 400;
     color: #ffcff3;
 }
 
@@ -59,13 +53,11 @@
 .about-section {
     padding: 50px 20px;
     text-align: center;
-    background: rgb(252, 243, 243);
+    background: #fcf3f3;
 }
 
 .about-section h2 {
-    margin-top: -25px;
     font-size: 2.5rem;
-    font-family: var(--fontFamily1);
     color: #110000;
 }
 
@@ -80,15 +72,17 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .left-div {
-    width: 70%;
+    width: 65%;
 }
 
 .right-div {
     width: 30%;
-    height: 180px;
+    height: 55vh;
     overflow: hidden;
 }
 
@@ -99,142 +93,32 @@
 .right-div img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
-}
-
-/* Why Choose Us Section */
-.why-choose-us {
-    padding: 50px 20px;
-    background: #eef5ff;
-    text-align: center;
-}
-
-.why-choose-us h2 {
-    font-size: 2.5rem;
-    font-family: var(--fontFamily1);
-    color: #110000;
-}
-
-.features {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.feature {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-}
-
-/* Our Services */
-.our-services {
-    padding: 50px 20px;
-    background: white;
-    text-align: center;
-}
-
-.our-services h2 {
-    font-size: 2.5rem;
-    font-family: var(--fontFamily1);
-    color: #110000;
-}
-
-.our-services ul {
-    list-style: none;
-    padding: 0;
-}
-
-.our-services li {
-    font-size: 1.2rem;
-    background: #f0f8ff;
-    padding: 10px;
-    margin: 10px auto;
-    width: 300px;
-    border-radius: 5px;
-}
-
-/* Testimonials */
-.testimonials {
-    padding: 50px 20px;
-    background: #f4f4f4;
-    text-align: center;
-}
-
-.testimonials h2 {
-    font-size: 2.5rem;
-    font-family: var(--fontFamily1);
-    color: #110000;
-}
-
-.testimonial {
-    background: white;
-    padding: 20px;
-    margin: 20px auto;
-    width: 60%;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial p {
-    font-size: 1.2rem;
-    color: #333;
-}
-
-/* Contact Us */
-.contact-us {
-    padding: 50px 20px;
-    background: #1a2a3a;
-    color: white;
-    text-align: center;
-}
-
-.contact-us h2 {
-    font-size: 2.5rem;
-}
-
-.contact-us p {
-    font-size: 1.2rem;
+    object-fit: contain;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .features {
+    .features, .main-div {
         flex-direction: column;
         align-items: center;
     }
 
-    .feature {
+    .feature, .testimonial {
         width: 90%;
-    }
-
-    .testimonial {
-        width: 90%;
-    }
-
-    .main-div {
-        flex-direction: column;
-        gap: 20px;
     }
 
     .right-div {
         width: 100%;
-        display: flex;
-        justify-content: center;
     }
+   
 
     .left-div {
         width: 100%;
     }
-
-    .left-div img {
+      .right-div img {
         width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: contain;
     }
 }
 
@@ -253,17 +137,12 @@
         font-size: 1rem;
     }
 
-    .about-section h2,
-    .why-choose-us h2,
-    .our-services h2,
-    .testimonials h2,
-    .contact-us h2 {
+    .about-section h2, .why-choose-us h2, .our-services h2,
+    .testimonials h2, .contact-us h2 {
         font-size: 2rem;
     }
 
-    .about-section p,
-    .our-services li,
-    .testimonial p {
+    .about-section p, .our-services li, .testimonial p {
         font-size: 1rem;
     }
 
@@ -273,8 +152,8 @@
 
     .right-div img {
         width: 100%;
-        height: 150px;
-        object-fit: cover;
+        height: 100%;
+        object-fit: contain;
     }
 }
 
@@ -293,17 +172,12 @@
         font-size: 0.9rem;
     }
 
-    .about-section h2,
-    .why-choose-us h2,
-    .our-services h2,
-    .testimonials h2,
-    .contact-us h2 {
+    .about-section h2, .why-choose-us h2, .our-services h2,
+    .testimonials h2, .contact-us h2 {
         font-size: 1.8rem;
     }
 
-    .about-section p,
-    .our-services li,
-    .testimonial p {
+    .about-section p, .our-services li, .testimonial p {
         font-size: 0.9rem;
     }
 
@@ -312,6 +186,7 @@
     }
 
     .right-div img {
-        height: 130px;
+        height: 100%;object-fit: contain;
+
     }
 }
