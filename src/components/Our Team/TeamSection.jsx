@@ -4,6 +4,7 @@ import ceo from "./../../assets/images/Our Team/ceo.jpg";
 import ceo2 from "./../../assets/images/Our Team/assad.jpg";
 import ceo3 from "./../../assets/images/Our Team/yasir.jpg";
 import Abbas from "./../../assets/images/Our Team/Abbas.jpg";
+import waseem from "./../../assets/images/Our Team/waseem.png"; // Add Waseem's image
 
 const teamMembers = [
   {
@@ -12,6 +13,13 @@ const teamMembers = [
     image: ceo,
     style: "border-yellow-500 shadow-xl scale-110 bg-gradient-to-b from-yellow-100 to-white",
     textStyle: "text-yellow-500",
+  },
+  {
+    name: "Waseem Khan",
+    role: "Co-Owner",
+    image: waseem,
+    style: "border-yellow-400 shadow-lg bg-gradient-to-b from-yellow-50 to-white",
+    textStyle: "text-yellow-400",
   },
   {
     name: "Assad Khan",
@@ -61,30 +69,31 @@ const TeamSection = () => {
         Our leadership team brings expertise and vision to drive success.
       </motion.p>
       
-      <div className="grid gap-8 mt-10 sm:grid-cols-2 lg:grid-cols-4">
-        {teamMembers.map((member, index) => (
-          <motion.div
-            key={index}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={slideInLeft}
-            className={`relative flex flex-col items-center p-6 rounded-lg transition transform hover:scale-105 ${member.style}`}
-          >
-            <img
-              src={member.image}
-              alt={member.name}
-              className="w-28 h-28 object-cover rounded-full border-4"
-            />
-            <h3 className="mt-4 text-lg font-semibold text-gray-800">
-              {member.name}
-            </h3>
-            <p className={`mt-1 text-sm font-medium ${member.textStyle}`}>
-              {member.role}
-            </p>
-          </motion.div>
-        ))}
-      </div>
+      <div className="grid gap-8 mt-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+  {teamMembers.map((member, index) => (
+    <motion.div
+      key={index}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={slideInLeft}
+      className={`relative flex flex-col items-center p-6 rounded-lg transition transform hover:scale-105 ${member.style}`}
+    >
+      <img
+        src={member.image}
+        alt={member.name}
+        className="w-28 h-28 object-cover rounded-full border-4"
+      />
+      <h3 className="mt-4 text-lg font-semibold text-gray-800">
+        {member.name}
+      </h3>
+      <p className={`mt-1 text-sm font-medium ${member.textStyle}`}>
+        {member.role}
+      </p>
+    </motion.div>
+  ))}
+</div>
+
     </section>
   );
 };
