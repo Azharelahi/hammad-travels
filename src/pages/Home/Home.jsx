@@ -123,17 +123,19 @@ const Home = () => {
     <section className="call_us">
   <Container>
     <Row className="align-items-center">
-      <Col md="8">
-        <h5 className="title">BOOK YOUR NEXT ADVENTURE</h5>
-        <h2 className="heading">
-          EXPLORE THE BEAUTY OF PAKISTAN WITH <span>HAMMAD TRAVELS!</span>
-        </h2>
-        <p className="text">
-          Discover breathtaking destinations, hassle-free bookings, and 
-          unforgettable experiences. Whether it's a relaxing getaway or an 
-          adventurous trip, we make your travel dreams a reality.
-        </p>
-      </Col>
+   <Col md="8">
+  <h5 className="title">Plan Your Next Pakistan Tour</h5>
+  <h2 className="heading">
+    Explore Top Tourist Destinations in Pakistan with <span>Hammad Travels</span>
+  </h2>
+  <p className="text">
+    Hammad Travels is a trusted travel and tour company in Islamabad, 
+    offering hassle-free bookings for unforgettable journeys across Pakistan. 
+    Discover scenic landscapes, cultural hotspots, and highly recommended 
+    destinations that make every trip memorable.
+  </p>
+</Col>
+
       <Col md="4" className="text-center mt-3 mt-md-0">
         <a
           href="tel:+923341111427"

@@ -11,32 +11,32 @@ import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import { Card, Col, Container, Row } from "react-bootstrap";
 
 const Features = () => {
-  const featureList = [
-    {
-      id: 0,
-      image: feature1,
-      title: "Discover the possibilities",
-      des: "With nearly half a million attractions, hotels & more, you're sure to find joy.",
-    },
-    {
-      id: 1,
-      image: feature2,
-      title: "Enjoy deals & delights",
-      des: "Quality activities. Great prices. Plus, earn credits to save more.",
-    },
-    {
-      id: 2,
-      image: feature3,
-      title: "Exploring made easy",
-      des: "Book last minute, skip lines & get free cancellation for easier exploring.",
-    },
-    {
-      id: 3,
-      image: feature4,
-      title: "Travel you can trust",
-      des: "Read reviews & get reliable customer support. We're with you at every step.",
-    },
-  ];
+const featureList = [
+  {
+    id: 0,
+    image: feature1,
+    title: "Explore Top Tourist Destinations in Pakistan",
+    des: "Discover Pakistan’s most beautiful tourist destinations with our carefully planned Pakistan tour services, designed to create unforgettable journeys for every traveler.",
+  },
+  {
+    id: 1,
+    image: feature2,
+    title: "Affordable Travel & Tour Services",
+    des: "As a reliable travel agency, we offer quality travel and tour services at competitive prices, making us a highly recommend choice for local travelers.",
+  },
+  {
+    id: 2,
+    image: feature3,
+    title: "Easy & Hassle-Free Tour Planning",
+    des: "Our tourism company simplifies your Pakistan tour experience with smooth planning, flexible bookings, and expert support from start to finish.",
+  },
+  {
+    id: 3,
+    image: feature4,
+    title: "A Travel Agency You Can Trust",
+    des: "Hammad Travels is a trusted travel and tour partner, highly recommend by travelers for delivering safe, comfortable, and unforgettable journeys across Pakistan.",
+  },
+];
 
   return (
     <section className="feature-section">

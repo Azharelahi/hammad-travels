@@ -91,20 +91,27 @@ const AboutUs = () => {
             <h2 className="text-4xl font-bold text-center text-gray-800">
               About Us!
             </h2>
-            <p>
-              At Hammad Travels, we specialize in providing top-quality travel
-              and rental services to make your journey smooth and memorable.
-              Whether you're planning a road trip, need an airport transfer, or
-              require a comfortable rental car, we are here to serve you. Our
-              expert team ensures every aspect of your trip is taken care of,
-              from booking the best routes to providing premium vehicles. Let us
-              help you create the perfect travel experience, wherever your
-              journey may take you.
-            </p>
+       <p>
+  Hammad Travels is a professional travel agency based in Islamabad, dedicated
+  to providing reliable travel and tour services across Pakistan. As a trusted
+  tourism company, we specialize in well-planned Pakistan tour experiences,
+  airport transfers, and comfortable car rental solutions.
+</p>
+
+
+<p>
+  Our goal is to help travelers explore Pakistan’s most popular tourist
+  destinations with ease, safety, and comfort. From seamless bookings to
+  dependable transport, we focus on delivering services that travelers highly
+  recommend for creating smooth and unforgettable journeys.
+</p>
+
           </div>
-          <div className="right-div">
-            <img src={img} alt="there is an image" />
-          </div>
+         <img
+  src={img}
+  alt="Hammad Travels travel agency in Islamabad offering Pakistan tour services"
+/>
+
         </div>
       </motion.section>
       <hr />

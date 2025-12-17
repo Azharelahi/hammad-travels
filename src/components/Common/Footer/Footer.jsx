@@ -91,7 +91,7 @@ const Footer = () => {
               <h4 className="footer-title">Contact Info</h4>
               <p className="d-flex align-items-center gap-2">
                 <MapPin size={20} />
-                G9 Markaz , Islamabad, Pakistan
+                G10 Markaz , Islamabad, Pakistan
               </p>
               <a
                 href="mailto:contact.hammadtravel@gmail.com"
