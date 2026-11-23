@@ -3,7 +3,7 @@ import { Col, Container, Row, ListGroup } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { ChevronUp, MapPin } from "lucide-react";
 import "../Footer/footer.css";
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, Globe } from "lucide-react";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 const Footer = () => {
   const [visible, setVisible] = useState(false);
@@ -27,7 +27,7 @@ const Footer = () => {
           <Row>
             {/* Company */}
             <Col md="3" sm="6" className="mt-3">
-              <h4 className="footer-title">Hammad Travels</h4>
+              <h4 className="footer-title">Hammad Travels & Tourism</h4>
               <ListGroup variant="flush" className="footer-list">
                 <ListGroup.Item>
                   <ListGroup.Item>
@@ -91,11 +91,20 @@ const Footer = () => {
               <h4 className="footer-title">Contact Info</h4>
               <p className="d-flex align-items-center gap-2">
                 <MapPin size={20} />
-                G10 Markaz , Islamabad, Pakistan
+                Azeem Plaza, G10 Markaz, Islamabad, Pakistan
               </p>
               <a
-                href="mailto:contact.hammadtravel@gmail.com"
+                href="https://hammdtravelsandtourism.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="d-flex align-items-center gap-2 text-white"
+                style={{ textDecoration: "none" }}
+              >
+                <Globe size={20} /> hammdtravelsandtourism.com
+              </a>
+              <a
+                href="mailto:contact.hammadtravel@gmail.com"
+                className="d-flex align-items-center gap-2 text-white mt-2"
                 style={{ textDecoration: "none" }}
               >
                 <Mail size={20} /> contact.hammadtravel@gmail.com
@@ -118,7 +127,7 @@ const Footer = () => {
             {/* Copyright Section */}
             <Col md={6} xs={12} className="text-center mb-2 mb-md-0">
               <p className="m-0 text-white">
-                © 2025 Hammad Travels®. All rights reserved.
+                © 2025 Hammad Travels & Tourism®. All rights reserved.
               </p>
             </Col>
 

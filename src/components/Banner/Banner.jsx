@@ -19,9 +19,10 @@ const Banner = () => {
 </h5>
 
            <p className="sub_text animate__animated animate__backInDown">
-  Hammad Travels is a trusted travel and tour agency in Islamabad, offering
-  domestic and international tour packages, Islamabad airport transfers,
-  car rentals, and customized travel solutions for individuals and families.
+  Hammad Travels & Tourism is a trusted travel and tour agency in Islamabad,
+  offering domestic and international tour packages, guided sightseeing tours,
+  Islamabad airport transfers, car rentals, and customized travel solutions for
+  individuals and families.
 </p>
 
 
@@ -42,9 +43,10 @@ const Banner = () => {
 </h5>
 
 <p className="sub_text animate__animated animate__backInDown">
-  Based in Islamabad, Hammad Travels provides domestic tour services across
-  Pakistan, offering customized travel plans, comfortable transport, and
-  dependable tour arrangements for families and groups.
+  Now expanding beyond car rentals, Hammad Travels & Tourism provides domestic
+  tour services across Pakistan, offering customized travel plans, guided
+  sightseeing, comfortable transport, and dependable tour arrangements for
+  families and groups.
 </p>
 
 

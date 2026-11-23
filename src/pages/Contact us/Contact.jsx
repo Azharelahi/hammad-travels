@@ -136,7 +136,17 @@ ${formData.message}
         <div className="infoContainer">
           <h2 className="infoTitle">Contact Info</h2>
           <p className="infoText">
-            📍 Location: G9 Markaz, Islamabad, Pakistan
+            📍 Location: Azeem Plaza, G10 Markaz, Islamabad, Pakistan
+          </p>
+          <p className="infoText">
+            🌐{" "}
+            <a
+              href="https://hammdtravelsandtourism.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              hammdtravelsandtourism.com
+            </a>
           </p>
           <p className="infoText">
             📧{" "}
@@ -148,7 +158,7 @@ ${formData.message}
             📞 <a href="tel:+923341111427">+92 334 111 1427</a>
           </p>
           <iframe
-            src="https://maps.google.com/maps?q=Islamabad&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            src="https://maps.google.com/maps?q=Azeem+Plaza+G10+Markaz+Islamabad&t=&z=15&ie=UTF8&iwloc=&output=embed"
             className="map"
             title="map"
           ></iframe>

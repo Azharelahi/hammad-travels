@@ -70,12 +70,12 @@ const AboutUs = () => {
       >
         <h1>
           <AnimatedText
-            text={"Welcome to\nHammad Travels"}
+            text={"Welcome to\nHammad Travels\n& Tourism"}
             className="your-class"
           />
         </h1>
 
-        <p>Your Trusted Partner for Hassle-Free Travel & Car Rentals</p>
+        <p>Your Trusted Partner for Tours, Travel & Car Rentals</p>
       </motion.section>
 
       {/* About Section */}
@@ -91,11 +91,12 @@ const AboutUs = () => {
             <h2 className="text-4xl font-bold text-center text-gray-800">
               About Us!
             </h2>
-       <p>
-  Hammad Travels is a professional travel agency based in Islamabad, dedicated
-  to providing reliable travel and tour services across Pakistan. As a trusted
-  tourism company, we specialize in well-planned Pakistan tour experiences,
-  airport transfers, and comfortable car rental solutions.
+        <p>
+  Hammad Travels & Tourism is a professional travel agency based in Islamabad,
+  dedicated to providing reliable travel and tour services across Pakistan.
+  What started as a trusted car rental service has now expanded into full
+  tourism operations — we specialize in well-planned Pakistan tour experiences,
+  guided sightseeing, airport transfers, and comfortable car rental solutions.
 </p>
 
 
@@ -109,7 +110,7 @@ const AboutUs = () => {
           </div>
          <img
   src={img}
-  alt="Hammad Travels travel agency in Islamabad offering Pakistan tour services"
+  alt="Hammad Travels & Tourism travel agency in Islamabad offering Pakistan tour services"
 />
 
         </div>
