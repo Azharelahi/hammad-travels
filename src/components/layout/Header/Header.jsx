@@ -22,7 +22,12 @@ const Header = () => {
         <Navbar expand="lg" className="p-0">
           <Navbar.Brand as={NavLink} to="/" className="brand-link">
             <img className="logo-img" src={img} alt="" />
-            <span className="logo">Hammad Travels</span>
+            <span className="brand-wordmark">
+              <span className="brand-name">
+                Hammad <span className="brand-accent">Travels</span>
+              </span>
+              <span className="brand-caption">TRAVEL &amp; TOURISM</span>
+            </span>
           </Navbar.Brand>
 
           <Navbar.Offcanvas
@@ -32,7 +37,12 @@ const Header = () => {
             onHide={() => setOpen(false)}
           >
             <Offcanvas.Header>
-              <span className="logo">Hammad Travels</span>
+              <span className="brand-wordmark">
+                <span className="brand-name">
+                  Hammad <span className="brand-accent">Travels</span>
+                </span>
+                <span className="brand-caption">TRAVEL &amp; TOURISM</span>
+              </span>
               <button
                 type="button"
                 className="mobile-menu-button"
