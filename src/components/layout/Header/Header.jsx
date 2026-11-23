@@ -7,17 +7,41 @@ import "./header.css";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [interacting, setInteracting] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     setOpen(false);
   }, [location.pathname]);
 
+  useEffect(() => {
+    const updateScrollState = () => setScrolled(window.scrollY > 80);
+
+    updateScrollState();
+    window.addEventListener("scroll", updateScrollState, { passive: true });
+    return () => window.removeEventListener("scroll", updateScrollState);
+  }, []);
+
+  useEffect(() => {
+    setInteracting(open);
+  }, [open]);
+
   const getNavLinkClass = ({ isActive }) =>
     `nav-link${isActive ? " active-link" : ""}`;
 
   return (
-    <header className="header-section">
+    <header
+      className={`header-section${scrolled ? " is-scrolled" : ""}${interacting ? " is-interacting" : ""}`}
+      onPointerEnter={() => setInteracting(true)}
+      onPointerLeave={() => setInteracting(open)}
+      onFocusCapture={() => setInteracting(true)}
+      onBlurCapture={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) {
+          setInteracting(open);
+        }
+      }}
+    >
       <Container>
         <Navbar expand="lg" className="p-0">
           <Navbar.Brand as={NavLink} to="/" className="brand-link">
