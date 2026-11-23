@@ -1,8 +1,7 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import "../Cards/card.css";
-import { Navigate, NavLink } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Cards = ({ destination }) => {
   return (
@@ -21,6 +20,8 @@ const Cards = ({ destination }) => {
               src={destination.image}
               className="img-fluid dest-cont"
               alt={destination.name}
+              loading="lazy"
+              decoding="async"
             />
             <Card.Title>{destination.name}</Card.Title>
 

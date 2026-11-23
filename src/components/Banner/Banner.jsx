@@ -11,7 +11,15 @@ const Banner = () => {
     <section className="slider">
       <Carousel variant="dark">
         <Carousel.Item>
-          <img src={sliderImg} className="d-block w-100" alt="First slide" />
+          <img
+            src={sliderImg}
+            className="d-block w-100"
+            alt="Scenic northern Pakistan landscape - tours by Hammad Travels & Tourism"
+            width={1920}
+            height={900}
+            fetchpriority="high"
+            decoding="async"
+          />
           <Carousel.Caption>
             <div className="slider_des">
            <h5 className="heading-des1">
@@ -35,7 +43,15 @@ const Banner = () => {
         </Carousel.Item>
 
         <Carousel.Item>
-          <img src={sliderImg1} className="d-block w-100" alt="Second slide" />
+          <img
+            src={sliderImg1}
+            className="d-block w-100"
+            alt="Pakistan tour destinations - mountains, valleys and lakes"
+            width={1920}
+            height={900}
+            loading="lazy"
+            decoding="async"
+          />
           <Carousel.Caption>
             <div className="slider_des">
           <h5 className="heading-des1">

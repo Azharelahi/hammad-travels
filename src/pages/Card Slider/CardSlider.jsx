@@ -11,25 +11,25 @@ const CardSlider = () => {
         {
           title: "Mountain View",
           desc: "Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains",
-          img: "https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg",
+          img: "https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&w=640",
           link: "/mountaines",
         },
         {
           title: "To The Beach",
           desc: "Plan your next beach trip with these fabulous destinations",
-          img: "https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg",
+          img: "https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg?auto=compress&cs=tinysrgb&w=640",
           link: "/beaches",
         },
         {
           title: "To The Desert",
           desc: "Plan your next Desert trip with these fabulous destinations",
-          img: "https://images.pexels.com/photos/1001435/pexels-photo-1001435.jpeg",
+          img: "https://images.pexels.com/photos/1001435/pexels-photo-1001435.jpeg?auto=compress&cs=tinysrgb&w=640",
           link: "/deserts",
         },
         {
           title: "Into the Forest",
           desc: "Discover serene forests and reconnect with nature's beauty.",
-          img: "https://images.pexels.com/photos/142497/pexels-photo-142497.jpeg",
+          img: "https://images.pexels.com/photos/142497/pexels-photo-142497.jpeg?auto=compress&cs=tinysrgb&w=640",
           link: "/forests",
         },
       ].map((card, index) => (

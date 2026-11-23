@@ -71,6 +71,10 @@ const featureList = [
                       src={feature.image}
                       className="img-fluid"
                       alt={feature.title}
+                      loading="lazy"
+                      decoding="async"
+                      width={80}
+                      height={80}
                     />
                     <Card.Title className="mt-2">{feature.title}</Card.Title>
                     <Card.Text>{feature.des}</Card.Text>
