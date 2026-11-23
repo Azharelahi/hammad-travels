@@ -118,7 +118,25 @@
 }
 
 .header-section .offcanvas {
-  --bs-offcanvas-width: 340px;
+  --bs-offcanvas-width: min(320px, 82vw);
+  background:
+    linear-gradient(150deg, rgba(255, 255, 255, 0.92), rgba(228, 237, 232, 0.84)),
+    rgba(255, 255, 255, 0.82);
+  border-left: 1px solid rgba(255, 255, 255, 0.82);
+  box-shadow: -18px 0 45px rgba(27, 43, 36, 0.16);
+  backdrop-filter: blur(26px) saturate(160%);
+  -webkit-backdrop-filter: blur(26px) saturate(160%);
+}
+
+.header-section .offcanvas::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 100% 8%, rgba(227, 200, 142, 0.24), transparent 24%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.34), transparent 42%);
+  content: "";
+  pointer-events: none;
 }
 
 .header-section .offcanvas-body .nav-link {
@@ -197,8 +215,13 @@
 }
 
 .header-section .offcanvas-header {
-  padding: 22px;
-  border-bottom: 1px solid var(--line);
+  min-height: 86px;
+  align-items: center;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(18px) saturate(150%);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
 }
 
 .offcanvas .offcanvas-header .brand-name {
@@ -207,6 +230,18 @@
 
 .offcanvas .offcanvas-header .mobile-menu-button {
   display: inline-flex;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  margin-left: 10px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.92);
+  border-radius: 50%;
+  box-shadow:
+    0 7px 18px rgba(27, 43, 36, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 @media (max-width: 991px) {
@@ -301,6 +336,70 @@
   .header-cta {
     white-space: nowrap;
   }
+
+  .header-section .offcanvas {
+    --bs-offcanvas-width: 78vw;
+    width: 78vw !important;
+    max-width: 300px;
+    visibility: hidden;
+  }
+
+  .header-section .offcanvas.show,
+  .header-section .offcanvas.showing {
+    visibility: visible;
+  }
+
+  .offcanvas.offcanvas-end {
+    --bs-offcanvas-width: 78vw;
+    width: 78vw !important;
+    max-width: 300px;
+    background: linear-gradient(
+      150deg,
+      rgba(255, 255, 255, 0.92),
+      rgba(228, 237, 232, 0.84)
+    ) !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.82);
+    box-shadow: -18px 0 45px rgba(27, 43, 36, 0.16);
+    backdrop-filter: blur(26px) saturate(160%);
+    -webkit-backdrop-filter: blur(26px) saturate(160%);
+  }
+
+  .offcanvas.offcanvas-end.show,
+  .offcanvas.offcanvas-end.showing {
+    width: 78vw !important;
+    max-width: 300px;
+  }
+
+  .offcanvas .offcanvas-header {
+    min-height: 82px;
+    align-items: center;
+    padding: 13px 14px;
+    background: rgba(255, 255, 255, 0.54);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(18px) saturate(150%);
+    -webkit-backdrop-filter: blur(18px) saturate(150%);
+  }
+
+  .offcanvas .offcanvas-header .mobile-menu-button {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+  }
+
+  .header-section .offcanvas-header {
+    min-height: 82px;
+    gap: 8px;
+    padding: 13px 14px;
+  }
+
+  .offcanvas .offcanvas-header .brand-name {
+    max-width: 190px;
+    font-size: 17px;
+  }
+
+  .offcanvas .offcanvas-header .brand-caption {
+    display: block;
+  }
 }
 
 @media (max-width: 400px) {
@@ -326,6 +425,15 @@
     gap: 4px;
     padding: 10px 9px;
     font-size: 11px;
+  }
+
+  .offcanvas .offcanvas-header .brand-name {
+    max-width: 170px;
+    font-size: 15px;
+  }
+
+  .offcanvas .offcanvas-header .brand-caption {
+    display: none;
   }
 }
 
