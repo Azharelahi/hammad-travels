@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Heading from "components/ui/Heading/Heading";
 import logo from "assets/images/logo/logo4.png";
@@ -6,12 +6,9 @@ import "animate.css";
 import HeadlineTicker from "components/ui/HeadlineTicker/HeadlineTicker";
 
 const HireDetails = () => {
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
-
   const { state } = useLocation();
   const car = state?.car;
+  const bookingFormRef = useRef(null);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -23,6 +20,20 @@ const HireDetails = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useLayoutEffect(() => {
+    const form = bookingFormRef.current;
+    if (!form) {
+      window.scrollTo(0, 0);
+      return;
+    }
+
+    const headerHeight =
+      document.querySelector(".header-section")?.getBoundingClientRect().height ||
+      0;
+    const top = form.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
+    window.scrollTo({ top: Math.max(top, 0), behavior: "smooth" });
+  }, [car]);
 
   if (!car) return <p>No car selected!</p>;
 
@@ -88,7 +99,10 @@ const HireDetails = () => {
       <section className="bg-gray-100 py-12 flex justify-center min-h-screen">
         <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-center gap-6">
           {/* Left: Booking Form */}
-          <div className="relative w-full max-w-lg lg:w-3/5 p-6 rounded-lg shadow-lg flex flex-col justify-center bg-white/70 backdrop-blur-md">
+          <div
+            ref={bookingFormRef}
+            className="relative w-full max-w-lg lg:w-3/5 p-6 rounded-lg shadow-lg flex flex-col justify-center bg-white/70 backdrop-blur-md"
+          >
             {/* Background Logo */}
             <img
               src={logo}
