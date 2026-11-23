@@ -1,122 +1,148 @@
-/* Footer Styling */
 footer {
   position: relative;
-  background: rgba(255, 255, 255, 0.95); /* Ensuring pure whitish background */
-  color: black;
-  padding: 40px 0;
-  backdrop-filter: blur(10px); /* Smooth blur effect */
-  text-align: center; /* Default centering */
+  padding: 66px 0 24px;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.78);
+  background: #17251f !important;
 }
 
-/* Background Logo */
 footer::before {
-  content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 70%;
-  height: 100%;
-  background: url("./../../../assets/images/logo/logo4.png") no-repeat center;
-  background-size: contain;
-  opacity: 0.2; /* Keeping it very subtle */
-  filter: blur(10px); /* Soft blur effect */
-  z-index: -1; /* Behind the content */
+  top: -130px;
+  right: -120px;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(195, 154, 90, 0.12), transparent 68%);
+  content: "";
+  pointer-events: none;
 }
 
-/* Footer Titles */
 .footer-title {
-  font-size: 1.3rem;
-  font-weight: bold;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+  color: #fff;
+  font-family: var(--fontFamily1);
+  font-size: 17px;
+  font-weight: 500;
 }
 
-/* Footer Links */
 .footer-list {
-  text-align: center;
+  text-align: left;
 }
 
 .footer-list .list-group-item {
+  padding: 5px 0;
+  color: inherit;
   background: transparent;
   border: none;
-  padding: 6px 0;
 }
 
 .footer-list .list-group-item a {
-  color: rgb(187, 185, 185);
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 13px;
   text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+  transition: color 180ms ease;
 }
 
-.footer-list .list-group-item a:hover {
-  color: #b59fce;
+.footer-list .list-group-item a:hover,
+.footer-contact a:hover {
+  color: #e3c88e;
 }
 
-/* Contact Info */
 .footer-contact {
-  text-align: center;
+  align-items: flex-start !important;
+  text-align: left;
+}
+
+.footer-contact p,
+.footer-contact a {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 12px;
+  line-height: 1.65;
+  text-align: left;
 }
 
 .footer-contact a {
-  color: black;
-  text-decoration: none;
+  transition: color 180ms ease;
 }
 
-.footer-contact a:hover {
-  color: #ff4500;
+footer .border-top {
+  width: 100% !important;
+  margin-top: 40px !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
 }
 
-/* Scroll to Top Button */
+footer .border-top p {
+  color: rgba(255, 255, 255, 0.54) !important;
+  font-size: 11px;
+}
+
+footer .border-top a {
+  color: rgba(255, 255, 255, 0.76);
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+footer .border-top a:hover {
+  color: #e3c88e;
+  transform: translateY(-2px);
+}
+
 .scroll-top {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #5b7edf;
-  color: white;
-  padding: 12px;
-  border-radius: 50%;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1000;
   display: flex;
+  width: 44px;
+  height: 44px;
   align-items: center;
   justify-content: center;
+  padding: 0;
+  color: #fff;
+  background: var(--ink);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(27, 43, 36, 0.2);
   cursor: pointer;
-  transition: all 0.3s ease;
   opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 180ms ease, transform 180ms ease, background 180ms ease;
   visibility: hidden;
 }
 
 .scroll-top.visible {
   opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
   visibility: visible;
 }
 
 .scroll-top:hover {
-  background: #c878a9;
+  background: var(--accent-dark);
 }
 
-/* Responsive Design for Small Devices */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   footer {
-    text-align: center;
+    padding: 48px 0 20px;
+    text-align: left;
   }
 
-  .footer-title {
-    font-size: 1.2rem;
+  .footer-list {
+    text-align: left;
   }
 
-  .footer-list,
   .footer-contact {
-    text-align: center;
+    align-items: flex-start !important;
   }
 
-  .footer-list .list-group-item,
-  .footer-contact div {
-    justify-content: center;
+  footer .border-top {
+    margin-top: 28px !important;
   }
 
-  footer::before {
-    width: 90%; /* Adjusting logo size for small screens */
-    opacity: 0.15; /* Slightly lowering visibility */
-    filter: blur(8px);
+  .scroll-top {
+    right: 16px;
+    bottom: 16px;
+    width: 40px;
+    height: 40px;
   }
 }

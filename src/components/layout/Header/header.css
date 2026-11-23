@@ -1,244 +1,169 @@
-/* Sticky Menu */
-.is-sticky {
-  position: fixed;
+.header-section {
+  position: sticky;
   top: 0;
-  left: 0;
+  z-index: 1000;
   width: 100%;
-  animation: smoothScroll 0.5s forwards;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  z-index: 999;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 12px 0;
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid rgba(24, 45, 37, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 }
 
-/* Rent Button Styles */
-.Rent-Now {
-  text-decoration: none;
-  font-size: clamp(10px, 1vw, 14px);
-  font-weight: bold;
-  color: azure;
-  border: 2px solid azure;
-  padding: 8px 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  background: transparent;
+.header-section .navbar {
+  min-height: 58px;
+}
+
+.header-section .brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.header-section .logo-img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+}
+
+.header-section .logo {
+  color: var(--ink);
+  font-family: var(--fontFamily1);
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.7px;
+  white-space: nowrap;
+}
+
+.header-section .offcanvas {
+  --bs-offcanvas-width: 340px;
+}
+
+.header-section .offcanvas-body .nav-link {
   position: relative;
-  transition: all 0.3s ease-in-out;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  box-shadow: 0 0 10px rgba(173, 216, 230, 0.8);
+  margin: 0 3px;
+  padding: 10px 12px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: color 180ms ease;
 }
 
-.Rent-Now:hover {
-  color: black;
-  background: azure;
-  transform: scale(1.05);
+.header-section .offcanvas-body .nav-link:hover,
+.header-section .offcanvas-body .nav-link.active-link {
+  color: var(--ink);
 }
 
-.is-sticky .Rent-Now {
-  color: black !important;
-  background: transparent !important;
-  border: 2px solid black !important;
-}
-
-.is-sticky .Rent-Now:hover {
-  background: white !important;
-  border: 2px solid white !important;
-}
-
-/* Logo Styling */
-.logo {
-  font-family: 'Great Vibes', cursive;
-  font-size: clamp(20px, 3vw, 40px);
-  background: linear-gradient(to right, #ff7eb3, #5394d2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-
-.logo-img {
-  height: auto;
-  width: clamp(40px, 6vw, 70px);
-}
-
-/* Navbar & Header */
-header {
+.header-section .offcanvas-body .nav-link.active-link::after {
   position: absolute;
-  top: 0;
-  z-index: 999;
-  padding: 10px 5vw;
-  width: 100%;
-}
-
-.navbar .navbar-brand a {
-  font-size: clamp(18px, 2vw, 22px);
-  color: var(--white);
-  font-weight: bold;
-}
-
-.is-sticky .navbar .offcanvas-body a {
-  font-size: clamp(12px, 1.5vw, 14px);
-  color: var(--black) !important;
-  font-weight: bold;
-  text-transform: uppercase;
-  
-}
-.navbar .offcanvas-body a {
-  font-size: clamp(12px, 1.5vw, 14px);
-  color: var(--white) !important;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-.navbar .offcanvas-body a:hover {
-  font-size: clamp(12px, 1.5vw, 14px);
- color: #4169E1 !important;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: underline;
-}
-.navbar .offcanvas-body a:hover {
-  font-size: clamp(12px, 1.5vw, 14px);
-color: #8141e1 !important;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-.navbar .offcanvas-body .nav-link.active {
-  position: relative;
-  color: #bbaeec !important;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.navbar .offcanvas-body .nav-link.active::after {
+  right: 12px;
+  bottom: 3px;
+  left: 12px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
   content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -4px;
-  width: 8px;
-  height: 8px;
-  background-color: #cebecc;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 17px;
+  color: #fff;
+  background: var(--ink);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.header-cta:hover {
+  color: #fff;
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+.mobile-menu-button {
+  display: none;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  background: #f3f5f2;
+  border: 0;
   border-radius: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0 0 8px #736d72, 0 0 15px #252324;
-  animation: pulse-ring 1.5s infinite ease-in-out;
 }
 
-/* Keyframe animation for the glowing ring effect */
-@keyframes pulse-ring {
-  0% {
-    box-shadow: 0 0 8px #f58ee9, 0 0 15px #ff7eb3;
-  }
-  50% {
-    box-shadow: 0 0 12px #f58ee9, 0 0 20px #ff7eb3, 0 0 25px #ffb3e6;
-  }
-  100% {
-    box-shadow: 0 0 8px #f58ee9, 0 0 15px #ff7eb3;
-  }
+.header-section .offcanvas-header {
+  padding: 22px;
+  border-bottom: 1px solid var(--line);
 }
 
-
-@keyframes smoothScroll {
-  from {
-    transform: translateY(-40px);
-  }
-  to {
-    transform: translateY(0px);
-  }
+.offcanvas .offcanvas-header .mobile-menu-button {
+  display: inline-flex;
 }
 
-/* Responsive Design */
 @media (max-width: 991px) {
-  .navbar .toggle_btn {
-    font-size: 1rem;
-    color: #f58ee9;
-    border: 2px solid var(--white);
-    border-radius: 8px;
-    padding: 7px 10px;
+  .header-section .navbar {
+    flex-wrap: nowrap;
   }
-  .offcanvas-header {
-    border-bottom: 1px solid #f58ee9;
+
+  .header-section .navbar-nav {
+    align-items: stretch !important;
+    padding-top: 20px;
   }
-  .offcanvas-header .logo {
-    font-size: 26px;
-    color: var(--black) !important;
+
+  .header-section .offcanvas-body .nav-link {
+    margin: 2px 0;
+    padding: 14px 6px;
+    font-size: 15px;
   }
-  .offcanvas-body .nav-link, .offcanvas-body .dropdown-item {
-    padding: 12px 0;
-    color: var(--black);
+
+  .header-section .offcanvas-body .nav-link.active-link::after {
+    right: auto;
+    bottom: 7px;
+    left: 6px;
+    width: 26px;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
   }
 }
 
-@media (max-width: 550px) {
-  .logo {
-    font-size: 20px;
-  }
-  .logo-img {
-    width: 40px;
-  }
-  .Rent-Now {
-    padding: 6px 12px;
-    font-size: 10px;
-  }
-}
-@media (max-width: 400px) {
-  .logo {
-    font-size: 18px;
-    letter-spacing: 0.5px;
-  }
-  
-  .logo-img {
-    width: 35px;
-  }
-
-  .Rent-Now {
-    padding: 5px 10px;
-    font-size: 9px;
-  }
-
-  .navbar .toggle_btn {
-    font-size: 0.9rem;
-    padding: 5px 8px;
-  }
-
-  .offcanvas-header .logo {
-    font-size: 22px;
-  }
-
-  .offcanvas-body .nav-link {
-    font-size: 12px;
-    padding: 10px 0;
-  }
-}
-@media (max-width: 333px) {
-  .logo {
-    font-size: 16px;
-    letter-spacing: 0.3px;
-  }
-
-  .logo-img {
-    width: 30px;
-  }
-
-  .Rent-Now {
-    padding: 4px 8px;
-    font-size: 8px;
-  }
-
-  .navbar .toggle_btn {
-    font-size: 0.8rem;
-    padding: 4px 6px;
-  }
-
-  .offcanvas-header .logo {
-    font-size: 20px;
-  }
-
-  .offcanvas-body .nav-link {
-    font-size: 11px;
+@media (max-width: 575px) {
+  .header-section {
     padding: 8px 0;
+  }
+
+  .header-section .logo-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header-section .logo {
+    font-size: 16px;
+  }
+
+  .header-cta {
+    gap: 5px;
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .header-actions {
+    gap: 8px;
   }
 }

@@ -86,7 +86,7 @@ const Footer = () => {
             <Col
               md="3"
               sm="6"
-              className="mt-3 text-center d-flex flex-column align-items-center"
+              className="mt-3 d-flex flex-column footer-contact"
             >
               <h4 className="footer-title">Contact Info</h4>
               <p className="d-flex align-items-center gap-2">
@@ -159,14 +159,15 @@ const Footer = () => {
       </footer>
 
       {/* Scroll to Top Button */}
-      <div
+      <button
+        type="button"
         id="back-top"
         onClick={scrollTop}
         className={`scroll-top ${visible ? "visible" : ""}`}
         aria-label="Scroll to top"
       >
         <ChevronUp size={24} />
-      </div>
+      </button>
     </>
   );
 };

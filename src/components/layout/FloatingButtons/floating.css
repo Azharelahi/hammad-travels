@@ -1,3 +1,26 @@
 .float-icons {
-    z-index: 4;
+  z-index: 4;
+}
+
+.float-icons a {
+  display: flex;
+  width: 52px;
+  height: 52px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px !important;
+}
+
+@media (max-width: 575px) {
+  .float-icons {
+    right: 12px !important;
+    bottom: 12px !important;
+    left: auto !important;
+  }
+
+  .float-icons a {
+    width: 46px;
+    height: 46px;
+    padding: 10px !important;
+  }
 }

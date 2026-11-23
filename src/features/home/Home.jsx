@@ -77,7 +77,9 @@ const Home = () => {
           <Row>
             <Col md="12">
               <div className="main_heading">
-                <h1> Top Destination For Your Next Vacation </h1>
+                <span className="section-eyebrow">Places worth the journey</span>
+                <h2>Find your next favorite place</h2>
+                <p>Big horizons, quiet corners, and everything in between.</p>
               </div>
             </Col>
           </Row>
@@ -101,7 +103,9 @@ const Home = () => {
           <Row>
             <Col md="12">
               <div className="main_heading">
-                <h1> Popular Trips </h1>
+                <span className="section-eyebrow">A little inspiration</span>
+                <h2>Choose your kind of escape</h2>
+                <p>From cool mountain air to sun-warmed shores.</p>
               </div>
             </Col>
           </Row>
@@ -122,7 +126,7 @@ const Home = () => {
   <Container>
     <Row className="align-items-center">
    <Col md="8">
-  <h5 className="title">Plan Your Next Pakistan Tour</h5>
+  <span className="title">Made for your kind of adventure</span>
   <h2 className="heading">
     Explore Top Tourist Destinations in Pakistan with <span>Hammad Travels</span>
   </h2>
@@ -138,9 +142,8 @@ const Home = () => {
         <a
           href="tel:+923341111427"
           className="secondary_btn bounce"
-          rel="no"
         >
-          Contact Us Now!
+          Let's plan your trip
         </a>
       </Col>
     </Row>
@@ -154,7 +157,9 @@ const Home = () => {
           <Row>
             <Col md="12">
               <div className="main_heading">
-                <h1>Photo Gallery </h1>
+                <span className="section-eyebrow">The feeling stays with you</span>
+                <h2>Postcards from the road</h2>
+                <p>A glimpse of the places and moments waiting for you.</p>
               </div>
             </Col>
           </Row>

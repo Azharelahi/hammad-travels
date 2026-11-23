@@ -39,7 +39,7 @@ const featureList = [
 ];
 
   return (
-    <section className="feature-section">
+    <section className="feature-section" id="home-highlights">
       <Container>
         <Row>
           <Col md="12">
