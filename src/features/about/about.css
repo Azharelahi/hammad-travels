@@ -11,14 +11,16 @@
 .hero-section {
     position: relative;
     background: url("https://media.istockphoto.com/id/1262230418/photo/couple-sitting-in-camp-chairs-looking-at-sunset-above-river-in-mountains.webp?a=1&b=1&s=612x612&w=0&k=20&c=t6U-T9qC4nj7vAVUUiOABk0ajlFG6WDN3dKOEs8Asaw=") no-repeat center/cover;
-    height: 60vh;
+    min-height: 60vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
-    padding: 50px 20px;
+    color: #e3c58a;
+    box-sizing: border-box;
+    padding: 120px 20px 50px;
 }
 
 .hero-section::before {
@@ -39,14 +41,17 @@
 
 .hero-section h1 {
     font-size: 3rem;
-    font-weight: bolder;
+    font-weight: 800;
     margin: 0;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.48);
 }
 
 .hero-section p {
     margin-top: 20px;
     font-size: 1.2rem;
-    color: #ffcff3;
+    color: #f0ddb7;
+    font-weight: 600;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
 }
 
 /* About Section */
@@ -58,7 +63,8 @@
 
 .about-section h2 {
     font-size: 2.5rem;
-    color: #110000;
+    color: #35483d;
+    font-weight: 700;
 }
 
 .about-section p {
@@ -125,8 +131,9 @@
 /* Mobile Screens (500px and below) */
 @media (max-width: 500px) {
     .hero-section {
-        height: 50vh;
-        padding: 40px 15px;
+        min-height: 50vh;
+        height: auto;
+        padding: 105px 15px 40px;
     }
 
     .hero-section h1 {
@@ -160,8 +167,9 @@
 /* Ultra-Small Screens (375px and below) */
 @media (max-width: 375px) {
     .hero-section {
-        height: 45vh;
-        padding: 30px 10px;
+        min-height: 45vh;
+        height: auto;
+        padding: 90px 10px 30px;
     }
 
     .hero-section h1 {

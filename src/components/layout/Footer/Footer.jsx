@@ -27,7 +27,7 @@ const Footer = () => {
           <Row>
             {/* Company */}
             <Col md="3" sm="6" className="mt-3">
-              <h4 className="footer-title">Hammad Travels & Tourism</h4>
+              <h4 className="footer-title">Hammad travel and tour</h4>
               <ListGroup variant="flush" className="footer-list">
                 <ListGroup.Item>
                   <ListGroup.Item>
@@ -127,7 +127,7 @@ const Footer = () => {
             {/* Copyright Section */}
             <Col md={6} xs={12} className="text-center mb-2 mb-md-0">
               <p className="m-0 text-white">
-                © 2025 Hammad Travels & Tourism®. All rights reserved.
+                © 2025 Hammad travel and tour®. All rights reserved.
               </p>
             </Col>
 

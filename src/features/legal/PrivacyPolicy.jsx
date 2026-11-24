@@ -23,7 +23,7 @@ export default function PrivacyPolicy() {
       <div className="max-w-4xl mx-auto my-12 p-6 space-y-8 text-gray-700 text-center">
         <h2 className="text-3xl font-bold text-gray-900">1. Introduction</h2>
         <p>
-          Welcome to Hammad Travels. We are committed to protecting your privacy
+          Welcome to Hammad travel and tour. We are committed to protecting your privacy
           and ensuring that your personal information is handled securely.
         </p>
 

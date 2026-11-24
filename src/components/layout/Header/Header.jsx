@@ -16,7 +16,7 @@ const Header = () => {
   }, [location.pathname]);
 
   useEffect(() => {
-    const updateScrollState = () => setScrolled(window.scrollY > 80);
+    const updateScrollState = () => setScrolled(window.scrollY > 12);
 
     updateScrollState();
     window.addEventListener("scroll", updateScrollState, { passive: true });
@@ -48,9 +48,9 @@ const Header = () => {
             <img className="logo-img" src={img} alt="" />
             <span className="brand-wordmark">
               <span className="brand-name">
-                Hammad <span className="brand-accent">Travels</span>
+                <span>Hammad</span>
+                <span className="brand-accent">travel and tour</span>
               </span>
-              <span className="brand-caption">TRAVEL &amp; TOURISM</span>
             </span>
           </Navbar.Brand>
 
@@ -63,9 +63,9 @@ const Header = () => {
             <Offcanvas.Header>
               <span className="brand-wordmark">
                 <span className="brand-name">
-                  Hammad <span className="brand-accent">Travels</span>
+                  <span>Hammad</span>
+                  <span className="brand-accent">travel and tour</span>
                 </span>
-                <span className="brand-caption">TRAVEL &amp; TOURISM</span>
               </span>
               <button
                 type="button"

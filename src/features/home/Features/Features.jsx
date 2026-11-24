@@ -34,7 +34,7 @@ const featureList = [
     id: 3,
     image: feature4,
     title: "A Travel Agency You Can Trust",
-    des: "Hammad Travels is a trusted travel and tour partner, highly recommend by travelers for delivering safe, comfortable, and unforgettable journeys across Pakistan.",
+    des: "Hammad travel and tour is a trusted travel and tour partner, highly recommend by travelers for delivering safe, comfortable, and unforgettable journeys across Pakistan.",
   },
 ];
 

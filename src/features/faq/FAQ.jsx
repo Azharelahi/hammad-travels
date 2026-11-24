@@ -71,7 +71,7 @@ export default function FAQ() {
 
 const faqData = [
   {
-    question: "Is my payment secure with Hammad Travels?",
+    question: "Is my payment secure with Hammad travel and tour?",
     answer: "Yes, we use encrypted payment gateways to ensure your transactions are secure. Your financial information is never stored or shared.",
   },
   {
@@ -87,7 +87,7 @@ const faqData = [
     answer: "In case of a breakdown, we provide 24/7 roadside assistance. A replacement vehicle will be arranged promptly.",
   },
   {
-    question: "Are my personal details safe with Hammad Travels?",
+    question: "Are my personal details safe with Hammad travel and tour?",
     answer: "Absolutely. We comply with data protection laws and never share your personal details with third parties.",
   },
 ];

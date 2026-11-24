@@ -29,7 +29,7 @@ export default function TermsOfServices() {
             1. Introduction
           </h2>
           <p className="text-gray-700 leading-relaxed">
-            Welcome to Hammad Travels. By using our services, you agree to
+            Welcome to Hammad travel and tour. By using our services, you agree to
             comply with and be bound by the following terms and conditions.
           </p>
         </div>

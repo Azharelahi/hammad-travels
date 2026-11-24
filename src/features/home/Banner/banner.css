@@ -32,15 +32,20 @@
 }
 
 .slider .carousel-caption {
+  position: absolute;
   z-index: 2;
-  top: 50%;
+  top: 82px;
   right: auto;
-  bottom: auto;
+  bottom: 82px;
   left: max(calc((100vw - 1200px) / 2), 8%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: min(700px, 76%);
   padding: 0;
+  box-sizing: border-box;
   text-align: left;
-  transform: translateY(-45%);
+  transform: none;
 }
 
 .hero-eyebrow {
@@ -271,9 +276,11 @@
   }
 
   .slider .carousel-caption {
+    top: 68px;
+    bottom: 68px;
     left: 7%;
     width: 86%;
-    transform: translateY(-48%);
+    padding: 0;
   }
 
   .hero-eyebrow {

@@ -128,10 +128,10 @@ const Home = () => {
    <Col md="8">
   <span className="title">Made for your kind of adventure</span>
   <h2 className="heading">
-    Explore Top Tourist Destinations in Pakistan with <span>Hammad Travels</span>
+    Explore Top Tourist Destinations in Pakistan with <span>Hammad travel and tour</span>
   </h2>
   <p className="text">
-    Hammad Travels is a trusted travel and tour company in Islamabad, 
+    Hammad travel and tour is a trusted travel and tour company in Islamabad, 
     offering hassle-free bookings for unforgettable journeys across Pakistan. 
     Discover scenic landscapes, cultural hotspots, and highly recommended 
     destinations that make every trip memorable.

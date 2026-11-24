@@ -146,3 +146,10 @@ footer .border-top a:hover {
     height: 40px;
   }
 }
+
+@media (max-width: 575px) {
+  .scroll-top {
+    right: auto;
+    left: 16px;
+  }
+}

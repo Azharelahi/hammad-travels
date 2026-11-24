@@ -106,7 +106,7 @@ const HireDetails = () => {
             {/* Background Logo */}
             <img
               src={logo}
-              alt="Hammad Travels Logo"
+              alt="Hammad travel and tour Logo"
               className="absolute inset-0 w-full h-full object-contain opacity-20 blur-md mx-auto"
             />
 
@@ -225,14 +225,14 @@ const HireDetails = () => {
           <div className="w-full lg:w-2/5 flex flex-col justify-center items-center text-center flex-grow">
             <img
               src={logo}
-              alt="Hammad Travels Logo"
+              alt="Hammad travel and tour Logo"
               className="w-32 lg:w-40 mb-4"
             />
             <h2 className="text-lg lg:text-xl font-semibold mb-2">
               Rent The Car With Us!
             </h2>
             <p className="text-gray-600 text-sm leading-relaxed max-w-md">
-              At <strong>Hammad Travels</strong>, we offer premium car rental
+              At <strong>Hammad travel and tour</strong>, we offer premium car rental
               services tailored to your needs.
               <br />
               <br />
