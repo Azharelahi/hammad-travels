@@ -94,13 +94,13 @@ const Footer = () => {
                 Azeem Plaza, G10 Markaz, Islamabad, Pakistan
               </p>
               <a
-                href="https://hammdtravelsandtourism.com"
+                href="https://www.hammadtravelandtour.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="d-flex align-items-center gap-2 text-white"
                 style={{ textDecoration: "none" }}
               >
-                <Globe size={20} /> hammdtravelsandtourism.com
+                <Globe size={20} /> www.hammadtravelandtour.com
               </a>
               <a
                 href="mailto:contact.hammadtravel@gmail.com"

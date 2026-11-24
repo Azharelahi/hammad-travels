@@ -141,11 +141,11 @@ ${formData.message}
           <p className="infoText">
             🌐{" "}
             <a
-              href="https://hammdtravelsandtourism.com"
+              href="https://www.hammadtravelandtour.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              hammdtravelsandtourism.com
+              www.hammadtravelandtour.com
             </a>
           </p>
           <p className="infoText">

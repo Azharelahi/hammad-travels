@@ -1,6 +1,17 @@
 {
-  "short_name": "Hammad travel and tour",
-  "name": "Hammad travel and tour",
+  "id": "/",
+  "name": "Hammad Travels & Tourism",
+  "short_name": "Hammad Travels",
+  "description": "Tours, travel services and car rentals in Islamabad, Pakistan.",
+  "lang": "en-PK",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#0f172a",
+  "background_color": "#ffffff",
+  "categories": ["travel", "business", "shopping"],
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,16 +21,14 @@
     {
       "src": "logo192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any"
     },
     {
       "src": "logo512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any"
     }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#0f172a",
-  "background_color": "#ffffff"
+  ]
 }

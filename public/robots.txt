@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hammdtravelsandtourism.com/sitemap.xml
+Sitemap: https://www.hammadtravelandtour.com/sitemap.xml
