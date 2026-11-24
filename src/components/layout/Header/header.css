@@ -26,16 +26,22 @@
 .header-section .brand-link {
   display: inline-flex;
   align-items: center;
-  gap: 11px;
+  gap: 13px;
   margin: 0;
   padding: 0;
   text-decoration: none;
+  transition: transform 180ms ease;
+}
+
+.header-section .brand-link:hover {
+  transform: translateY(-1px);
 }
 
 .header-section .logo-img {
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
+  filter: drop-shadow(0 3px 7px rgba(39, 65, 50, 0.13));
 }
 
 .brand-wordmark {
@@ -48,22 +54,83 @@
   display: flex;
   flex-direction: column;
   gap: 1px;
-  color: #2e493a;
+  color: #294536;
   font-family: var(--fontFamily1);
-  font-size: 16px;
+  font-size: 21px;
   font-weight: 800;
-  letter-spacing: -0.25px;
-  line-height: 1.05;
+  letter-spacing: 0.15px;
+  line-height: 1;
   white-space: nowrap;
 }
 
+.brand-name > span:first-child {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.48);
+  animation: brand-title-glow 4.8s ease-in-out infinite;
+}
+
 .brand-accent {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 4px;
   color: #80551f;
   font-family: var(--fontFamily);
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 0.35px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
   text-transform: uppercase;
+  transition: letter-spacing 180ms ease;
+  background-image: linear-gradient(
+    105deg,
+    #80551f 0%,
+    #80551f 35%,
+    #c8a366 49%,
+    #80551f 63%,
+    #80551f 100%
+  );
+  background-size: 240% 100%;
+  animation: brand-accent-shimmer 5.2s ease-in-out infinite;
+}
+
+.brand-accent::before {
+  width: 15px;
+  height: 1px;
+  background: linear-gradient(90deg, #80551f, #d3b475, #80551f);
+  background-size: 200% 100%;
+  content: "";
+  transition: width 180ms ease;
+  animation: brand-line-shimmer 3.2s linear infinite;
+}
+
+@supports (-webkit-background-clip: text) {
+  .brand-accent {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+
+@keyframes brand-accent-shimmer {
+  from { background-position: 130% 0; }
+  to { background-position: -110% 0; }
+}
+
+@keyframes brand-line-shimmer {
+  from { background-position: 100% 0; }
+  to { background-position: -100% 0; }
+}
+
+@keyframes brand-title-glow {
+  0%, 100% { text-shadow: 0 1px 0 rgba(255, 255, 255, 0.48); }
+  50% { text-shadow: 0 1px 0 rgba(255, 255, 255, 0.48), 0 0 9px rgba(178, 138, 80, 0.24); }
+}
+
+.header-section .brand-link:hover .brand-accent {
+  letter-spacing: 1.85px;
+}
+
+.header-section .brand-link:hover .brand-accent::before {
+  width: 20px;
 }
 
 .header-section .offcanvas {
@@ -208,8 +275,8 @@
   }
 
   .header-section .logo-img {
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
   }
 
   .header-section .brand-link {
@@ -217,11 +284,12 @@
   }
 
   .brand-name {
-    font-size: 15px;
+    font-size: 18px;
   }
 
   .brand-accent {
-    font-size: 10px;
+    font-size: 8px;
+    letter-spacing: 1.25px;
   }
 
   .brand-car {
@@ -242,9 +310,24 @@
   }
 
   .header-section .offcanvas {
-    width: 78vw !important;
-    max-width: 300px;
+    position: fixed;
+    top: 74px;
+    right: 12px;
+    bottom: auto;
+    left: auto;
+    width: fit-content !important;
+    min-width: 230px;
+    max-width: min(290px, calc(100vw - 24px));
+    height: auto;
+    max-height: calc(100vh - 86px);
+    overflow: hidden;
     visibility: hidden;
+    background: rgba(229, 239, 232, 0.76);
+    border: 1px solid rgba(255, 255, 255, 0.68);
+    border-radius: 18px;
+    box-shadow: 0 18px 48px rgba(27, 43, 36, 0.2);
+    backdrop-filter: blur(24px) saturate(165%);
+    -webkit-backdrop-filter: blur(24px) saturate(165%);
   }
 
   .header-section .offcanvas.show,
@@ -258,7 +341,47 @@
   }
 
   .header-section .offcanvas-header {
+    min-height: 64px;
     gap: 8px;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.28);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .header-section .offcanvas-body {
+    max-height: calc(100vh - 152px);
+    overflow-y: auto;
+    padding: 8px 10px 12px;
+  }
+
+  .header-section .navbar-nav {
+    gap: 3px;
+    padding-top: 0 !important;
+  }
+
+  .header-section .offcanvas-body .nav-link {
+    padding: 10px 12px;
+    border-radius: 9px;
+  }
+
+  .header-section .offcanvas-body .nav-link:hover {
+    background: rgba(255, 255, 255, 0.38);
+  }
+
+  .header-section .offcanvas-body .nav-link.active-link {
+    padding-left: 17px;
+    color: #294b39;
+    background: rgba(54, 91, 67, 0.12);
+  }
+
+  .header-section .offcanvas-body .nav-link.active-link::after {
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    left: 7px;
+    width: 3px;
+    height: 18px;
+    transform: translateY(-50%);
   }
 
   .offcanvas .offcanvas-header .brand-name {
@@ -268,8 +391,8 @@
 
 @media (max-width: 400px) {
   .header-section .logo-img {
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
   }
 
   .header-section .brand-link {
@@ -277,11 +400,12 @@
   }
 
   .brand-name {
-    font-size: 14px;
+    font-size: 17px;
   }
 
   .brand-accent {
-    font-size: 9px;
+    font-size: 7px;
+    letter-spacing: 1px;
   }
 
   .header-cta {
@@ -309,7 +433,11 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .header-cta {
+  .header-cta,
+  .brand-accent,
+  .brand-accent::before,
+  .brand-name > span:first-child {
     transition: none;
+    animation: none;
   }
 }

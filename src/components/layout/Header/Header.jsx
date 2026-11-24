@@ -57,6 +57,7 @@ const Header = () => {
           <Navbar.Offcanvas
             id="travel-navigation"
             placement="end"
+            backdrop={false}
             show={open}
             onHide={() => setOpen(false)}
           >
