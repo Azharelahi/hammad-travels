@@ -133,14 +133,14 @@
   width: 20px;
 }
 
-.header-section .offcanvas {
+#travel-navigation {
   --bs-offcanvas-width: min(340px, 85vw);
   background: transparent;
   border-left: 0;
   box-shadow: none;
 }
 
-.header-section .offcanvas-body .nav-link {
+#travel-navigation .offcanvas-body .nav-link {
   position: relative;
   margin: 0 2px;
   padding: 10px 12px;
@@ -151,12 +151,12 @@
   transition: color 180ms ease;
 }
 
-.header-section .offcanvas-body .nav-link:hover,
-.header-section .offcanvas-body .nav-link.active-link {
+#travel-navigation .offcanvas-body .nav-link:hover,
+#travel-navigation .offcanvas-body .nav-link.active-link {
   color: #2e493a;
 }
 
-.header-section .offcanvas-body .nav-link.active-link::after {
+#travel-navigation .offcanvas-body .nav-link.active-link::after {
   position: absolute;
   right: 12px;
   bottom: 3px;
@@ -168,7 +168,7 @@
   content: "";
 }
 
-.header-section .offcanvas-body .nav-link.active-link {
+#travel-navigation .offcanvas-body .nav-link.active-link {
   color: #294b39;
   font-weight: 800;
 }
@@ -214,18 +214,18 @@
   cursor: pointer;
 }
 
-.header-section .offcanvas-header {
+#travel-navigation .offcanvas-header {
   min-height: 78px;
   align-items: center;
   padding: 14px 18px;
   border-bottom: 1px solid #e8ece8;
 }
 
-.offcanvas .offcanvas-header .brand-name {
+#travel-navigation .offcanvas-header .brand-name {
   font-size: 17px;
 }
 
-.offcanvas .offcanvas-header .mobile-menu-button {
+#travel-navigation .offcanvas-header .mobile-menu-button {
   display: inline-flex;
   width: 40px;
   height: 40px;
@@ -238,18 +238,18 @@
     flex-wrap: nowrap;
   }
 
-  .header-section .navbar-nav {
+  #travel-navigation .navbar-nav {
     align-items: stretch !important;
     padding-top: 20px;
   }
 
-  .header-section .offcanvas-body .nav-link {
+  #travel-navigation .offcanvas-body .nav-link {
     margin: 2px 0;
     padding: 14px 6px;
     font-size: 15px;
   }
 
-  .header-section .offcanvas-body .nav-link.active-link::after {
+  #travel-navigation .offcanvas-body .nav-link.active-link::after {
     right: auto;
     bottom: 7px;
     left: 6px;
@@ -260,7 +260,7 @@
     display: inline-flex;
   }
 
-  .header-section .offcanvas {
+  #travel-navigation {
     width: min(320px, 82vw);
     background: #f8faf8;
     border-left: 1px solid #e8ece8;
@@ -309,7 +309,7 @@
     margin-left: 8px;
   }
 
-  .header-section .offcanvas {
+  #travel-navigation {
     position: fixed;
     top: 74px;
     right: 12px;
@@ -330,17 +330,17 @@
     -webkit-backdrop-filter: blur(24px) saturate(165%);
   }
 
-  .header-section .offcanvas.show,
-  .header-section .offcanvas.showing {
+  #travel-navigation.show,
+  #travel-navigation.showing {
     visibility: visible;
   }
 
-  .offcanvas .offcanvas-header {
+  #travel-navigation .offcanvas-header {
     min-height: 78px;
     padding: 13px 14px;
   }
 
-  .header-section .offcanvas-header {
+  #travel-navigation .offcanvas-header {
     min-height: 64px;
     gap: 8px;
     padding: 10px 12px;
@@ -348,33 +348,33 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   }
 
-  .header-section .offcanvas-body {
+  #travel-navigation .offcanvas-body {
     max-height: calc(100vh - 152px);
     overflow-y: auto;
     padding: 8px 10px 12px;
   }
 
-  .header-section .navbar-nav {
+  #travel-navigation .navbar-nav {
     gap: 3px;
     padding-top: 0 !important;
   }
 
-  .header-section .offcanvas-body .nav-link {
+  #travel-navigation .offcanvas-body .nav-link {
     padding: 10px 12px;
     border-radius: 9px;
   }
 
-  .header-section .offcanvas-body .nav-link:hover {
+  #travel-navigation .offcanvas-body .nav-link:hover {
     background: rgba(255, 255, 255, 0.38);
   }
 
-  .header-section .offcanvas-body .nav-link.active-link {
+  #travel-navigation .offcanvas-body .nav-link.active-link {
     padding-left: 17px;
     color: #294b39;
     background: rgba(54, 91, 67, 0.12);
   }
 
-  .header-section .offcanvas-body .nav-link.active-link::after {
+  #travel-navigation .offcanvas-body .nav-link.active-link::after {
     top: 50%;
     right: auto;
     bottom: auto;
@@ -384,7 +384,7 @@
     transform: translateY(-50%);
   }
 
-  .offcanvas .offcanvas-header .brand-name {
+  #travel-navigation .offcanvas-header .brand-name {
     font-size: 17px;
   }
 }
@@ -414,7 +414,7 @@
     font-size: 11px;
   }
 
-  .offcanvas .offcanvas-header .brand-name {
+  #travel-navigation .offcanvas-header .brand-name {
     font-size: 15px;
   }
 }
